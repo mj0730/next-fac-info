@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/mj0730/7110react#readme",
   "dependencies": {
-    "next": "^9.3.4",
+    "next": "^9.3.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

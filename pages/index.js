@@ -1,11 +1,13 @@
 import Link from 'next/link';
+import * as facs from '../Scripts/facility_info';
 
 const Index = () => (
   <div>
-    <h1>Home page</h1>
-    <Link href="/toc">
-      <a>Table of Contents</a>
-    </Link>
+    <p>{console.log(facs.completePayTable('n90'))}</p>
+
+
+
+    <Link href="FacilityPage"><a>FacPage</a></Link>
   </div>
 )
 
