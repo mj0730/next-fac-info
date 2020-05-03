@@ -1,8 +1,11 @@
 import Link from 'next/link';
 
-const FacilityPage = () => 
-  (
-  <div id="">
+const FacilityPage = () => (
+  <Layout>
+    <Head>
+      <title>Title of page</title>
+    </Head>
+  
     <header>
       <h1>FacID</h1>
       <p>FacName</p>
@@ -21,7 +24,7 @@ const FacilityPage = () =>
 
     </main>
 
-  </div>
+  </Layout>
   )
 
 export default FacilityPage

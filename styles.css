@@ -1,0 +1,23 @@
+body {
+  background-color: #000;
+}
+
+/* Main page layout: 2 columns */
+.index-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas: "NavColumn DisplayColumn"
+}
+
+.index-NavColumn { 
+  grid-area: 1 / 1 / 2 / 2;; 
+  background-color: slategray;
+}
+
+.index-DisplayColumn { 
+  grid-area: 1 / 2 / 2 / 5; 
+  background-color: steelblue;
+}

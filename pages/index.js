@@ -1,14 +1,27 @@
+import Layout from '../components/layout';
+import Head from 'next/head';
 import Link from 'next/link';
-import * as facs from '../Scripts/facility_info';
+import * as facs from '../scripts/facility_info';
 
 const Index = () => (
-  <div>
-    <p>{console.log(facs.completePayTable('n90'))}</p>
+  <Layout>
+    <Head>
+      <title>Title of page</title>
+    </Head>
+
+    <div className="index-NavColumn">
+      <ul>
+        <li>placeholder</li>
+      </ul>
+
+    </div>
+    
+    
+    <div className="index-DisplayColumn"></div>
 
 
 
-    <Link href="FacilityPage"><a>FacPage</a></Link>
-  </div>
+  </Layout>
 )
 
 export default Index
