@@ -2,8 +2,9 @@ import Layout from '../components/layout';
 import Head from 'next/head';
 import Link from 'next/link';
 import * as facs from '../scripts/facility_info';
+import FacilityPage from './FacilityPage';
 
-const Index = () => (
+const Index = (props) => (
   <Layout>
     <Head>
       <title>Title of page</title>
@@ -17,7 +18,10 @@ const Index = () => (
     </div>
     
     
-    <div className="index-DisplayColumn"></div>
+    <div className="index-DisplayColumn">
+      <FacilityPage facs = {facs} />
+
+    </div>
 
 
 
