@@ -1,31 +1,34 @@
 import Layout from '../components/layout';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useState } from 'react';
 import * as facs from '../scripts/facility_info';
 import FacilityPage from './FacilityPage';
+import SearchBox from './SearchBox';
 
-const Index = (props) => (
-  <Layout>
-    <Head>
-      <title>Title of page</title>
-    </Head>
+const Index = (props) => {
+  const [FacId, setFacId] = useState('')
 
-    <div className="index-NavColumn">
-      <ul>
-        <li>placeholder</li>
-      </ul>
+  return (
+    <Layout>
+      <Head>
+        <title>Title of page</title>
+      </Head>
 
-    </div>
-    
-    
-    <div className="index-DisplayColumn">
-      <FacilityPage facs = {facs} />
+      <div className="index-NavColumn">
+        <SearchBox setFacId={setFacId} FacId = {FacId}/>
 
-    </div>
+      </div>
+      
+      
+      <div className="index-DisplayColumn">
+        <FacilityPage facs = {facs} />
+
+      </div>
 
 
 
-  </Layout>
-)
+    </Layout>
+)}
 
 export default Index
