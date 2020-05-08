@@ -16,6 +16,8 @@ const Index = (props) => {
     if (facs.FACILITIES[FacId]) {
       setCurrentFacPay(facs.completePayTable(FacId));
       setcurrentFacInfo(facs.FACILITIES[FacId]);
+    } else if (FacId.length === 3) {
+      setcurrentFacInfo({id: `${FacId} is not a valid identifier`, name: 'Please use a valid Facility ID.'});
     }
     // return () => {
     //   cleanup
