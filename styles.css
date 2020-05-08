@@ -2,6 +2,11 @@ body {
   background-color: #000;
 }
 
+/* Search box */
+input {
+  text-transform: uppercase;
+}
+
 /* Main page layout: 2 columns */
 .index-grid-container {
   display: grid;
