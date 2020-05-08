@@ -19,15 +19,12 @@ const Index = (props) => {
     } else if (FacId.length === 3) {
       setcurrentFacInfo({id: `${FacId} is not a valid identifier`, name: 'Please use a valid Facility ID.'});
     }
-    // return () => {
-    //   cleanup
-    // }
   }, [FacId])
 
   return (
     <Layout>
       <Head>
-        <title>Title of page</title>
+        <title>pointSixtyFive - Facility Information</title>
       </Head>
 
       <div className="index-NavColumn">
@@ -35,9 +32,8 @@ const Index = (props) => {
 
       </div>
       
-      
       <div className="index-DisplayColumn">
-        <FacilityPage facs = {facs} currentFacPay = {currentFacPay} currentFacInfo = {currentFacInfo}/>
+        <FacilityPage currentFacPay = {currentFacPay} currentFacInfo = {currentFacInfo}/>
 
       </div>
 

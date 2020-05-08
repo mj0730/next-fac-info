@@ -20,7 +20,7 @@ const FacilityPage = ({currentFacPay, currentFacInfo}) => {
       </header>
 
       <main>
-        <Pay />
+        <Pay currentFacPay = {currentFacPay} />
       </main>
 
     </Layout>
