@@ -6,8 +6,8 @@ const PageLinks = (props) => {
   return (
     <div id="page-links">
       <Link href="/"><a>Home</a></Link>
-      <Link href="/facilities">Facilities</Link>
-      <Link href="/map">Map</Link>
+      <Link href="/facilities"><a>Facilities</a></Link>
+      <Link href="/map"><a>Map</a></Link>
     </div>
   )
 }

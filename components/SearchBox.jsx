@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchIcon from '@material-ui/icons/Search';
 
 const SearchBox = ({facId, setFacId}) => {
   const handleChange = (e) => {
@@ -7,8 +8,9 @@ const SearchBox = ({facId, setFacId}) => {
 
   return (
   <div id="search-box">
-    <form>
-      <input type="text" id="facId" name="facId" minLength="3" maxLength="3" placeholder="Facility ID" value={facId} onChange={handleChange}/>
+    <form className="search-container">
+    <SearchIcon style={{ flexShrink: '1', fontSize: 'inherit' }}/>
+      <input type="text" id="facId" name="facId" minLength="3" maxLength="3" placeholder="Search Facility ID" value={facId} onChange={handleChange}/>
     </form>
   </div>
 )}
