@@ -1,10 +1,10 @@
 import Layout from '../components/layout';
 import Head from 'next/head';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import * as facs from '../scripts/facility_info';
 import FacilityPage from '../components/FacilityPage';
 import SearchBox from '../components/SearchBox';
+import PageLinks from '../components/PageLinks';
 
 const Index = (props) => {
   const [FacId, setFacId] = useState('');
@@ -33,6 +33,7 @@ const Index = (props) => {
 
       <div className="index-NavColumn">
         <SearchBox setFacId={setFacId} FacId = {FacId}/>
+        <PageLinks />
 
       </div>
       
