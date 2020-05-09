@@ -10,7 +10,7 @@ const PageLinks = (props) => {
   return (
     <nav id="page-links">
       <ul>
-        <li><Link href="/"><a><span><HomeIcon/> Home</span></a></Link></li>
+        <li><Link href="/"><a><HomeIcon/> Home</a></Link></li>
         <li> <Link href="/facilities"><a><TrackChangesIcon/> Facilities</a></Link></li>
         <li><Link href="/map"><a><MapIcon/> Map</a></Link></li>
       </ul>
