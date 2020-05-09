@@ -1,14 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 
+import HomeIcon from '@material-ui/icons/Home';
+import TrackChangesIcon from '@material-ui/icons/TrackChanges';
+import MapIcon from '@material-ui/icons/Map';
+
 const PageLinks = (props) => {
 
   return (
-    <div id="page-links">
-      <Link href="/"><a>Home</a></Link>
-      <Link href="/facilities"><a>Facilities</a></Link>
-      <Link href="/map"><a>Map</a></Link>
-    </div>
+    <nav id="page-links">
+      <ul>
+        <li><Link href="/"><a><span><HomeIcon/> Home</span></a></Link></li>
+        <li> <Link href="/facilities"><a><TrackChangesIcon/> Facilities</a></Link></li>
+        <li><Link href="/map"><a><MapIcon/> Map</a></Link></li>
+      </ul>
+    </nav>
   )
 }
 
