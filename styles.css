@@ -20,15 +20,36 @@ form {
 }
 
 input#facId {
-  text-transform: uppercase;
   width: 100%;
-  font-size: 2em;
-  border: 2px solid crimson;
   background-color: #000;
+  border: 2px solid crimson;
   color: #fff;
+  font-size: 2em;
   text-align: center;
+  text-transform: uppercase;
 }
 
+/* Link Menu */
+#page-links {
+  margin-top: 1em;
+}
+
+#page-links a {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 0;
+  font-family: 'garamound';
+  font-size: 1.5em;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+#page-links a:hover {
+  text-shadow: 0px 0px 2px antiquewhite;
+  background-color: rgba(0, 0, 70, 0.3);
+}
 /* Main page layout: 2 columns */
 .index-grid-container {
   display: grid;
