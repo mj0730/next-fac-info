@@ -9,15 +9,19 @@ import SearchBox from '../components/SearchBox';
 const Index = (props) => {
   const [FacId, setFacId] = useState('');
   const [currentFacPay, setCurrentFacPay] = useState('');
-  const [currentFacInfo, setcurrentFacInfo] = useState('');
+  const [currentFacInfo, setCurrentFacInfo] = useState('');
+  const [currentFacLocality, setCurrentFacLocality] = useState('');
 
   //'Lock' valid facility into place for rendering
   useEffect(() => {
     if (facs.FACILITIES[FacId]) {
       setCurrentFacPay(facs.completePayTable(FacId));
-      setcurrentFacInfo(facs.FACILITIES[FacId]);
+      setCurrentFacInfo(facs.FACILITIES[FacId]);
+      setCurrentFacLocality(facs.getLocality(FacId));
     } else if (FacId.length === 3) {
-      setcurrentFacInfo({id: `${FacId} is not a valid identifier`, name: 'Please use a valid Facility ID.'});
+      setCurrentFacInfo({id: `${FacId} is not a valid identifier`, name: 'Please use a valid Facility ID.'});
+      setCurrentFacPay('');
+      setCurrentFacLocality('');
     }
   }, [FacId])
 
@@ -33,7 +37,7 @@ const Index = (props) => {
       </div>
       
       <div className="index-DisplayColumn">
-        <FacilityPage currentFacPay = {currentFacPay} currentFacInfo = {currentFacInfo}/>
+        <FacilityPage currentFacPay = {currentFacPay} currentFacInfo = {currentFacInfo} currentFacLocality = {currentFacLocality}/>
 
       </div>
 
