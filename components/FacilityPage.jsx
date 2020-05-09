@@ -5,8 +5,12 @@ import Pay from './Pay';
 import Staffing from './Staffing';
 import Information from './Information';
 
-const FacilityPage = ({currentFacPay, currentFacInfo}) => {
+const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
   console.log(currentFacPay, currentFacInfo)
+
+  const changeToPercentage = (num) => {
+    return (num * 100).toFixed(2);
+  }
 
   return (
     <Layout>
@@ -21,6 +25,10 @@ const FacilityPage = ({currentFacPay, currentFacInfo}) => {
 
       <main>
         <Pay currentFacPay = {currentFacPay} />
+
+        <h2>Locality</h2>
+        <p>Rate: {changeToPercentage(currentFacLocality[1]) + '%'}</p>
+        <p>Area: {currentFacLocality[0]}</p>
       </main>
 
     </Layout>

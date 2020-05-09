@@ -1069,4 +1069,4 @@ function completePayTable(facility) {
     return {'PayTable' : basePayTable, 'CIP%' : cipPercentage, 'CIP' : cipAmounts, 'COLA%' : colaPercentage, 'COLA' : colaAmounts, 'differentialType' : differentialType, 'differentialAmount' : differentialAmount};
 }
 
-export {FACILITIES, LOCALITY, COLA, CIP, DIFFERENTIAL, completePayTable};
+export {FACILITIES, LOCALITY, COLA, CIP, DIFFERENTIAL, completePayTable, getLocality};

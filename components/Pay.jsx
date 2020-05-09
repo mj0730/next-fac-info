@@ -2,27 +2,33 @@ import React from 'react';
 
 const Pay = ({ currentFacPay }) => {
   const pay = currentFacPay;
-  const labels = ['CPCMAX', 'CPC', 'D3', 'D2', 'D1', 'AG'];
-
-  let basePay = [];
-  if (pay) {
-    basePay = pay.PayTable;
-  }
-  console.log(basePay);
+  
+  let basePay = '';
+  if (pay) basePay = pay.PayTable;
 
   return (
     <section id="fac-pay">
-      <ul>
-      {basePay.map((x, i, arr) => {
-        if (!x) i++;
-        if (x > 0) {
-          return (
-          <li key={labels[i + 1]}>{`${labels[i + 1]}: ${arr[i + 1]} - ${x}`} </li>
-          )
-        }
-      })
-    }
-    </ul>
+      <h2>Base Pay Table</h2>
+      <div className="grid-container">
+        <div>CPC</div>
+        <div>D3</div>
+        <div>D2</div>
+        <div>D1</div>
+        <div>AG</div>
+
+        <div>{basePay[0]}</div>
+        <div>{basePay[1]}</div>
+        <div>{basePay[2]}</div>
+        <div>{basePay[3]}</div>
+        <div>{basePay[4]}</div>
+
+        <div>{basePay[1]}</div>
+        <div>{basePay[2]}</div>
+        <div>{basePay[3]}</div>
+        <div>{basePay[4]}</div>
+        <div>{basePay[5]}</div>
+        
+      </div>
 
     </section>
 
