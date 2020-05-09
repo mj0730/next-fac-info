@@ -2,9 +2,31 @@ body {
   background-color: #000;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-child {
+
+}
+
 /* Search box */
-input {
+
+form {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+input#facId {
   text-transform: uppercase;
+  width: 100%;
+  font-size: 2em;
+  border: 2px solid crimson;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 
 /* Main page layout: 2 columns */
