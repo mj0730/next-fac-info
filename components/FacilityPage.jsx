@@ -12,7 +12,7 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
   }
 
   return (
-    <Layout>
+    <div id="facility-info">
       <Head>
         <title>{`${currentFacInfo.name} - pointSixtyFive`}</title>
       </Head>
@@ -29,8 +29,7 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
         <p>Rate: {changeToPercentage(currentFacLocality[1]) + '%'}</p>
         <p>Area: {currentFacLocality[0]}</p>
       </main>
-
-    </Layout>
+    </div>
     )
 }
 

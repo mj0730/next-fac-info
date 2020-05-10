@@ -1,9 +1,21 @@
+import {useState} from 'react';
+import PageLinks from './PageLinks';
+import SearchBox from './SearchBox';
 
-function Layout({ children }) {
+function Layout(props) {
+  const [FacId, setFacId] = useState('');
+
   return (
     <div className="index-grid-container">
+      <div className="index-NavColumn">
+        <SearchBox setFacId={setFacId} FacId = {FacId}/>
+        <PageLinks />
+      </div>
       
-      {children}</div>
+      <div className="index-DisplayColumn">
+        {props.children}
+      </div>
+    </div>
   )
 }
 

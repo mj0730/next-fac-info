@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import SearchIcon from '@material-ui/icons/Search';
+import {FacIdContext} from './FacIdContext';
 
 const SearchBox = ({facId, setFacId}) => {
+  const [FacId, storeFacId] = useContext(FacIdContext)
+
   const handleChange = (e) => {
-    setFacId(e.target.value.toUpperCase());
+    storeFacId(e.target.value.toUpperCase());
   }
 
   return (
