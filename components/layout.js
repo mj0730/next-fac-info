@@ -1,14 +1,12 @@
-import {useState} from 'react';
 import PageLinks from './PageLinks';
 import SearchBox from './SearchBox';
 
 function Layout(props) {
-  const [FacId, setFacId] = useState('');
 
   return (
     <div className="index-grid-container">
       <div className="index-NavColumn">
-        <SearchBox setFacId={setFacId} FacId = {FacId}/>
+        <SearchBox />
         <PageLinks />
       </div>
       

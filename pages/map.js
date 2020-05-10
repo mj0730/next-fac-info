@@ -5,12 +5,12 @@ import * as facs from '../scripts/facility_info';
 const Facilites = () => {
 
   return (
-    <div id="container">
+    <div id="map-container">
       <Head>
-        <title>pointSixtyFive - Facility Information</title>
+        <title>pointSixtyFive - Facility and Locality Map</title>
       </Head>
 
-      <p>Placeholder</p>
+      <p>Map placeholder</p>
     </div>
 )}
 
