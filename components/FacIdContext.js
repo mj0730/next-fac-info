@@ -7,7 +7,6 @@ const FacIdContextProvider = (props) => {
   const storeFacId = FacId => {
     setFacId(FacId)
   }
- 
 
   return (
     <FacIdContext.Provider value={[FacId, storeFacId]}>
@@ -15,4 +14,5 @@ const FacIdContextProvider = (props) => {
     </FacIdContext.Provider>
   )
 }
+
 export default FacIdContextProvider;

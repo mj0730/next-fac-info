@@ -4,10 +4,10 @@ import FacIdContextProvider from '../components/FacIdContext';
 
 export default function MyApp({ Component, pageProps }) {
   return (
-      <FacIdContextProvider>
-    <Layout>
+    <FacIdContextProvider>
+      <Layout>
         <Component {...pageProps} />
-    </Layout>
-      </FacIdContextProvider>
+      </Layout>
+    </FacIdContextProvider>
   )
 }

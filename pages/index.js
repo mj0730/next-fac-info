@@ -1,19 +1,14 @@
-import Layout from '../components/layout';
 import Head from 'next/head';
 import { useState, useEffect, useContext } from 'react';
 import * as facs from '../scripts/facility_info';
 import FacilityPage from '../components/FacilityPage';
-import SearchBox from '../components/SearchBox';
-import PageLinks from '../components/PageLinks';
 import {FacIdContext} from '../components/FacIdContext';
 
 const Index = (props) => {
-  //const [FacId, setFacId] = useState('');
+  const [FacId] = useContext(FacIdContext)
   const [currentFacPay, setCurrentFacPay] = useState('');
   const [currentFacInfo, setCurrentFacInfo] = useState('');
   const [currentFacLocality, setCurrentFacLocality] = useState('');
-
-  const [FacId] = useContext(FacIdContext)
 
   //'Lock' valid facility into place for rendering
   useEffect(() => {
