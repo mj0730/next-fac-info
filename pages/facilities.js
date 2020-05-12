@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState, useEffect, useContext } from 'react';
-import * as facs from '../scripts/facility_info';
+import * as facs from '../scripts/facility_info';  //refactor to only import needed object
 import FacilityListItem from '../components/FacilityListItem';
 
 const Facilites = () => {
