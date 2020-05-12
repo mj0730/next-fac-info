@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState, useEffect, useContext } from 'react';
 import * as facs from '../scripts/facility_info';
 
-const Facilites = () => {
+const Map = () => {
 
   return (
     <div id="map-container">
@@ -14,4 +14,4 @@ const Facilites = () => {
     </div>
 )}
 
-export default Facilites;
+export default Map;
