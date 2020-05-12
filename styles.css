@@ -89,7 +89,8 @@ input#facId {
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  grid-template-areas: "NavColumn DisplayColumn"
+  grid-template-areas: "NavColumn DisplayColumn";
+  height: 100vh;
 }
 
 .index-NavColumn { 
