@@ -8,8 +8,10 @@ const FacIdContextProvider = (props) => {
     setFacId(FacId)
   }
 
+  const [displayFrontPage, setDisplayFrontPage] = useState(true);
+
   return (
-    <FacIdContext.Provider value={[FacId, storeFacId]}>
+    <FacIdContext.Provider value={[FacId, storeFacId, displayFrontPage, setDisplayFrontPage]}>
       {props.children}
     </FacIdContext.Provider>
   )
