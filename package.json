@@ -1,7 +1,7 @@
 {
-  "name": "7110react",
+  "name": "next-fac-info",
   "version": "1.0.0",
-  "description": "FAA JO 7110.65 in React",
+  "description": "FAA Facility Information",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,18 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mj0730/7110react.git"
+    "url": "git+https://github.com/mj0730/next-fac-info.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mj0730/7110react/issues"
+    "url": "https://github.com/mj0730/next-fac-info/issues"
   },
-  "homepage": "https://github.com/mj0730/7110react#readme",
+  "homepage": "https://github.com/mj0730/next-fac-info#readme",
   "dependencies": {
-    "@material-ui/core": "^4.9.13",
+    "@material-ui/core": "^4.9.14",
     "@material-ui/icons": "^4.9.1",
-    "next": "^9.3.6",
+    "material-table": "^1.57.2",
+    "next": "^9.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
