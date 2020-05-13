@@ -41,9 +41,14 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
 };
 
+const options = {sorting: true, filtering: true, header: true, search: false, paging: false, padding: 'dense', toolbar: false, showTitle: true,
+  headerStyle: {backgroundColor: '#01579b', color: '#FFF', fontFamily: 'Garamound', fontWeight: 'bold'},
+  rowStyle: {backgroundColor: '#000', color: '#FFF'},
+  filterCellStyle: {backgroundColor: '#333', color: '#FFF', paddingTop: 0, paddingBottom: 0}
+}
+
 const Facilites = () => {
   const facilityData = Object.values(FACILITIES);
-  console.log(facilityData)
 
   const columnHeaders = [{title: 'ID', field: 'id'}, {title: 'Name', field: 'name'}, {title: 'Level', field: 'level'}, {title: 'Type', field: 'type'}]
 
@@ -58,7 +63,7 @@ const Facilites = () => {
         columns={columnHeaders}
         data={facilityData}
         icons={tableIcons}
-        options={{sorting: true, filtering: true, search: false, paging: false}} 
+        options={options} 
       />
     </div>
 )}
