@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Pay = ({ currentFacPay }) => {
+const DetailsPay = ({ currentFacPay }) => {
   const pay = currentFacPay;
   
   let basePay = '';
@@ -35,4 +35,4 @@ const Pay = ({ currentFacPay }) => {
   )
 }
 
-export default Pay;
+export default DetailsPay;

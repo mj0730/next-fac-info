@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Layout from './layout'
-import Pay from './Pay';
-import Staffing from './Staffing';
-import Information from './Information';
+import DetailsPay from './DetailsPay';
+import DetailsStaffing from './DetailsStaffing';
+import DetailsInformation from './DetailsInformation';
 
 const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
   console.log(currentFacPay, currentFacInfo)
@@ -23,11 +23,13 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
       </header>
 
       <main>
-        <Pay currentFacPay = {currentFacPay} />
+        <DetailsInformation />
+        <DetailsPay currentFacPay = {currentFacPay} />
 
         <h2>Locality</h2>
         <p>Rate: {changeToPercentage(currentFacLocality[1]) + '%'}</p>
         <p>Area: {currentFacLocality[0]}</p>
+        <DetailsStaffing />
       </main>
     </div>
     )
