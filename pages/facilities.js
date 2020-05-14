@@ -58,7 +58,6 @@ const Facilites = () => {
 
   const handleRowClick = (e, rowData) => {
     e.preventDefault();
-    console.log('Clicked:' , rowData.id)
     storeFacId(rowData.id);
     Router.push('/');
   }

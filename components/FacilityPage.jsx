@@ -4,8 +4,6 @@ import DetailsStaffing from './DetailsStaffing';
 import DetailsInformation from './DetailsInformation';
 
 const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
-  console.log(currentFacPay, currentFacInfo)
-
   const changeToPercentage = (num) => {
     return (num * 100).toFixed(2);
   }
