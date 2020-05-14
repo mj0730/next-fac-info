@@ -17,7 +17,7 @@ const SearchBox = () => {
 
   return (
   <div id="search-box">
-    <form className="search-container">
+    <form className="search-container" onSubmit={(e)=>e.preventDefault()}>
     <SearchIcon style={{ flexShrink: '1', fontSize: 'inherit' }}/>
       <input type="text" id="facId" name="facId" minLength="3" maxLength="3" placeholder="Search Facility ID" value={FacId} onChange={handleChange}/>
     </form>
