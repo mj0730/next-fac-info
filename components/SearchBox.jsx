@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import {FacIdContext} from './FacIdContext';
+import Router from 'next/router';
 
 const SearchBox = () => {
   const [FacId, storeFacId] = useContext(FacIdContext)
@@ -8,6 +9,10 @@ const SearchBox = () => {
   const handleChange = (e) => {
     e.preventDefault();
     storeFacId(e.target.value.toUpperCase());
+
+    if (e.target.value.length === 3) {
+      Router.push('/');
+    }
   }
 
   return (
