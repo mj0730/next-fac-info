@@ -1,5 +1,7 @@
 import Head from 'next/head';
+import Router from 'next/router';
 import { useState, useEffect, useContext, forwardRef} from 'react';
+import {FacIdContext} from '../components/FacIdContext';
 import {FACILITIES} from '../scripts/facility_info';
 import MaterialTable from 'material-table';
 
@@ -17,7 +19,7 @@ import FilterList from '@material-ui/icons/FilterList';
 //import LastPage from '@material-ui/icons/LastPage';
 //import Remove from '@material-ui/icons/Remove';
 //import SaveAlt from '@material-ui/icons/SaveAlt';
-//import Search from '@material-ui/icons/Search';
+// import Search from '@material-ui/icons/Search';
 // import ViewColumn from '@material-ui/icons/ViewColumn';
 
 const tableIcons = {
@@ -42,6 +44,7 @@ const tableIcons = {
 
 
 const Facilites = () => {
+  const [FacId, storeFacId] = useContext(FacIdContext);
   const facilityData = Object.values(FACILITIES);
 
   const columnHeaders = [{title: 'ID', field: 'id'}, {title: 'Name', field: 'name'}, {title: 'Level', field: 'level'}, {title: 'Type', field: 'type'}]
@@ -49,8 +52,16 @@ const Facilites = () => {
   const options = {sorting: true, filtering: true, header: true, search: false, paging: false, padding: 'dense', toolbar: false, showTitle: true, color: '#FFF', backgroundColor: '#000',
   headerStyle: {backgroundColor: '#01579b', color: '#FFF', fontFamily: 'Garamound', fontWeight: 'bold'},
   rowStyle: { backgroundColor: '#000', color: '#FFF'},
-  filterCellStyle: {backgroundColor: '#333', color: '#FFF', paddingTop: 0, paddingBottom: 0}
+  filterCellStyle: {backgroundColor: '#333', color: '#FFF', paddingTop: 0, paddingBottom: 0},
+  actionsCellStyle: {backgroundColor: '#333', color: '#FFF', padding: 0, margin: 0}
 }
+
+  const handleRowClick = (e, rowData) => {
+    e.preventDefault();
+    console.log('Clicked:' , rowData.id)
+    storeFacId(rowData.id);
+    Router.push('/');
+  }
 
   return (
     <div id="container">
@@ -64,6 +75,7 @@ const Facilites = () => {
         data={facilityData}
         icons={tableIcons}
         options={options}
+        onRowClick={handleRowClick}
       />
     </div>
 )}
