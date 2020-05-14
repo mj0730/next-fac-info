@@ -124,7 +124,7 @@ const LOCALITY =
   },
 
   boston : {
-      fullName : `Boston, Worcester-Lawrence, Massachusetts - New Hampshire - Maine - Connecticut`,
+      fullName : `Boston, Worcester-Lawrence, Massachusetts-New Hampshire-Maine-Connecticut`,
       percentage : .2911,
       facilities : ['A90', 'BED', 'BOS', 'MHT', 'PVD', 'PWM', 'ZBW']
   },
@@ -154,7 +154,7 @@ const LOCALITY =
   },
 
   cincinnati : {
-      fullName : `Cincinnati-Hamilton, Ohio - Kentucky - Indiana`,
+      fullName : `Cincinnati-Hamilton, Ohio-Kentucky-Indiana`,
       percentage : .2055,
       facilities : ['CVG']
   },
@@ -286,13 +286,13 @@ const LOCALITY =
   },
 
   minneapolis : {
-      fullName : `Minneapolis-St. Paul, Minnesota - Wisconsin`,
+      fullName : `Minneapolis-St. Paul, Minnesota-Wisconsin`,
       percentage : .2466,
       facilities : ['FCT', 'M98', 'MIC', 'MSP', 'STP', 'ZMP']
   },
 
   newYork : {
-      fullName : `New York-Northern New Jersey-Long Island, New York - New Jersey - Connecticut - Pennsylvania`,
+      fullName : `New York-Northern New Jersey-Long Island, New York-New Jersey-Connecticut-Pennsylvania`,
       percentage : .3398,
       facilities : ['ABE', 'CDW', 'EWR', 'FRG', 'HPN', 'ISP', 'JFK', 'LGA', 'MMU', 'N90', 'POU', 'TEB', 'ZNY']
   },
@@ -310,7 +310,7 @@ const LOCALITY =
   },
 
   philadelphia : {
-      fullName : `Philadelphia-Wilmington-Atlantic City, Pennsylvania - New Jersey - Delaware - Maryland`,
+      fullName : `Philadelphia-Wilmington-Atlantic City, Pennsylvania-New Jersey-Delaware-Maryland`,
       percentage : .2604,
       facilities : ['ACY', 'ILG', 'PHL', 'PNE', 'RDG']
   },
@@ -328,7 +328,7 @@ const LOCALITY =
   },
 
   portland : {
-      fullName : `Portland-Salem, Oregon - Washington`,
+      fullName : `Portland-Salem, Oregon-Washington`,
       percentage : .2374,
       facilities : ['HIO', 'P80', 'PDX']
   },
@@ -394,7 +394,7 @@ const LOCALITY =
   },
 
   washington : {
-      fullName : `Washington-Baltimore, District of Columbia - Maryland - Virginia - West Virginia`,
+      fullName : `Washington-Baltimore, District of Columbia-Maryland-Virginia-West Virginia`,
       percentage : .3048,
       facilities : ['ADW', 'BWI', 'DCA', 'HEF', 'IAD', 'PCT', 'ZDC']
   },
@@ -463,7 +463,7 @@ const FACILITIES = {
     CHA: {id: 'CHA', name: 'Chatanooga Tower', level: 6, type: 'COMBINED TRACON TOWER', address: '5921 Pinehurst Ave', city: 'Chattanooga', state: 'TN', zip: '37421', phone : '423-855-6475', hours: '0600-2350', travelDays: 2},
     CHS: {id: 'CHS', name: 'Charleston Tower', level: 8, type: 'COMBINED TRACON TOWER', address: '5775 S Aviation Ave', city: 'Charleston', state: 'SC', zip: '29406', phone : '843-414-2800', hours: '0000-2359', travelDays: 3},
     CID: {id: 'CID', name: 'Cedar Rapids Tower', level: 5, type: 'COMBINED TRACON TOWER', address: '9455 Shepard Ct SW', city: 'Cedar Rapids', state: 'IA', zip: '52404', phone : '319-364-2344', hours: '0500-2330', travelDays: 2},
-    CKB: {id: 'CKB', name: 'Clarksburg Tower', level: 5, type: 'COMBINED TRACON TOWER', address: '2500 Aviation Way', city: 'Bridgeport', state: 'WV', zip: '26330', phone : '304-842-4465', hours: '0600-2300 MON - FRI, 0700-2300 SAT - SUN', travelDays: 3},
+    CKB: {id: 'CKB', name: 'Clarksburg Tower', level: 5, type: 'COMBINED TRACON TOWER', address: '2500 Aviation Way', city: 'Bridgeport', state: 'WV', zip: '26330', phone : '304-842-4465', hours: '0600-2300 MON-FRI, 0700-2300 SAT-SUN', travelDays: 3},
     CLE: {id: 'CLE', name: 'Cleveland Tower', level: 8, type: 'COMBINED TRACON TOWER', address: '5300 Riverside Dr', city: 'Cleveland', state: 'OH', zip: '44135', phone : '216-898-2020', hours: '0000-2359', travelDays: 3},
     CLT: {id: 'CLT', name: 'Charlotte Tower', level: 12, type: 'COMBINED TRACON TOWER', address: '5507 Josh BirMham Pkwy', city: 'Charlotte', state: 'NC', zip: '28208', phone : '704-359-1000', hours: '0000-2359', travelDays: 3},
     CMA: {id: 'CMA', name: 'Camarillo Tower', level: 6, type: 'TOWER WITH RADAR', address: '797 Aviation Dr', city: 'Camarillo', state: 'CA', zip: '93010', phone : '805-388-9730', hours: '0700-2100', travelDays: 3},
@@ -479,7 +479,7 @@ const FACILITIES = {
     CSG: {id: 'CSG', name: 'Columbus Tower', level: 4, type: 'TOWER WITH RADAR', address: '3250 W Britt David Rd', city: 'Columbus', state: 'GA', zip: '31909', phone : '706-323-4363', hours: '0900-2100', travelDays: 2},
     CVG: {id: 'CVG', name: 'Cincinnati Tower', level: 8, type: 'COMBINED TRACON TOWER', address: '56 New Price Pike', city: 'Erlanger', state: 'KY', zip: '41018', phone : '859-372-6400', hours: '0000-2359', travelDays: 2},
     D01: {id: 'D01', name: 'Denver TRACON', level: 12, type: 'TRACON', address: '26705 E 68th Ave', city: 'Denver', state: 'CO', zip: '80249', phone : '303-342-1500', hours: '0000-2359', travelDays: 2},
-    D10: {id: 'D10', name: 'Dallas - Ft Worth TRACON', level: 12, type: 'TRACON', address: '2401 International Pkwy', city: 'DFW Airport', state: 'TX', zip: '75261', phone : '972-615-2500', hours: '0000-2359', travelDays: 1},
+    D10: {id: 'D10', name: 'Dallas-Ft Worth TRACON', level: 12, type: 'TRACON', address: '2401 International Pkwy', city: 'DFW Airport', state: 'TX', zip: '75261', phone : '972-615-2500', hours: '0000-2359', travelDays: 1},
     D21: {id: 'D21', name: 'Detroit TRACON', level: 11, type: 'TRACON', address: 'Detroit Metro Airport', city: 'Detroit', state: 'MI', zip: '48242', phone : '734-955-5000', hours: '0000-2359', travelDays: 3},
     DAB: {id: 'DAB', name: 'Daytona Beach Tower', level: 9, type: 'COMBINED TRACON TOWER', address: '2302 Bellevue Ave', city: 'Daytona Beach', state: 'FL', zip: '32114', phone : '386-226-3900', hours: '0000-2359', travelDays: 3},
     DAL: {id: 'DAL', name: 'Dallas Love Tower', level: 8, type: 'TOWER WITH RADAR', address: '8100 Aviation Pl', city: 'Dallas', state: 'TX', zip: '75235', phone : '214-353-1500', hours: '0000-2359', travelDays: 1},
@@ -613,7 +613,7 @@ const FACILITIES = {
     PAO: {id: 'PAO', name: 'Palo Alto Tower', level: 6, type: 'TOWER WITH RADAR', address: '1909 Embarcadero Rd', city: 'Palo Alto', state: 'CA', zip: '94303', phone : '650-493-0641', hours: '0700-2100', travelDays: 4},
     PBI: {id: 'PBI', name: 'Palm Beach Tower', level: 9, type: 'COMBINED TRACON TOWER', address: '3550 Belvedere Road', city: 'West Palm Beach', state: 'FL', zip: '33406', phone : '561-683-1867', hours: '0000-2359', travelDays: 4},
     PCT: {id: 'PCT', name: 'Potomac TRACON', level: 12, type: 'TRACON', address: '3699 Macintosh Dr', city: 'Warrenton', state: 'VA', zip: '20187', phone : '540-349-7503', hours: '0000-2359', travelDays: 3},
-    PDK: {id: 'PDK', name: 'DeKalb - Peachtree Tower', level: 7, type: 'TOWER WITH RADAR', address: '2001 Airport Rd', city: 'Chamblee', state: 'GA', zip: '30341', phone : '678-495-5230', hours: '0630-2300 MON-FRI 0700-2300 SAT-SUN', travelDays: 2},
+    PDK: {id: 'PDK', name: 'DeKalb-Peachtree Tower', level: 7, type: 'TOWER WITH RADAR', address: '2001 Airport Rd', city: 'Chamblee', state: 'GA', zip: '30341', phone : '678-495-5230', hours: '0630-2300 MON-FRI 0700-2300 SAT-SUN', travelDays: 2},
     PDX: {id: 'PDX', name: 'Portland Tower', level: 8, type: 'TOWER WITH RADAR', address: '7108 NE Airport Way', city: 'Portland', state: 'OR', zip: '97218', phone : '503-493-7500', hours: '0000-2359', travelDays: 5},
     PHF: {id: 'PHF', name: 'Patrick Henry Tower', level: 5, type: 'TOWER WITH RADAR', address: '2402 G Ave', city: 'Newport News', state: 'VA', zip: '23602', phone : ' 757-875-5080', hours: '0600-2300', travelDays: 3},
     PHL: {id: 'PHL', name: 'Philadelphia Tower', level: 11, type: 'COMBINED TRACON TOWER', address: '15 Hog Island Rd', city: 'Philadelphia', state: 'PA', zip: '19153', phone : '215-492-4100', hours: '0000-2359', travelDays: 4},
