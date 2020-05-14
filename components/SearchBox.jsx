@@ -6,6 +6,7 @@ const SearchBox = () => {
   const [FacId, storeFacId] = useContext(FacIdContext)
 
   const handleChange = (e) => {
+    e.preventDefault();
     storeFacId(e.target.value.toUpperCase());
   }
 

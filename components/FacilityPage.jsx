@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Layout from './layout'
 import DetailsPay from './DetailsPay';
 import DetailsStaffing from './DetailsStaffing';
 import DetailsInformation from './DetailsInformation';
