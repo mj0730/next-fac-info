@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ErrorModal = ({facId}) => {
+const ErrorModal = ({facId, displayErrorModal}) => {
 
   return (
-    <div id="modal">
+    <div id="modal" className={displayErrorModal ? "fade-out" : ""}>
       <p>{`${facId} is not a valid ID. Please enter a valid facility ID.`}</p>
     </div>
   )
