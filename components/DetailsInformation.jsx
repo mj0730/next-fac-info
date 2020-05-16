@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const DetailsInformation = props => (
+const DetailsInformation = ({currentFacInfo}) => (
   <section id="fac-Information">
 
     <p>This is the info section</p>
@@ -9,3 +10,7 @@ const DetailsInformation = props => (
 )
 
 export default DetailsInformation;
+
+DetailsInformation.PropTypes = {
+  currentFacInfo: PropTypes.object.isRequired
+}
