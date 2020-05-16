@@ -105,13 +105,16 @@ input#facId {
 
 /* Error Message Modal */
 #modal {
-  background-color: #002f5c;
+  background-color: rgba(0, 50, 90, 0.70);
   border: 2px solid #fff;
   border-radius: 5px;
-  width: 50px;
+  width: 25%;
+  margin-left: -12.5%;
+  padding: 10px;
   position: absolute;
   top: 20px;
   left: 50%;
   color: #fff;
+  font-size: 1.3em;
   z-index: 1000;
 }
