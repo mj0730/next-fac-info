@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const DetailsPay = ({ currentFacPay }) => {
   const pay = currentFacPay;
@@ -36,3 +37,7 @@ const DetailsPay = ({ currentFacPay }) => {
 }
 
 export default DetailsPay;
+
+DetailsPay.propTypes = {
+  currentFacPay: PropTypes.object.isRequired
+}

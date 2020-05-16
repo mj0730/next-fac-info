@@ -6,7 +6,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import TrackChangesIcon from '@material-ui/icons/TrackChanges';
 import MapIcon from '@material-ui/icons/Map';
 
-const PageLinks = (props) => {
+const PageLinks = () => {
   const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
 
   const handleClick = () => {

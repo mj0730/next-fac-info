@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import DetailsPay from './DetailsPay';
 import DetailsStaffing from './DetailsStaffing';
@@ -20,7 +21,7 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
       </header>
 
       <main>
-        <DetailsInformation />
+        <DetailsInformation currentFacInfo = {currentFacInfo} />
         <DetailsPay currentFacPay = {currentFacPay} />
 
         <h2>Locality</h2>
@@ -33,3 +34,9 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
 }
 
 export default FacilityPage
+
+FacilityPage.propTypes = {
+  currentFacInfo: PropTypes.object.isRequired,
+  currentFacLocality: PropTypes.array.isRequired,
+  currentFacPay: PropTypes.object.isRequired
+};
