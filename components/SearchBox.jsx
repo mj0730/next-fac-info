@@ -4,7 +4,7 @@ import {FacIdContext} from './FacIdContext';
 import Router from 'next/router';
 
 const SearchBox = () => {
-  const [FacId, storeFacId] = useContext(FacIdContext)
+  const [FacId, storeFacId] = useContext(FacIdContext);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -22,6 +22,7 @@ const SearchBox = () => {
       <input type="text" id="facId" name="facId" minLength="3" maxLength="3" placeholder="Search Facility ID" value={FacId} onChange={handleChange}/>
     </form>
   </div>
+
 )}
 
 export default SearchBox;
