@@ -11,6 +11,6 @@ const DetailsInformation = ({currentFacInfo}) => (
 
 export default DetailsInformation;
 
-DetailsInformation.PropTypes = {
+DetailsInformation.propTypes = {
   currentFacInfo: PropTypes.object.isRequired
 }
