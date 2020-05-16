@@ -112,9 +112,23 @@ input#facId {
   margin-left: -12.5%;
   padding: 10px;
   position: absolute;
-  top: 20px;
+  top: -200px;
   left: 50%;
   color: #fff;
   font-size: 1.3em;
-  z-index: 1000;
+  overflow: hidden;
+}
+
+#modal.fade-out {
+  top: 20px;
+  animation-name: fadeout;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  0% {opacity: 1;}
+  100% {opacity: 0; top: -20px}
 }
