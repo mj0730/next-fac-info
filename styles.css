@@ -4,11 +4,11 @@ body {
   margin: 0;
 }
 
-/* Main page layout: 2 columns */
+/* Main page layout: 5 columns 4 rows */
 .index-grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr) 40px;
+  /* grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr) 40px; */
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 100vh;
@@ -116,11 +116,6 @@ input#facId {
   color: #FFF;
 }
 
-#page-links ul li a:hover {
-  text-shadow: 0px 0px 2px #14518a;
-  background-color: rgba(0, 50, 90, 0.70);
-}
-
 #page-links ul li svg {
   font-size: inherit;
   position: relative;
@@ -159,7 +154,7 @@ input#facId {
 
 /* Media Queries */
 /* Phones */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 320px) {
   .index-grid-container {
     grid-template-rows: 68px repeat(2, 1fr) 40px;
   }
@@ -170,10 +165,12 @@ input#facId {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    border-bottom: 2px solid #14518a;
   }
   
   .index-DisplayColumn { 
-    grid-area: 2 / 1 / 4 / 6; 
+    grid-area: 2 / 1 / 4 / 6;
+    padding: 0 3px;
   }
   
   .index-Footer {
@@ -209,5 +206,68 @@ input#facId {
 }
 
 /* Tablets */
+@media only screen and (min-width: 601px) {
+  #search-box {
+    width: 50%;
+  }
+
+  #page-links .hide-text {
+    display: inline;
+  }
+}
 
 /* Desktop */
+@media only screen and (min-width: 992px) {
+  .index-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr) 40px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+    
+  }
+  
+  .index-NavColumn { 
+    grid-area: 1 / 1 / 4 / 2;; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: none;
+    border-right: 2px solid #14518a;
+  }
+  
+  .index-DisplayColumn { 
+    grid-area: 1 / 2 / 4 / 6; 
+  }
+  
+  .index-Footer {
+    grid-area : 4 / 1 / 5 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+  }
+  
+  .index-Footer a, .index-Footer a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  #search-box {
+    width: 100%;
+  }
+
+  #page-links ul {
+    flex-direction: column;
+  }
+
+  #page-links ul li {
+    width: 100%;
+  }
+
+  #page-links ul li:hover {
+    text-shadow: 0px 0px 2px #14518a;
+    background-color: rgba(0, 50, 90, 0.70);
+  }
+}

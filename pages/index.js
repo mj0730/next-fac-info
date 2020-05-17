@@ -35,7 +35,7 @@ const Index = () => {
   }, [FacId])
 
   return (
-    <div>
+    <main>
       {(displayFrontPage) ? 
         <FrontPage /> :
         <FacilityPage currentFacPay = {currentFacPay} currentFacInfo = {currentFacInfo} currentFacLocality = {currentFacLocality} />
@@ -44,7 +44,7 @@ const Index = () => {
         (currentFacInfo.id) &&
         <ErrorModal facId = {currentFacInfo.id} displayErrorModal= {displayErrorModal}/>
       }
-    </div>
+    </main>
   )
     
 }
