@@ -10,7 +10,7 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
   }
 
   return (
-    <div id="facility-info">
+    <div id="facility-info" className="grid-container fac-page-grid">
       <Head>
         <title>{`${currentFacInfo.name} - pointSixtyFive`}</title>
       </Head>
