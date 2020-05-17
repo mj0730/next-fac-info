@@ -48,15 +48,33 @@ body {
   text-align: center;
 }
 
-/* */
+/* Facility Details */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+}
+.fac-page-grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2.5em repeat(4, 1fr);
 }
 
-.grid-child {
+#facility-info header {
+  grid-area: 1 / 1 / 2 / 3;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 2em;
+}
 
+#facility-info header h1 {margin: 0;}
+
+#facility-info main {
+  grid-area: 2 / 1 / 6 / 3;
+  
+}
+.payscale-grid {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 /* Search box */
