@@ -13,7 +13,10 @@ function Layout(props) {
       <div className="index-DisplayColumn">
         {props.children}
       </div>
+
+      <footer className="index-Footer"><a href="https://pointsixtyfive.com">pointSixtyFive.com</a></footer>
     </div>
+
   )
 }
 
