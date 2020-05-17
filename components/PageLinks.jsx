@@ -17,9 +17,9 @@ const PageLinks = () => {
   return (
     <nav id="page-links">
       <ul>
-        <li><Link href="/"><a onClick={handleClick}><HomeIcon/> Home</a></Link></li>
-        <li> <Link href="/facilities"><a><TrackChangesIcon/> Facilities</a></Link></li>
-        <li><Link href="/map"><a><MapIcon/> Map</a></Link></li>
+        <li><Link href="/"><a onClick={handleClick}><HomeIcon/> <span className="hide-text">Home</span></a></Link></li>
+        <li><Link href="/facilities"><a><TrackChangesIcon/> <span className="hide-text">Facilities</span></a></Link></li>
+        <li><Link href="/map"><a><MapIcon/> <span className="hide-text">Map</span></a></Link></li>
       </ul>
     </nav>
   )
