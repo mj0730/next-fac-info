@@ -1,7 +1,44 @@
 body {
   background-color: #000;
+  color: #fff;
 }
 
+/* Main page layout: 2 columns */
+.index-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr) 40px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas: "NavColumn DisplayColumn Footer";
+  height: 100%;
+  
+}
+
+.index-NavColumn { 
+  grid-area: 1 / 1 / 4 / 2;; 
+  background-color: #0e0e0e;
+}
+
+.index-DisplayColumn { 
+  grid-area: 1 / 2 / 4 / 5; 
+  background-color: #0e0e0e;
+}
+
+.index-Footer {
+  grid-area : 4 / 1 / 5 / 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.index-Footer a, .index-Footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -81,26 +118,6 @@ input#facId {
   font-size: inherit;
   position: relative;
   top: 4px;
-}
-/* Main page layout: 2 columns */
-.index-grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  grid-template-areas: "NavColumn DisplayColumn";
-  height: 100vh;
-}
-
-.index-NavColumn { 
-  grid-area: 1 / 1 / 2 / 2;; 
-  background-color: slategray;
-}
-
-.index-DisplayColumn { 
-  grid-area: 1 / 2 / 2 / 5; 
-  background-color: steelblue;
 }
 
 /* Error Message Modal */
