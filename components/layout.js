@@ -14,7 +14,7 @@ function Layout(props) {
         {props.children}
       </div>
 
-      <footer className="index-Footer"><a href="https://pointsixtyfive.com">pointSixtyFive.com</a></footer>
+      <footer className="index-Footer"><img src="circle_logo.png" alt="Logo"/> <a href="https://pointsixtyfive.com">pointSixtyFive.com</a></footer>
     </div>
 
   )
