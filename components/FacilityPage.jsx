@@ -9,6 +9,14 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
     return (num * 100).toFixed(2);
   }
 
+  const toTitleCase = (str) => {
+    str = str.toLowerCase()
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+
+      return str.join(' ')
+    }
+
   return (
     <div id="facility-info" className="grid-container fac-page-grid">
       <Head>
@@ -16,8 +24,16 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
       </Head>
     
       <header>
-        <h1>{currentFacInfo.id}</h1>
-        <p>{currentFacInfo.name}</p>
+          <div className="flex-col">
+          <h1>{currentFacInfo.id}</h1>
+          <p>{currentFacInfo.name}</p>
+
+          </div>
+
+          <div className="flex-col align-flex-end">
+            <h1>Level {currentFacInfo.level}</h1>
+            <p>{toTitleCase(currentFacInfo.type)}</p>
+          </div>
       </header>
 
       <main>
