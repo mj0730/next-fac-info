@@ -60,7 +60,8 @@ body {
 }
 .fac-page-grid {
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 2.5em repeat(4, 1fr);
+  grid-template-rows: 4.5em repeat(4, 1fr);
+  margin-top: 5px;
 }
 
 #facility-info header {
@@ -76,6 +77,23 @@ body {
   margin: 0;
 }
 
+#facility-info .flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-flex-end {
+  align-items: flex-end;
+}
+
+.align-flex-start{
+  align-items: flex-start;
+}
+
+.flex-col p {
+  margin: 0;
+}
+
 #facility-info main {
   grid-area: 2 / 1 / 6 / 3;
   
@@ -83,6 +101,27 @@ body {
 .payscale-grid {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
+}
+
+/* Facility Details */
+#fac-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  margin: 6px 2px;
+}
+
+#fac-information .flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.fac-information-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 .5em;
 }
 
 /* Search box */
