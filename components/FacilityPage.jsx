@@ -9,7 +9,7 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
     return (num * 100).toFixed(2);
   }
 
-  const toTitleCase = (str) => {
+  const toTitleCase = (str = '') => {
     str = str.toLowerCase()
       .split(' ')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -31,11 +31,12 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
           </div>
 
           <div className="flex-col align-flex-end">
-            <h1>Level {currentFacInfo.level}</h1>
+            <h1>{(currentFacInfo.level !== undefined) && `Level ${currentFacInfo.level}`}</h1>
             <p>{toTitleCase(currentFacInfo.type)}</p>
           </div>
       </header>
 
+      {(currentFacInfo.level !== undefined) &&
       <main>
         <DetailsInformation currentFacInfo = {currentFacInfo} />
         <DetailsPay currentFacPay = {currentFacPay} />
@@ -45,6 +46,7 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
         <p>Area: {currentFacLocality[0]}</p>
         <DetailsStaffing />
       </main>
+      }
     </div>
     )
 }
