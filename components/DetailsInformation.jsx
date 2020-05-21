@@ -8,9 +8,15 @@ const DetailsInformation = ({currentFacInfo}) => (
       <div className="fac-information-item">{currentFacInfo.city}</div>
       <div className="fac-information-item">{currentFacInfo.state}</div>
       <div className="fac-information-item">{currentFacInfo.zip}</div>
-
     </div>
     
+    <div className="flex-row">
+      <div className="fac-information-item">{currentFacInfo.phone}</div>
+      <div className="fac-information-item">{currentFacInfo.hours}</div>
+      <div className="fac-information-item">Travel Days: {currentFacInfo.travelDays}</div>
+
+    </div>
+
   </section>
 
 )
