@@ -98,9 +98,47 @@ body {
   grid-area: 2 / 1 / 6 / 3;
   
 }
-.payscale-grid {
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+
+#payscale {
+  width: 60%;
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 1.1em;
+  padding: 5px;
+}
+
+#payscale td {
+  padding: 6px;
+}
+
+.pay-header {
+  background-color: rgba(20, 81, 138, .5);
+  font-weight: bold;
+}
+
+.pay-header th {
+  padding: 6px;
+}
+
+.flex-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-list li {
+  margin-right: .5em;
+}
+
+#locality {
+  list-style-type: none;
+}
+
+#locality li:first-of-type {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-right: 1em;
 }
 
 /* Facility Details */
