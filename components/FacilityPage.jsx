@@ -5,9 +5,6 @@ import DetailsStaffing from './DetailsStaffing';
 import DetailsInformation from './DetailsInformation';
 
 const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
-  const changeToPercentage = (num) => {
-    return (num * 100).toFixed(2);
-  }
 
   const toTitleCase = (str = '') => {
     str = str.toLowerCase()
@@ -39,11 +36,9 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
       {(currentFacInfo.level !== undefined) &&
       <main>
         <DetailsInformation currentFacInfo = {currentFacInfo} />
-        <DetailsPay currentFacPay = {currentFacPay} />
+        <DetailsPay currentFacPay = {currentFacPay} currentFacLocality={currentFacLocality}/>
 
-        <h2>Locality</h2>
-        <p>Rate: {changeToPercentage(currentFacLocality[1]) + '%'}</p>
-        <p>Area: {currentFacLocality[0]}</p>
+        
         <DetailsStaffing />
       </main>
       }
