@@ -49,7 +49,7 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
           <li>{`${changeToPercentage(currentFacLocality[1])}%`}</li>
         </ul>
 
-        {currentFacPay.differentialAmount !== 0 && 
+        {currentFacPay.differentialType && 
         <ul className="flex-list pay-factors">
           <li>Differential</li>
           <li>{currentFacPay.differentialType}</li>
