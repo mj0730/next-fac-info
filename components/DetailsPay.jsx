@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import StandardPayTable from './StandardPayTable';
+import DifferentialPayTable from './DifferentialPayTable';
+
 
 const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
   const pay = currentFacPay;
@@ -25,21 +28,9 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
             <th scope="col">AG</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>{basePay[0]}</td>
-            {basePay[2] > 0 ? <td>{basePay[1]}</td> : <td>N/A</td>}
-            {basePay[3] > 0 ? <td>{basePay[2]}</td> : <td>N/A</td>}
-            {basePay[4] > 0 ? <td>{basePay[3]}</td> : <td>N/A</td>}
-            <td rowSpan="2">{basePay[5]}</td>
-          </tr>
-          <tr>
-            <td>{basePay[1]}</td>
-            {basePay[2] > 0 ? <td>{basePay[2]}</td> : <td>N/A</td>}
-            {basePay[3] > 0 ? <td>{basePay[3]}</td> : <td>N/A</td>}
-            {basePay[4] > 0 ? <td>{basePay[4]}</td> : <td>N/A</td>}
-          </tr>
-        </tbody>
+        {!currentFacPay.differentialType ? 
+        <StandardPayTable basePay = {basePay} /> :
+        <DifferentialPayTable basePay = {basePay} differential = {currentFacPay.differentialAmount} /> }
       </table>
 
       <h2>Pay Factors</h2>

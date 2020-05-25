@@ -7,13 +7,14 @@ import DetailsInformation from './DetailsInformation';
 const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
 
   const toTitleCase = (str = '') => {
-    if(str = "ARTCC") return str
-    else {
+    if(str === "ARTCC") {
+      return str;
+    } else {
       str = str.toLowerCase()
         .split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1));
 
-        return str.join(' ')
+        return str.join(' ');
       }
     }
 
