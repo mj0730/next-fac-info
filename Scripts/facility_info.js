@@ -1007,10 +1007,12 @@ function getAffordabilityDifferential(facility, payTable) {
     }
 }
 //pay is cola, plus (post diff-cola), capped at post diff   
-function getPostDifferntial(facility) {
-  let postDifferntialAmount = [];
+function getPostDifferntial(facility, payTable) {
+  const postDifference = DIFFERENTIAL[facility][1] - getCola(facility);
   
-  return postDifferntialAmount = DIFFERENTIAL[facility][1] - getCola(facility);
+  const modifiedPayTable = payTable.map(x => Math.round(x * postDifference));
+
+  return {'amount' : modifiedPayTable, 'percentage' : postDifference, 'postDiff' : DIFFERENTIAL[facility][1]}
 }
 
 function getDifferentialType(facility) {
@@ -1056,7 +1058,7 @@ function completePayTable(facility) {
             differentialAmount = getAffordabilityDifferential(facility, basePayTable);
             //else run post diff function
         } else {
-            differentialAmount = getPostDifferntial(facility);
+            differentialAmount = getPostDifferntial(facility, basePayTable);
         }
     } else {
         differentialAmount = 0;

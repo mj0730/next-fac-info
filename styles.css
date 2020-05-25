@@ -137,13 +137,15 @@ body {
 
 .flex-list li {
   margin-right: .5em;
+  align-self: center;
 }
 
 .pay-factors {
   list-style-type: none;
   justify-content: space-between;
   background-color: #222222;
-  padding: 3px;
+  padding: 4px 3px;
+  border-bottom: 1px solid #000;
 }
 
 .pay-factors li:first-of-type {
