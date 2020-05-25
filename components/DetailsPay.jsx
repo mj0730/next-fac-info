@@ -43,22 +43,32 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
       </table>
 
       <h2>Pay Factors</h2>
-        <ul id="locality" className="flex-list">
+        <ul className="flex-list pay-factors">
           <li>Locality</li>
-          <li>{changeToPercentage(currentFacLocality[1]) + '%'} - {currentFacLocality[0]}</li>
+          <li>{currentFacLocality[0]}</li>
+          <li>{`${changeToPercentage(currentFacLocality[1])}%`}</li>
         </ul>
-        <ul id="cip" className="flex-list">
-          <li>CIP</li>
-          <li>{currentFacPay['CIP%']}</li>
-        </ul>
-        <ul className="flex-list">
-          <li>COLA</li>
-          <li></li>
-        </ul>
-        <ul className="flex-list">
+
+        {currentFacPay.differentialAmount !== 0 && 
+        <ul className="flex-list pay-factors">
           <li>Differential</li>
-          <li></li>
-        </ul>
+          <li>{currentFacPay.differentialType}</li>
+          <li>{`${changeToPercentage(currentFacPay.differntialPercentage)}%`}</li>
+        </ul> }
+
+        {currentFacPay['CIP%'] > 0 &&
+        <ul className="flex-list pay-factors">
+          <li>CIP</li>
+          <li>{`${currentFacPay['CIP%']}%`}</li>
+        </ul> }
+
+        {currentFacPay['COLA%'] > 0 &&
+        <ul className="flex-list pay-factors">
+          <li>COLA</li>
+          <li>{`${currentFacPay['COLA%']}%`}</li>
+        </ul> }
+
+       
 
     </section>
 
