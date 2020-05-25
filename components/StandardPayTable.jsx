@@ -12,7 +12,7 @@ const StandardPayTable = ({basePay, cip}) => (
         </tr>
         <tr>
         <StandardPayTableCell basePay={basePay} cip ={cip} i = {1} />
-          {basePay[2] > 0 ? <StandardPayTableCell basePay={basePay} cip ={cip} i = {1} /> : <td>N/A</td>}
+          {basePay[2] > 0 ? <StandardPayTableCell basePay={basePay} cip ={cip} i = {2} /> : <td>N/A</td>}
           {basePay[3] > 0 ? <StandardPayTableCell basePay={basePay} cip ={cip} i = {3} /> : <td>N/A</td>}
           {basePay[4] > 0 ? <StandardPayTableCell basePay={basePay} cip ={cip} i = {4} />: <td>N/A</td>}
         </tr>
