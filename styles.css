@@ -96,11 +96,15 @@ body {
 
 #facility-info main {
   grid-area: 2 / 1 / 6 / 3;
-  
+}
+
+/* Facility Pay */
+#fac-pay h2 {
+  margin-left: .5em;
 }
 
 #payscale {
-  width: 60%;
+  width: 100%;
   text-align: center;
   border-collapse: collapse;
   font-size: 1.1em;
@@ -109,11 +113,15 @@ body {
 
 #payscale td {
   padding: 6px;
+  background-color: #222222;
+  border: 1px solid #000;
 }
 
 .pay-header {
   background-color: rgba(20, 81, 138, .5);
   font-weight: bold;
+  border-top: 2px solid #14518a;
+  border-bottom: 2px solid #14518a;
 }
 
 .pay-header th {
@@ -131,16 +139,24 @@ body {
   margin-right: .5em;
 }
 
-#locality {
+.pay-factors {
   list-style-type: none;
+  justify-content: space-between;
+  background-color: #222222;
+  padding: 3px;
 }
 
-#locality li:first-of-type {
+.pay-factors li:first-of-type {
   font-weight: bold;
   font-size: 1.1em;
   margin-right: 1em;
+  margin-left: 8px;
 }
 
+.loc-area {
+  font-weight: normal; 
+  font-size: .75em;
+}
 /* Facility Details */
 #fac-information {
   display: flex;
