@@ -29,8 +29,8 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
           </tr>
         </thead>
         {!currentFacPay.differentialType ? 
-        <StandardPayTable basePay = {basePay} /> :
-        <DifferentialPayTable basePay = {basePay} differential = {currentFacPay.differentialAmount} /> }
+        <StandardPayTable basePay = {basePay} cip ={currentFacPay.CIP}/> :
+        <DifferentialPayTable basePay = {basePay} differential = {currentFacPay.differentialAmount} cip = {currentFacPay.CIP}/> }
       </table>
 
       <h2>Pay Factors</h2>

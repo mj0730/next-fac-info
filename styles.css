@@ -159,6 +159,10 @@ body {
   font-weight: normal; 
   font-size: .75em;
 }
+
+.cip {
+  font-size: .5em;
+}
 /* Facility Details */
 #fac-information {
   display: flex;
