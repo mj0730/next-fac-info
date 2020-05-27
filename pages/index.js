@@ -11,9 +11,14 @@ const Index = () => {
   const [currentFacInfo, setCurrentFacInfo] = useState('');
   const [currentFacLocality, setCurrentFacLocality] = useState('');
   const [displayErrorModal, setDisplayErrorModal] = useState(false);
+  const [idForModal, setIdForModal] = useState('');
 
-  const showModal = () => {
+  let facIdForModal;
+  const showModal = (input) => {
     if (displayErrorModal) setDisplayErrorModal(false);
+    
+    setIdForModal(input);
+    
     setTimeout(() => {
       setDisplayErrorModal(true);
     }, 100); 
@@ -30,7 +35,7 @@ const Index = () => {
       setCurrentFacInfo({id: `${FacId}`, name: 'Please use a valid Facility ID.'});
       setCurrentFacPay('');
       setCurrentFacLocality('');
-      showModal();
+      showModal(FacId);
     }
   }, [FacId])
 
@@ -41,8 +46,8 @@ const Index = () => {
         <FacilityPage currentFacPay = {currentFacPay} currentFacInfo = {currentFacInfo} currentFacLocality = {currentFacLocality} />
       }
       { 
-        (currentFacInfo.id) &&
-        <ErrorModal facId = {currentFacInfo.id} displayErrorModal= {displayErrorModal}/>
+        (idForModal) &&
+        <ErrorModal facId = {idForModal} displayErrorModal= {displayErrorModal}/>
       }
     </main>
   )
