@@ -5,30 +5,47 @@ import DetailsStaffing from './DetailsStaffing';
 import DetailsInformation from './DetailsInformation';
 
 const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
-  const changeToPercentage = (num) => {
-    return (num * 100).toFixed(2);
-  }
+
+  const toTitleCase = (str = '') => {
+    if(str === "ARTCC") {
+      return str;
+    } else {
+      str = str.toLowerCase()
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1));
+
+        return str.join(' ');
+      }
+    }
 
   return (
-    <div id="facility-info">
+    <div id="facility-info" className="grid-container fac-page-grid">
       <Head>
         <title>{`${currentFacInfo.name} - pointSixtyFive`}</title>
       </Head>
     
       <header>
-        <h1>{currentFacInfo.id}</h1>
-        <p>{currentFacInfo.name}</p>
+          <div className="flex-col">
+          <h1>{currentFacInfo.id}</h1>
+          <p>{currentFacInfo.name}</p>
+
+          </div>
+
+          <div className="flex-col align-flex-end">
+            <h1>{(currentFacInfo.level !== undefined) && `Level ${currentFacInfo.level}`}</h1>
+            <p>{toTitleCase(currentFacInfo.type)}</p>
+          </div>
       </header>
 
+      {(currentFacInfo.level !== undefined) &&
       <main>
         <DetailsInformation currentFacInfo = {currentFacInfo} />
-        <DetailsPay currentFacPay = {currentFacPay} />
+        <DetailsPay currentFacPay = {currentFacPay} currentFacLocality={currentFacLocality}/>
 
-        <h2>Locality</h2>
-        <p>Rate: {changeToPercentage(currentFacLocality[1]) + '%'}</p>
-        <p>Area: {currentFacLocality[0]}</p>
+        
         <DetailsStaffing />
       </main>
+      }
     </div>
     )
 }

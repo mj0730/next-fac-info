@@ -989,25 +989,30 @@ function getCola(facility) {
 //Check for differential and return the modifier and type of differential, if it exists
     //afford diff is greater of base X 10%, or base X (difference in locality)
     //if old locality + .1 < new locality, use new locality
-function getAffordabilityDifferential(facility) {
+function getAffordabilityDifferential(facility, payTable) {
+    const localityResult = getLocality(facility);
     let localityDifference = DIFFERENTIAL[facility][1] - localityResult[1];
     let differentialAmount = [];
 
     if (localityDifference > .1) {
-        basePayTable.forEach(x => {
+        payTable.forEach(x => {
             differentialAmount.push(Math.round(x * localityDifference)) 
         });
-        return differentialAmount;
+        return {'amount' : differentialAmount, 'percentage' : localityDifference};
     } else {
-        basePayTable.forEach(x => {
+        payTable.forEach(x => {
             differentialAmount.push(Math.round(x * .1))
         });
-        return differentialAmount;
+        return {'amount' : differentialAmount, 'percentage' : localityDifference};
     }
 }
 //pay is cola, plus (post diff-cola), capped at post diff   
-function getPostDifferntial(facility) {
-    return postDifferntialAmount = DIFFERENTIAL[facility][1] - getCola(facility);
+function getPostDifferntial(facility, payTable) {
+  const postDifference = DIFFERENTIAL[facility][1] - getCola(facility);
+  
+  const modifiedPayTable = payTable.map(x => Math.round(x * postDifference));
+
+  return {'amount' : modifiedPayTable, 'percentage' : postDifference, 'postDiff' : DIFFERENTIAL[facility][1]}
 }
 
 function getDifferentialType(facility) {
@@ -1036,7 +1041,7 @@ function completePayTable(facility) {
     });
     
     //COLA is subject to the payscale max
-    let colaPercentage = getCola(facility) * 100;
+    let colaPercentage = (getCola(facility) * 100).toFixed(2);
     let colaAmounts = basePayTable.map(x => Math.round(x * colaPercentage / 100));
 
     //enforce pay cap with cola
@@ -1047,11 +1052,13 @@ function completePayTable(facility) {
     let differentialAmount, differentialType;
     if (getDifferentialType(facility)) {
         //check which type. if its afford, run that function
+        differentialType = getDifferentialType(facility);
+
         if (differentialType === 'Affordability') {
-            differentialAmount = getAffordabilityDifferential(facility);
+            differentialAmount = getAffordabilityDifferential(facility, basePayTable);
             //else run post diff function
         } else {
-            differentialAmount = getPostDifferntial(facility);
+            differentialAmount = getPostDifferntial(facility, basePayTable);
         }
     } else {
         differentialAmount = 0;
@@ -1066,7 +1073,8 @@ function completePayTable(facility) {
         }
     }
 
-    return {'PayTable' : basePayTable, 'CIP%' : cipPercentage, 'CIP' : cipAmounts, 'COLA%' : colaPercentage, 'COLA' : colaAmounts, 'differentialType' : differentialType, 'differentialAmount' : differentialAmount};
+    return {'PayTable' : basePayTable, 'CIP%' : cipPercentage, 'CIP' : cipAmounts, 'COLA%' : colaPercentage, 'COLA' : colaAmounts, 'differentialType' : differentialType, 'differentialAmount' : differentialAmount.amount,
+  'differntialPercentage' : differentialAmount.percentage};
 }
 
 export {FACILITIES, LOCALITY, COLA, CIP, DIFFERENTIAL, completePayTable, getLocality};
