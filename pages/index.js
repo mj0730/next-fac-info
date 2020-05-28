@@ -31,6 +31,7 @@ const Index = () => {
       setCurrentFacInfo(facs.FACILITIES[FacId]);
       setCurrentFacLocality(facs.getLocality(FacId));
       setDisplayFrontPage(false);
+      if (displayErrorModal) setDisplayErrorModal(false);
     } else if (FacId.length === 3) {
       setCurrentFacInfo({id: `${FacId}`, name: 'Please use a valid Facility ID.'});
       setCurrentFacPay('');
