@@ -1,8 +1,8 @@
 import { MongoClient } from 'mongodb';
 import nextConnect from 'next-connect';
-import dbconnect from '../env/dbconnect';
+import dbUri from '../env/dbUri';
 
-const client = new MongoClient(dbconnect, {
+const client = new MongoClient(dbUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
