@@ -8,7 +8,7 @@ import ErrorModal from '../components/ErrorModal';
 
  //Get facility info from the database
  export async function getStaticProps(context) {
-  const res = await fetch('http://localhost:3001/api/facility');
+  const res = await fetch('http://localhost:3001/api/getAllFacilityData');
   const result = await res.json();
 
   const data = {};
