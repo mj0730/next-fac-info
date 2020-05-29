@@ -6,7 +6,17 @@ import FacilityPage from '../components/FacilityPage';
 import FrontPage from '../components/FrontPage';
 import ErrorModal from '../components/ErrorModal';
 
-const Index = () => {
+ //Get facility info from the database
+ export async function getStaticProps(context) {
+  const res = await fetch('http://localhost:3001/api/facility');
+  const data = await res.json();
+
+  return {
+    props: { data },
+  }
+}
+
+const Index = ({data}) => {
   const [DbInfo, setDbInfo] = useContext(DbInfoContext);
   const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
   const [currentFacPay, setCurrentFacPay] = useState('');
@@ -14,6 +24,9 @@ const Index = () => {
   const [currentFacLocality, setCurrentFacLocality] = useState('');
   const [displayErrorModal, setDisplayErrorModal] = useState(false);
   const [idForModal, setIdForModal] = useState('');
+
+  //set context from database
+  setDbInfo(data);
 
   //Modal
   let facIdForModal;
@@ -25,12 +38,6 @@ const Index = () => {
     setTimeout(() => {
       setDisplayErrorModal(true);
     }, 100); 
-  }
-
-  //Get facility info from the database
-
-  const getData = () => {
-
   }
 
   //'Lock' valid facility into place for rendering
