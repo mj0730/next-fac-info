@@ -29,7 +29,9 @@ const Index = ({data}) => {
   const [idForModal, setIdForModal] = useState('');
 
   //set context from database
-  setDbInfo(data);
+  useEffect(() => {
+    setDbInfo(data);
+  }, [])
 
   //Modal
   let facIdForModal;
