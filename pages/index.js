@@ -1,11 +1,13 @@
 import { useState, useEffect, useContext } from 'react';
 import * as facs from '../scripts/facility_info';
-import {FacIdContext} from '../components/FacIdContext';
+import { DbInfoContext } from '../components/DbInfoContext';
+import { FacIdContext } from '../components/FacIdContext';
 import FacilityPage from '../components/FacilityPage';
 import FrontPage from '../components/FrontPage';
 import ErrorModal from '../components/ErrorModal';
 
 const Index = () => {
+  const [DbInfo, setDbInfo] = useContext(DbInfoContext);
   const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
   const [currentFacPay, setCurrentFacPay] = useState('');
   const [currentFacInfo, setCurrentFacInfo] = useState('');
@@ -13,6 +15,7 @@ const Index = () => {
   const [displayErrorModal, setDisplayErrorModal] = useState(false);
   const [idForModal, setIdForModal] = useState('');
 
+  //Modal
   let facIdForModal;
   const showModal = (input) => {
     if (displayErrorModal) setDisplayErrorModal(false);
@@ -22,6 +25,12 @@ const Index = () => {
     setTimeout(() => {
       setDisplayErrorModal(true);
     }, 100); 
+  }
+
+  //Get facility info from the database
+
+  const getData = () => {
+
   }
 
   //'Lock' valid facility into place for rendering
@@ -44,7 +53,7 @@ const Index = () => {
     <main>
       {(displayFrontPage) ? 
         <FrontPage /> :
-        <FacilityPage currentFacPay = {currentFacPay} currentFacInfo = {currentFacInfo} currentFacLocality = {currentFacLocality} />
+          <FacilityPage currentFacPay = {currentFacPay} currentFacInfo = {currentFacInfo} currentFacLocality = {currentFacLocality}/>
       }
       { 
         (idForModal) &&

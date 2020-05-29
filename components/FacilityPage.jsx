@@ -3,8 +3,11 @@ import Head from 'next/head';
 import DetailsPay from './DetailsPay';
 import DetailsStaffing from './DetailsStaffing';
 import DetailsInformation from './DetailsInformation';
+import { DbInfoContext } from './DbInfoContext';
+import { useContext } from 'react';
 
 const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
+  const [DbInfo] = useContext(DbInfoContext);
 
   const toTitleCase = (str = '') => {
     if(str === "ARTCC") {
@@ -40,10 +43,10 @@ const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
       {(currentFacInfo.level !== undefined) &&
       <main>
         <DetailsInformation currentFacInfo = {currentFacInfo} />
-        <DetailsPay currentFacPay = {currentFacPay} currentFacLocality={currentFacLocality}/>
+        <DetailsPay currentFacPay = {currentFacPay} currentFacLocality={currentFacLocality} />
 
         
-        <DetailsStaffing />
+        <DetailsStaffing data = {DbInfo} />
       </main>
       }
     </div>
