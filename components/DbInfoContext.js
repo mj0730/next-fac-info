@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 export const DbInfoContext = createContext();
 
 const DbInfoContextProvider = (props) => {
-  const [ DbInfo, setDbInfo ] = useState({test: {id : 'this is some placeholder text'}});
+  const [ DbInfo, setDbInfo ] = useState({});
   
   return (
     <DbInfoContext.Provider value={[DbInfo, setDbInfo]}>

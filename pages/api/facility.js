@@ -7,11 +7,8 @@ handler.use(middleware);
 
 handler.get(async (req, res) => {
     try {
-        //let search = req.body
-        console.log(req);
-        let doc = await req.db.collection("facilitydata").findOne();
-        console.log(doc);
-        res.status(200).json(doc);
+        let data = await req.db.collection("facilitydata").find().toArray();
+        res.status(200).json(data);
     } catch (error) {
         throw new Error('Error retreiving from the database')
     };
