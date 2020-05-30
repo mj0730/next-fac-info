@@ -23,7 +23,7 @@
     "@material-ui/core": "^4.10.0",
     "@material-ui/icons": "^4.9.1",
     "material-table": "^1.58.2",
-    "mongodb": "^3.5.7",
+    "mongodb": "^3.5.8",
     "next": "^9.4.4",
     "next-connect": "^0.6.6",
     "react": "^16.13.1",
