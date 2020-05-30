@@ -16,13 +16,25 @@ const SearchBox = () => {
   }
 
   return (
-  <div id="search-box">
-    <form className="search-container" onSubmit={(e)=>e.preventDefault()}>
-    <SearchIcon style={{ flexShrink: '1', fontSize: 'inherit' }}/>
-      <input type="text" id="facId" name="facId" minLength="3" maxLength="3" spellCheck="false" autoCorrect="no" placeholder="Search Facility ID" value={FacId} onChange={handleChange} onFocus={e => storeFacId('')}/>
-    </form>
-  </div>
-
-)}
+    <div id="search-box">
+      <form className="search-container" onSubmit={(e) => e.preventDefault()}>
+        <SearchIcon style={{ flexShrink: "1", fontSize: "inherit" }} />
+        <input
+          type="text"
+          id="facId"
+          name="facId"
+          minLength="3"
+          maxLength="3"
+          spellCheck="false"
+          autoCorrect="no"
+          placeholder="Search Facility ID"
+          value={FacId}
+          onChange={handleChange}
+          onFocus={(e) => storeFacId("")}
+          onBlur={(e) => storeFacId("")}
+        />
+      </form>
+    </div>
+  );}
 
 export default SearchBox;
