@@ -1,61 +1,63 @@
 import MUIDataTable from 'mui-datatables';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import {FACILITIES} from '../scripts/facility_info';
+import {FacIdContext} from '../components/FacIdContext';
+import { useState, useEffect, useContext, forwardRef} from 'react';
+import Router from 'next/router';
+
+
 
 const MTable = () => {
+  const [FacId, storeFacId] = useContext(FacIdContext);
+
   const facilityData = Object.values(FACILITIES);
+
+  const getMuiTheme = () => createMuiTheme({
+    overrides: {
+      MUIDataTableBodyCell: {
+        root: {
+          backgroundColor: "#FFF"
+        }
+      }
+    }
+  })
+
+  const handleRowClick = (e) => {
+    const clickedRowId = e[0];
+    storeFacId(clickedRowId);
+    Router.push('/');
+  }
+
+  const options = {
+    filterType: 'checkbox',
+    selectableRows: 'multiple',
+    responsive: 'stacked',
+    rowsPerPageOptions: [10, 25, 50],
+    rowHover: true,
+    fixedHeaderOptions: {xAxis: true, yAxis: true},
+    sort: true,
+    searchPlaceholder: 'Search...',
+    print: true,
+    download: true,
+    onRowClick: handleRowClick,
+  };
+
   const columns = [
-    {
-     name: "name",
-     label: "Name",
-     options: {
-      filter: true,
-      sort: true,
-     }
-    },
-    {
-     name: "company",
-     label: "Company",
-     options: {
-      filter: true,
-      sort: false,
-     }
-    },
-    {
-     name: "city",
-     label: "City",
-     options: {
-      filter: true,
-      sort: false,
-     }
-    },
-    {
-     name: "state",
-     label: "State",
-     options: {
-      filter: true,
-      sort: false,
-     }
-    },
-   ];
-   
-   const data = [
-    { name: "Joe James", company: "Test Corp", city: "Yonkers", state: "NY" },
-    { name: "John Walsh", company: "Test Corp", city: "Hartford", state: "CT" },
-    { name: "Bob Herm", company: "Test Corp", city: "Tampa", state: "FL" },
-    { name: "James Houston", company: "Test Corp", city: "Dallas", state: "TX" },
-   ];
-   
-   const options = {
-     filterType: 'checkbox',
-   };
-   const columnHeaders = [{label: 'ID', name: 'id'}, {label: 'Name', name: 'name'}, {Label: 'Level', name: 'level'}, {Label: 'Type', name: 'type'}]
+    {label: 'ID', name: 'id', options: {filter: true, sort: false, searchable: true,}}, 
+    {label: 'Name', name: 'name', options: {filter: true, sort: false, searchable: true,}}, 
+    {Label: 'Level', name: 'level', options: {filter: true, sort: false, searchable: false,}}, 
+    {Label: 'Type', name: 'type', options: {filter: true, sort: false, searchable: false,}}
+  ]
 
   return (
-    <MUIDataTable
-      title={'This is a Title'}
-      data={facilityData}
-      columns={columnHeaders}
-    />
+    <MuiThemeProvider theme={getMuiTheme()}>
+      <MUIDataTable
+        title={'This is a Title'}
+        data={facilityData}
+        columns={columns}
+        options={options}
+      />
+    </MuiThemeProvider>
   )
 }
 
