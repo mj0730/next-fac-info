@@ -1,12 +1,8 @@
 import MUIDataTable from 'mui-datatables';
-import {FacIdContext} from '../components/FacIdContext';
 import {FACILITIES} from '../scripts/facility_info';
-
-
 
 const MTable = () => {
   const facilityData = Object.values(FACILITIES);
-
   const columns = [
     {
      name: "name",
@@ -52,13 +48,13 @@ const MTable = () => {
    const options = {
      filterType: 'checkbox',
    };
+   const columnHeaders = [{label: 'ID', name: 'id'}, {label: 'Name', name: 'name'}, {Label: 'Level', name: 'level'}, {Label: 'Type', name: 'type'}]
 
   return (
     <MUIDataTable
       title={'This is a Title'}
-      data={data}
-      columns={columns}
-      options={options}
+      data={facilityData}
+      columns={columnHeaders}
     />
   )
 }
