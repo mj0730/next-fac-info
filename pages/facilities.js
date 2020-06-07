@@ -4,6 +4,9 @@ import { useState, useEffect, useContext, forwardRef} from 'react';
 import {FacIdContext} from '../components/FacIdContext';
 import {FACILITIES} from '../scripts/facility_info';
 import MaterialTable from 'material-table';
+import MTable from '../components/MTable';
+import MUIDataTable from 'mui-datatables';
+
 
 /* Icon Imports */
 //import AddBox from '@material-ui/icons/AddBox';
@@ -68,14 +71,16 @@ const Facilites = () => {
         <title>pointSixtyFive - Facility Information</title>
       </Head>
 
-      <MaterialTable
+      {/*<MaterialTable
         title='Facility'
         columns={columnHeaders}
         data={facilityData}
         icons={tableIcons}
         options={options}
         onRowClick={handleRowClick}
-      />
+      />*/}
+
+      <MTable />
     </div>
 )}
 
