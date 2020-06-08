@@ -9,6 +9,7 @@ const MTable = ({title}) => {
   const [FacId, storeFacId] = useContext(FacIdContext);
 
   const facilityData = Object.values(FACILITIES);
+  console.log(facilityData);
 
   const theme = createMuiTheme({
     overrides: {
@@ -61,9 +62,10 @@ const MTable = ({title}) => {
       },
       MuiTableCell: {
         head: {
-          fontWeight: "bold",
           backgroundColor: "#000",
           color: "#FFF",
+          fontWeight: "bold",
+          padding: "8px 16px",
         },
       },
       MUIDataTableHeadCell: {
@@ -85,6 +87,41 @@ const MTable = ({title}) => {
         list: {
           border: "1px solid #FFF",
         }
+      },
+      MUIDataTableViewCol: {
+        label: {
+          color: "rgba(255, 255, 255, .87)",
+        },
+        title: {
+          color: "#FFF",
+        }
+      },
+      MuiCheckbox: {
+        root: {
+          color: "rgba(255, 255, 255, .55)",
+        }
+      },
+      MUIDataTableFilter: {
+        root: {
+          backgroundColor: "#0F0F0F",
+        },
+        checkboxFormControlLabel: {
+          color: "inherit",
+        },
+        checkboxListTitle: {
+          color: "inherit",
+        },
+        title: {
+          color: "inherit",
+        }
+      },
+      MUIDataTableFilterList: {
+        root: {
+          margin: "0px 16px 4px 16px",
+        },
+        chip: {
+          margin: "0 2px",
+        }
       }
     }
   })
@@ -100,7 +137,6 @@ const MTable = ({title}) => {
     selectableRows: 'none',
     print: true,
     download: true,
-    //onRowClick: handleRowClick,
     onCellClick: (colData, {colIndex}) => { 
       if (colIndex === 0) {
         Router.push('/');
@@ -110,8 +146,8 @@ const MTable = ({title}) => {
   };
 
   const columns = [
-    {label: 'ID', name: 'id', options: {filter: true, sort: true, searchable: true,}}, 
-    {label: 'Name', name: 'name', options: {filter: true, sort: true, searchable: true,}}, 
+    {label: 'ID', name: 'id', options: {filter: false, sort: true, searchable: true,}}, 
+    {label: 'Name', name: 'name', options: {filter: false, sort: true, searchable: true,}}, 
     {label: 'Level', name: 'level', options: {filter: true, sort: true, searchable: false,}}, 
     {label: 'Type', name: 'type', options: {filter: true, sort: true, searchable: false,}}
   ]
