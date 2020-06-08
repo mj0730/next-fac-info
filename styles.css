@@ -395,4 +395,9 @@ input#facId {
     text-shadow: 0px 0px 2px #14518a;
     background-color: rgba(0, 50, 90, 0.70);
   }
+
+  /* ovverride for MUI table */
+  tr.MuiTableRow-root {
+    display: table-row !important;
+  }
 }

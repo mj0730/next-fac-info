@@ -80,7 +80,7 @@ const Facilites = () => {
         onRowClick={handleRowClick}
       />*/}
 
-      <MTable />
+      <MTable title={"Facility Information"}/>
     </div>
 )}
 
