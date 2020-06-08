@@ -1,15 +1,11 @@
-import MUIDataTable from 'mui-datatables';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { useContext } from 'react';
 import Router from 'next/router';
-import {FACILITIES} from '../scripts/facility_info';
+import MUIDataTable from 'mui-datatables';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import {FacIdContext} from '../components/FacIdContext';
 
-const MTable = ({title}) => {
+const MTable = ({title, data, columns}) => {
   const [FacId, storeFacId] = useContext(FacIdContext);
-
-  const facilityData = Object.values(FACILITIES);
-  console.log(facilityData);
 
   const theme = createMuiTheme({
     overrides: {
@@ -46,7 +42,6 @@ const MTable = ({title}) => {
       MUIDataTableBodyCell: {
         root: {
           color: "#FFF",
-          cursor: "pointer",
         },
         cellStackedSmall: {
           borderBottom: "none",
@@ -124,7 +119,7 @@ const MTable = ({title}) => {
         }
       }
     }
-  })
+  });
 
   const options = {
     filterType: 'checkbox',
@@ -145,18 +140,11 @@ const MTable = ({title}) => {
     }
   };
 
-  const columns = [
-    {label: 'ID', name: 'id', options: {filter: false, sort: true, searchable: true,}}, 
-    {label: 'Name', name: 'name', options: {filter: false, sort: true, searchable: true,}}, 
-    {label: 'Level', name: 'level', options: {filter: true, sort: true, searchable: false,}}, 
-    {label: 'Type', name: 'type', options: {filter: true, sort: true, searchable: false,}}
-  ]
-
   return (
     <MuiThemeProvider theme={theme}>
       <MUIDataTable
         title={title}
-        data={facilityData}
+        data={data}
         columns={columns}
         options={options}
       />
