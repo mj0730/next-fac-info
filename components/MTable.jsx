@@ -6,7 +6,7 @@ import {FacIdContext} from '../components/FacIdContext';
 
 const MTable = ({title, data, columns}) => {
   const [FacId, storeFacId] = useContext(FacIdContext);
-
+  
   const theme = createMuiTheme({
     overrides: {
       MuiPaper: {
