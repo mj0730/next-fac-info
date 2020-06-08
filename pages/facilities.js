@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useContext } from 'react';
+import { ButtonGroup, Button } from '@material-ui/core';
 import { FacIdContext } from '../components/FacIdContext';
 import { DbInfoContext } from '../components/DbInfoContext';
 import { FACILITIES } from '../scripts/facility_info';
@@ -58,6 +59,15 @@ const Facilites = () => {
       <Head>
         <title>pointSixtyFive - Facility Information</title>
       </Head>
+
+      <nav id="table-select">
+      <ButtonGroup color="primary" size="large" aria-label="outlined primary button group">
+        <Button>Information</Button>
+        <Button>Staffing</Button>
+        <Button>Pay</Button>
+      </ButtonGroup>
+      </nav> 
+
 
       <MTable title={"Facility Information"} data={facilityData} columns={columnsFacility}/>
       <MTable title={"Staffing"} data={staffingData} columns={columnsStaffing} />
