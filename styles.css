@@ -396,6 +396,21 @@ input#facId {
     background-color: rgba(0, 50, 90, 0.70);
   }
 
+  nav#table-select {
+    display: flex;
+    justify-content: right;
+    margin: 2px;
+  }
+
+  nav#table-select button {
+    color: #90caf9;
+    border-color: #90caf9;
+    width: 150px;
+  }
+  
+  nav#table-select button:hover {
+    background-color: #90caf922;
+  }
   /* ovverride for MUI table */
   tr.MuiTableRow-root {
     display: table-row !important;
