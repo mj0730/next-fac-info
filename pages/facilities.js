@@ -11,7 +11,18 @@ const Facilites = () => {
 
   const facilityData = Object.values(FACILITIES);
   const staffingData = Object.values(DbInfo);
-  console.log(staffingData)
+  
+  //massage decimals into percentages
+  staffingData.forEach(item => {
+    item['Current % CPC to Target'] = changeToPercentage(item['Current % CPC to Target']);
+    item['Current % CPC to Trainees'] = changeToPercentage(item['Current % CPC to Trainees']);
+    item['Training Success Rate'] = changeToPercentage(item['Training Success Rate']);
+    item['Projected % to Target'] = changeToPercentage(item['Projected % to Target']);
+  });
+
+  function changeToPercentage (num) {
+    return (num * 100).toFixed(1);
+  };
 
   // const handleRowClick = (e, rowData) => {
   //   e.preventDefault();
@@ -30,9 +41,9 @@ const Facilites = () => {
     {label: 'ID', name: 'Facility ID', options: {filter: true, sort: true, searchable: true, filterType: 'dropdown'}},
     {label: 'CPC', name: 'Current # of CPC On-Board minus Temps minus LTH', options: {filter: true, sort: true, searchable: true,}},
     {label: 'CPC Target', name: 'CPC Target', options: {filter: true, sort: true, searchable: true,}},
-    {label: 'CPC To Target%', name: 'Current % CPC to Target', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'CPC To Target %', name: 'Current % CPC to Target', options: {filter: true, sort: true, searchable: true,}},
     {label: 'Trainees', name: 'ATCS in Training minus LTH', options: {filter: true, sort: true, searchable: true,}},
-    {label: 'Trainee To CPC%', name: 'Current % CPC to Trainees', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'Trainee To CPC %', name: 'Current % CPC to Trainees', options: {filter: true, sort: true, searchable: true,}},
     {label: 'Training Success Rate', name: 'Training Success Rate', options: {filter: true, sort: true, searchable: true,}},
     {label: 'Training Time (yrs)', name: 'Training Time Years', options: {filter: true, sort: true, searchable: true,}},
     {label: 'ERR Category', name: 'ERR Category', options: {filter: true, sort: true, searchable: true,}},
