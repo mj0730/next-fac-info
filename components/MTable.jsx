@@ -8,11 +8,13 @@ const MTable = ({title, data, columns}) => {
   const [FacId, storeFacId] = useContext(FacIdContext);
 
   const theme = createMuiTheme({
+    palette: {
+      type: "dark",
+    },
     overrides: {
       MuiPaper: {
         root: {
-          color: "#FFF",
-          backgroundColor: "#080808"
+          backgroundColor: "#0C0C0C",
         }
       },
       MuiTable: {
@@ -25,16 +27,6 @@ const MTable = ({title, data, columns}) => {
           backgroundColor: "#14518A",
           color: "#FFF",
         }
-      },
-      MuiIconButton: {
-        root: {
-          color: "rgba(255, 255, 255, .75)",
-        }
-      },
-      MuiInputBase: {
-        input: {
-          color: "#FFF",
-        },
       },
       MUIDataTableBodyRow: {
         responsiveStacked: {
@@ -73,47 +65,15 @@ const MTable = ({title, data, columns}) => {
           backgroundColor: "#14518A"
         }
       },
-      MuiTablePagination: {
-        root: {
-          color: "#FFF",
-        }
-      },
-      MuiSelect: {
-        icon: {
-          color: "rgba(0, 0, 0, .75)",
-        }
-      },
       MuiMenu: {
         list: {
           border: "1px solid #FFF",
         }
       },
-      MUIDataTableViewCol: {
-        label: {
-          color: "rgba(255, 255, 255, .87)",
-        },
-        title: {
-          color: "#FFF",
-        }
-      },
-      MuiCheckbox: {
-        root: {
-          color: "rgba(255, 255, 255, .55)",
-        }
-      },
       MUIDataTableFilter: {
         root: {
-          backgroundColor: "#0F0F0F",
+          backgroundColor: "#1C1C1C",
         },
-        checkboxFormControlLabel: {
-          color: "inherit",
-        },
-        checkboxListTitle: {
-          color: "inherit",
-        },
-        title: {
-          color: "inherit",
-        }
       },
       MUIDataTableFilterList: {
         root: {

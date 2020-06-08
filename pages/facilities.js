@@ -27,7 +27,7 @@ const Facilites = () => {
   ];
 
   const columnsStaffing = [
-    {label: 'ID', name: 'Facility ID', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'ID', name: 'Facility ID', options: {filter: true, sort: true, searchable: true, filterType: 'dropdown'}},
     {label: 'CPC', name: 'Current # of CPC On-Board minus Temps minus LTH', options: {filter: true, sort: true, searchable: true,}},
     {label: 'CPC Target', name: 'CPC Target', options: {filter: true, sort: true, searchable: true,}},
     {label: 'CPC To Target%', name: 'Current % CPC to Target', options: {filter: true, sort: true, searchable: true,}},
