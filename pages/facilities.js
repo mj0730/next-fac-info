@@ -27,7 +27,19 @@ const Facilites = () => {
   ];
 
   const columnsStaffing = [
-    {label: 'col1', name: 'Facility ID', options: {filter: true, sort: true, searchable: true,}}
+    {label: 'ID', name: 'Facility ID', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'CPC', name: 'Current # of CPC On-Board minus Temps minus LTH', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'CPC Target', name: 'CPC Target', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'CPC To Target%', name: 'Current % CPC to Target', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'Trainees', name: 'ATCS in Training minus LTH', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'Trainee To CPC%', name: 'Current % CPC to Trainees', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'Training Success Rate', name: 'Training Success Rate', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'Training Time (yrs)', name: 'Training Time Years', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'ERR Category', name: 'ERR Category', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'Projected %', name: 'Projected % to Target', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'Gains (NatAvg)', name: 'Possible Gains to National Average', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'Gains (Target)', name: 'Possible Gains to Target', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'Losses', name: 'Possible Losses', options: {filter: true, sort: true, searchable: true,}},
   ];
 
   return (
