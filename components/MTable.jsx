@@ -6,7 +6,7 @@ import {FacIdContext} from '../components/FacIdContext';
 
 const MTable = ({title, data, columns}) => {
   const [FacId, storeFacId] = useContext(FacIdContext);
-  
+
   const theme = createMuiTheme({
     overrides: {
       MuiPaper: {
@@ -30,6 +30,11 @@ const MTable = ({title, data, columns}) => {
         root: {
           color: "rgba(255, 255, 255, .75)",
         }
+      },
+      MuiInputBase: {
+        input: {
+          color: "#FFF",
+        },
       },
       MUIDataTableBodyRow: {
         responsiveStacked: {
