@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import Router from 'next/router';
 import MUIDataTable from 'mui-datatables';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import {FacIdContext} from '../components/FacIdContext';
+import { FacIdContext } from '../components/FacIdContext';
 
 const MTable = ({title, data, columns}) => {
   const [FacId, storeFacId] = useContext(FacIdContext);
