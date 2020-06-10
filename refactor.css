@@ -1,0 +1,183 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Garamond', 'Baskerville', 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main page layout (Mobile) */
+.index-grid-container {
+  display: grid;
+  grid-template-rows: 68px repeat(2, 1fr) 40px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+}
+
+.index-nav-column { 
+  grid-area: 1 / 1 / 2 / 6;; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #0e0e0e;
+  border-bottom: 2px solid #14518a;
+}
+
+.index-display-column { 
+  grid-area: 2 / 1 / 4 / 6;
+  background-color: #0e0e0e;
+  padding: 0 3px;
+}
+
+.index-Footer {
+  grid-area : 4 / 1 / 5 / 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  border-top: 2px solid #14518a;
+}
+
+.index-Footer a, .index-Footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.index-Footer img {
+  max-width: 24px;
+  margin-right: 5px;
+}
+
+/* Link Menu */
+#page-links {
+  margin-top: 0;
+  width: 100%;
+}
+
+#page-links ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#page-link ul li {
+  font-size: 1.8em;
+  text-align: center;
+  line-height: normal;
+  position: relative;
+}
+
+#page-links .hide-text {
+  display: none;
+}
+
+#search-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Front page content */
+#front-page {
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Facility Details */
+.fac-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 4.5em repeat(4, 1fr);
+  margin-top: 5px;
+}
+
+#facility-info header {
+  grid-area: 1 / 1 / 2 / 3;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 2em;
+}
+
+#facility-info header h1 {
+  margin: 0;
+}
+
+#facility-info .flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-flex-end {
+  align-items: flex-end;
+}
+
+.align-flex-start{
+  align-items: flex-start;
+}
+
+.flex-col p {
+  margin: 0;
+}
+
+#facility-info main {
+  grid-area: 2 / 1 / 6 / 3;
+}
+
+/* Tablets */
+@media only screen and (min-width: 601px) {
+  #search-box {
+    width: 50%;
+  }
+
+  #page-links .hide-text {
+    display: inline;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+  .index-grid-container {
+    grid-template-rows: repeat(3, 1fr) 40px;
+  }
+  
+  .index-nav-column { 
+    grid-area: 1 / 1 / 4 / 2;; 
+    flex-direction: column;
+    border-bottom: none;
+  }
+  
+  .index-display-column { 
+    grid-area: 1 / 2 / 4 / 6; 
+  }
+  
+  #search-box {
+    width: 100%;
+  }
+
+  #page-links {
+    margin-top: 1em;
+  }
+
+  #page-links ul {
+    flex-direction: column;
+  }
+
+  #page-links ul li {
+    width: 100%;
+    line-height: 2;
+  }
+
+  #page-links ul li:hover {
+    text-shadow: 0px 0px 2px #14518a;
+    background-color: rgba(0, 50, 90, 0.70);
+  }
+}

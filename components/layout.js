@@ -5,12 +5,12 @@ function Layout(props) {
 
   return (
     <div className="index-grid-container">
-      <div className="index-NavColumn">
+      <div className="index-nav-column">
         <SearchBox />
         <PageLinks />
       </div>
       
-      <div className="index-DisplayColumn">
+      <div className="index-display-column">
         {props.children}
       </div>
 
