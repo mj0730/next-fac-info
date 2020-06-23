@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ButtonGroup, Button } from '@material-ui/core';
 import { FacIdContext } from '../components/FacIdContext';
 import { DbInfoContext } from '../components/DbInfoContext';
@@ -9,6 +9,7 @@ import MTable from '../components/MTable';
 const Facilites = () => {
   const [FacId, storeFacId] = useContext(FacIdContext);
   const [DbInfo, setDbInfo] = useContext(DbInfoContext);
+  const [tableToDisplay, setTableToDisplay] = useState('')
 
   const facilityData = Object.values(FACILITIES);
   const staffingData = Object.values(DbInfo);
@@ -23,6 +24,11 @@ const Facilites = () => {
 
   function changeToPercentage (num) {
     return (num * 100).toFixed(1);
+  };
+
+  const handleClick = (e) => {
+    console.log(e.target.innerHTML);
+    setTableToDisplay(e.target.innerHTML);
   };
 
   // const handleRowClick = (e, rowData) => {
@@ -54,6 +60,11 @@ const Facilites = () => {
     {label: 'Losses', name: 'Possible Losses', options: {filter: true, sort: true, searchable: true,}},
   ];
 
+  const columnsPay = [
+    {label: 'col1', name: 'test1', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'col2', name: 'test2', options: {filter: true, sort: true, searchable: false,}},
+  ];
+
   return (
     <div id="container">
       <Head>
@@ -62,15 +73,16 @@ const Facilites = () => {
 
       <nav id="table-select">
       <ButtonGroup color="primary" size="large" aria-label="outlined primary button group">
-        <Button>Information</Button>
-        <Button>Staffing</Button>
-        <Button>Pay</Button>
+        <Button onClick={handleClick}>Information</Button>
+        <Button onClick={handleClick}>Staffing</Button>
+        <Button onClick={handleClick}>Pay</Button>
       </ButtonGroup>
       </nav> 
 
 
-      <MTable title={"Facility Information"} data={facilityData} columns={columnsFacility}/>
-      <MTable title={"Staffing"} data={staffingData} columns={columnsStaffing} />
+      { tableToDisplay === 'Information' && <MTable title={'Facility Information'} data={facilityData} columns={columnsFacility} /> }
+      { tableToDisplay === 'Staffing' && <MTable title={'Staffing'} data={staffingData} columns={columnsStaffing} /> }
+      { tableToDisplay === 'Pay' && <MTable title={'Pay'} data={[]} columns={columnsPay} /> }
     </div>
 )}
 
