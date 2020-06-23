@@ -27,15 +27,9 @@ const Facilites = () => {
   };
 
   const handleClick = (e) => {
-    console.log(e.target.innerHTML);
-    setTableToDisplay(e.target.innerHTML);
+    e.target.value === undefined ?
+      setTableToDisplay(e.target.firstChild.data.toLowerCase()) : setTableToDisplay(e.target.value);
   };
-
-  // const handleRowClick = (e, rowData) => {
-  //   e.preventDefault();
-  //   storeFacId(rowData.id);
-  //   Router.push('/');
-  // }
 
   const columnsFacility = [
     {label: 'ID', name: 'id', options: {filter: false, sort: true, searchable: true,}}, 
@@ -73,16 +67,16 @@ const Facilites = () => {
 
       <nav id="table-select">
       <ButtonGroup color="primary" size="large" aria-label="outlined primary button group">
-        <Button onClick={handleClick}>Information</Button>
-        <Button onClick={handleClick}>Staffing</Button>
-        <Button onClick={handleClick}>Pay</Button>
+        <Button onClick={handleClick} value={'information'}>Information</Button>
+        <Button onClick={handleClick} value={'staffing'}>Staffing</Button>
+        <Button onClick={handleClick} value={'pay'}>Pay</Button>
       </ButtonGroup>
       </nav> 
 
 
-      { tableToDisplay === 'Information' && <MTable title={'Facility Information'} data={facilityData} columns={columnsFacility} /> }
-      { tableToDisplay === 'Staffing' && <MTable title={'Staffing'} data={staffingData} columns={columnsStaffing} /> }
-      { tableToDisplay === 'Pay' && <MTable title={'Pay'} data={[]} columns={columnsPay} /> }
+      { tableToDisplay === 'information' && <MTable title={'Facility Information'} data={facilityData} columns={columnsFacility} /> }
+      { tableToDisplay === 'staffing' && <MTable title={'Staffing'} data={staffingData} columns={columnsStaffing} /> }
+      { tableToDisplay === 'pay' && <MTable title={'Pay'} data={[]} columns={columnsPay} /> }
     </div>
 )}
 
