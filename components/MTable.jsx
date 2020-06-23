@@ -92,6 +92,7 @@ const MTable = ({title, data, columns}) => {
     responsive: 'stacked',
     rowsPerPageOptions: [10, 25, 50],
     rowHover: true,
+    fixedHeader: true,
     fixedHeaderOptions: {xAxis: true, yAxis: true},
     searchPlaceholder: 'Search...',
     selectableRows: 'none',

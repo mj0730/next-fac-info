@@ -393,7 +393,7 @@ input#facId {
 
   #page-links ul li:hover {
     text-shadow: 0px 0px 2px #14518a;
-    background-color: rgba(0, 50, 90, 0.70);
+    background-color: #00325ab3;
   }
 
   nav#table-select {
@@ -410,6 +410,10 @@ input#facId {
   
   nav#table-select button:hover {
     background-color: #90caf922;
+  }
+
+  nav#table-select button:active {
+    background-color: #00325ab3;
   }
   /* ovverride for MUI table */
   tr.MuiTableRow-root {

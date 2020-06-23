@@ -9,11 +9,11 @@ import MTable from '../components/MTable';
 const Facilites = () => {
   const [FacId, storeFacId] = useContext(FacIdContext);
   const [DbInfo, setDbInfo] = useContext(DbInfoContext);
-  const [tableToDisplay, setTableToDisplay] = useState('')
+  const [tableToDisplay, setTableToDisplay] = useState('information');
 
   const facilityData = Object.values(FACILITIES);
   const staffingData = Object.values(DbInfo);
-  
+
   //massage decimals into percentages
   staffingData.forEach(item => {
     item['Current % CPC to Target'] = changeToPercentage(item['Current % CPC to Target']);
@@ -35,7 +35,8 @@ const Facilites = () => {
     {label: 'ID', name: 'id', options: {filter: false, sort: true, searchable: true,}}, 
     {label: 'Name', name: 'name', options: {filter: false, sort: true, searchable: true,}}, 
     {label: 'Level', name: 'level', options: {filter: true, sort: true, searchable: false,}}, 
-    {label: 'Type', name: 'type', options: {filter: true, sort: true, searchable: false,}}
+    {label: 'Type', name: 'type', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'State', name: 'state', options: {filter: true, sort: true, searchable: false,}},
   ];
 
   const columnsStaffing = [
