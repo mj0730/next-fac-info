@@ -56,8 +56,16 @@ const Facilites = () => {
   ];
 
   const columnsPay = [
-    {label: 'col1', name: 'test1', options: {filter: true, sort: true, searchable: false,}},
-    {label: 'col2', name: 'test2', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'ID', name: 'test1', options: {filter: true, sort: true, searchable: true,}},
+    {label: 'CPC MAX', name: 'test1', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'CPC', name: 'test1', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'D3', name: 'test1', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'D2', name: 'test1', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'D1', name: 'test1', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'AG', name: 'test1', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'Locality %', name: 'test2', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'CIP %', name: 'test2', options: {filter: true, sort: true, searchable: false,}},
+    {label: 'COLA %', name: 'test2', options: {filter: true, sort: true, searchable: false,}},
   ];
 
   return (
