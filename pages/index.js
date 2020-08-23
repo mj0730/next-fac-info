@@ -6,22 +6,25 @@ import FacilityPage from '../components/FacilityPage';
 import FrontPage from '../components/FrontPage';
 import ErrorModal from '../components/ErrorModal';
 
- //Get facility info from the database
- export async function getStaticProps(context) {
-  const res = await fetch('http://localhost:3001/api/getAllFacilityData');
-  const result = await res.json();
+//Get facility info from the database
+export async function getStaticProps(context) {
+  const result = await fetch(
+    'http://localhost:3001/api/getAllFacilityData'
+  ).then((res) => res.json());
 
   const data = {};
-  result.forEach(x => data[x['Facility ID']] = x);
+  result.forEach((x) => (data[x['Facility ID']] = x));
 
   return {
     props: { data },
-  }
+  };
 }
 
-const Index = ({data}) => {
+const Index = ({ data }) => {
   const [DbInfo, setDbInfo] = useContext(DbInfoContext);
-  const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
+  const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(
+    FacIdContext
+  );
   const [currentFacPay, setCurrentFacPay] = useState('');
   const [currentFacInfo, setCurrentFacInfo] = useState('');
   const [currentFacLocality, setCurrentFacLocality] = useState('');
@@ -31,19 +34,19 @@ const Index = ({data}) => {
   //set context from database
   useEffect(() => {
     setDbInfo(data);
-  }, [])
+  }, []);
 
   //Modal
   let facIdForModal;
   const showModal = (input) => {
     if (displayErrorModal) setDisplayErrorModal(false);
-    
+
     setIdForModal(input);
-    
+
     setTimeout(() => {
       setDisplayErrorModal(true);
-    }, 100); 
-  }
+    }, 100);
+  };
 
   //'Lock' valid facility into place for rendering
   useEffect(() => {
@@ -54,25 +57,31 @@ const Index = ({data}) => {
       setDisplayFrontPage(false);
       if (displayErrorModal) setDisplayErrorModal(false);
     } else if (FacId.length === 3) {
-      setCurrentFacInfo({id: `${FacId}`, name: 'Please use a valid Facility ID.'});
+      setCurrentFacInfo({
+        id: `${FacId}`,
+        name: 'Please use a valid Facility ID.',
+      });
       setCurrentFacPay('');
       setCurrentFacLocality('');
       showModal(FacId);
     }
-  }, [FacId])
+  }, [FacId]);
 
   return (
     <main>
-      {(displayFrontPage) ? 
-        <FrontPage /> :
-          <FacilityPage currentFacPay = {currentFacPay} currentFacInfo = {currentFacInfo} currentFacLocality = {currentFacLocality}/>
-      }
-      { 
-        (idForModal) &&
-        <ErrorModal facId = {idForModal} displayErrorModal= {displayErrorModal}/>
-      }
+      {displayFrontPage ? (
+        <FrontPage />
+      ) : (
+        <FacilityPage
+          currentFacPay={currentFacPay}
+          currentFacInfo={currentFacInfo}
+          currentFacLocality={currentFacLocality}
+        />
+      )}
+      {idForModal && (
+        <ErrorModal facId={idForModal} displayErrorModal={displayErrorModal} />
+      )}
     </main>
-  )
-    
-}
-export default Index
+  );
+};
+export default Index;
