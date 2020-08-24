@@ -1,82 +1,220 @@
 import Head from 'next/head';
-import Router from 'next/router';
-import { useState, useEffect, useContext, forwardRef} from 'react';
-import {FacIdContext} from '../components/FacIdContext';
-import {FACILITIES} from '../scripts/facility_info';
-import MaterialTable from 'material-table';
-
-/* Icon Imports */
-//import AddBox from '@material-ui/icons/AddBox';
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
-//import Check from '@material-ui/icons/Check';
-//import ChevronLeft from '@material-ui/icons/ChevronLeft';
-//import ChevronRight from '@material-ui/icons/ChevronRight';
-//import Clear from '@material-ui/icons/Clear';
-//import DeleteOutline from '@material-ui/icons/DeleteOutline';
-//import Edit from '@material-ui/icons/Edit';
-import FilterList from '@material-ui/icons/FilterList';
-//import FirstPage from '@material-ui/icons/FirstPage';
-//import LastPage from '@material-ui/icons/LastPage';
-//import Remove from '@material-ui/icons/Remove';
-//import SaveAlt from '@material-ui/icons/SaveAlt';
-// import Search from '@material-ui/icons/Search';
-// import ViewColumn from '@material-ui/icons/ViewColumn';
-
-const tableIcons = {
-  //Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
-  //Check: forwardRef((props, ref) => <Check {...props} ref={ref} />),
-  // Clear: forwardRef((props, ref) => <Clear {...props} ref={ref} />),
-  // Delete: forwardRef((props, ref) => <DeleteOutline {...props} ref={ref} />),
-  // DetailPanel: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
-  // Edit: forwardRef((props, ref) => <Edit {...props} ref={ref} />),
-  // Export: forwardRef((props, ref) => <SaveAlt {...props} ref={ref} />),
-  Filter: forwardRef((props, ref) => <FilterList {...props} ref={ref} />),
-  // FirstPage: forwardRef((props, ref) => <FirstPage {...props} ref={ref} />),
-  // LastPage: forwardRef((props, ref) => <LastPage {...props} ref={ref} />),
-  // NextPage: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
-  // PreviousPage: forwardRef((props, ref) => <ChevronLeft {...props} ref={ref} />),
-  // ResetSearch: forwardRef((props, ref) => <Clear {...props} ref={ref} />),
-  // Search: forwardRef((props, ref) => <Search {...props} ref={ref} />),
-  SortArrow: forwardRef((props, ref) => <ArrowDownward {...props} ref={ref} />),
-  // ThirdStateCheck: forwardRef((props, ref) => <Remove {...props} ref={ref} />),
-  // ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
-};
-
+import { useContext, useState, useEffect } from 'react';
+import { ButtonGroup, Button } from '@material-ui/core';
+import { FacIdContext } from '../components/context/FacIdContext';
+import { DbInfoContext } from '../components/context/DbInfoContext';
+import { FACILITIES } from '../scripts/facility_info';
+import MTable from '../components/MTable';
 
 const Facilites = () => {
   const [FacId, storeFacId] = useContext(FacIdContext);
+  const [DbInfo, setDbInfo] = useContext(DbInfoContext);
+  const [tableToDisplay, setTableToDisplay] = useState('information');
+
   const facilityData = Object.values(FACILITIES);
+  const staffingData = Object.values(DbInfo);
 
-  const columnHeaders = [{title: 'ID', field: 'id'}, {title: 'Name', field: 'name'}, {title: 'Level', field: 'level'}, {title: 'Type', field: 'type'}]
-
-  const options = {sorting: true, filtering: true, header: true, search: false, paging: false, padding: 'dense', toolbar: false, showTitle: true, color: '#FFF', backgroundColor: '#000',
-  headerStyle: {backgroundColor: '#01579b', color: '#FFF', fontFamily: 'Garamound', fontWeight: 'bold'},
-  rowStyle: { backgroundColor: '#000', color: '#FFF'},
-  filterCellStyle: {backgroundColor: '#333', color: '#FFF', paddingTop: 0, paddingBottom: 0},
-  actionsCellStyle: {backgroundColor: '#333', color: '#FFF', padding: 0, margin: 0}
-}
-
-  const handleRowClick = (e, rowData) => {
-    e.preventDefault();
-    storeFacId(rowData.id);
-    Router.push('/');
+  // Convert decimals into percentages
+  function changeToPercentage(num) {
+    return (num * 100).toFixed(1);
   }
 
+  useEffect(() => {
+    staffingData.forEach((item) => {
+      item['Current % CPC to Target'] = changeToPercentage(item['Current % CPC to Target']);
+      item['Current % CPC to Trainees'] = changeToPercentage(item['Current % CPC to Trainees']);
+      item['Training Success Rate'] = changeToPercentage(item['Training Success Rate']);
+      item['Projected % to Target'] = changeToPercentage(item['Projected % to Target']);
+    });
+  }, []);
+
+  const handleClick = (e) => {
+    e.target.value === undefined
+      ? setTableToDisplay(e.target.firstChild.data.toLowerCase())
+      : setTableToDisplay(e.target.value);
+  };
+
+  const columnsFacility = [
+    {
+      label: 'ID',
+      name: 'id',
+      options: { filter: false, sort: true, searchable: true },
+    },
+    {
+      label: 'Name',
+      name: 'name',
+      options: { filter: false, sort: true, searchable: true },
+    },
+    {
+      label: 'Level',
+      name: 'level',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'Type',
+      name: 'type',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'State',
+      name: 'state',
+      options: { filter: true, sort: true, searchable: false },
+    },
+  ];
+
+  const columnsStaffing = [
+    {
+      label: 'ID',
+      name: 'Facility ID',
+      options: {
+        filter: true,
+        sort: true,
+        searchable: true,
+        filterType: 'dropdown',
+      },
+    },
+    {
+      label: 'CPC',
+      name: 'Current # of CPC On-Board minus Temps minus LTH',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'CPC Target',
+      name: 'CPC Target',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'CPC To Target %',
+      name: 'Current % CPC to Target',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'Trainees',
+      name: 'ATCS in Training minus LTH',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'Trainee To CPC %',
+      name: 'Current % CPC to Trainees',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'Training Success Rate',
+      name: 'Training Success Rate',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'Training Time (yrs)',
+      name: 'Training Time Years',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'ERR Category',
+      name: 'ERR Category',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'Projected %',
+      name: 'Projected % to Target',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'Gains (NatAvg)',
+      name: 'Possible Gains to National Average',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'Gains (Target)',
+      name: 'Possible Gains to Target',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'Losses',
+      name: 'Possible Losses',
+      options: { filter: true, sort: true, searchable: true },
+    },
+  ];
+
+  const columnsPay = [
+    {
+      label: 'ID',
+      name: 'test1',
+      options: { filter: true, sort: true, searchable: true },
+    },
+    {
+      label: 'CPC MAX',
+      name: 'test1',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'CPC',
+      name: 'test1',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'D3',
+      name: 'test1',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'D2',
+      name: 'test1',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'D1',
+      name: 'test1',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'AG',
+      name: 'test1',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'Locality %',
+      name: 'test2',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'CIP %',
+      name: 'test2',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'COLA %',
+      name: 'test2',
+      options: { filter: true, sort: true, searchable: false },
+    },
+  ];
+
   return (
-    <div id="container">
+    <div id='container'>
       <Head>
         <title>pointSixtyFive - Facility Information</title>
       </Head>
 
-      <MaterialTable
-        title='Facility'
-        columns={columnHeaders}
-        data={facilityData}
-        icons={tableIcons}
-        options={options}
-        onRowClick={handleRowClick}
-      />
+      <nav id='table-select'>
+        <ButtonGroup color='primary' size='large' aria-label='outlined primary button group'>
+          <Button onClick={handleClick} value={'information'}>
+            Information
+          </Button>
+          <Button onClick={handleClick} value={'staffing'}>
+            Staffing
+          </Button>
+          <Button onClick={handleClick} value={'pay'}>
+            Pay
+          </Button>
+        </ButtonGroup>
+      </nav>
+
+      {tableToDisplay === 'information' && (
+        <MTable title={'Facility Information'} data={facilityData} columns={columnsFacility} />
+      )}
+      {tableToDisplay === 'staffing' && <MTable title={'Staffing'} data={staffingData} columns={columnsStaffing} />}
+      {tableToDisplay === 'pay' && <MTable title={'Pay'} data={[]} columns={columnsPay} />}
     </div>
-)}
+  );
+};
 
 export default Facilites;

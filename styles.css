@@ -12,7 +12,6 @@ body {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 100vh;
-  
 }
 
 .index-nav-column { 
@@ -30,7 +29,7 @@ body {
 }
 
 .index-Footer {
-  grid-area : 4 / 1 / 5 / 6;
+  grid-area: 4 / 1 / 5 / 6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +37,8 @@ body {
   border-top: 2px solid #14518a;
 }
 
-.index-Footer a, .index-Footer a:hover {
+.index-Footer a,
+.index-Footer a:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -86,7 +86,7 @@ body {
   align-items: flex-end;
 }
 
-.align-flex-start{
+.align-flex-start {
   align-items: flex-start;
 }
 
@@ -100,7 +100,7 @@ body {
 
 /* Facility Pay */
 #fac-pay h2 {
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 
 #payscale {
@@ -118,7 +118,7 @@ body {
 }
 
 .pay-header {
-  background-color: rgba(20, 81, 138, .5);
+  background-color: rgba(20, 81, 138, 0.5);
   font-weight: bold;
   border-top: 2px solid #14518a;
   border-bottom: 2px solid #14518a;
@@ -136,7 +136,7 @@ body {
 }
 
 .flex-list li {
-  margin-right: .5em;
+  margin-right: 0.5em;
   align-self: center;
 }
 
@@ -156,12 +156,12 @@ body {
 }
 
 .loc-area {
-  font-weight: normal; 
-  font-size: .75em;
+  font-weight: normal;
+  font-size: 0.75em;
 }
 
 .cip {
-  font-size: .5em;
+  font-size: 0.5em;
 }
 /* Facility Details */
 #fac-information {
@@ -182,7 +182,7 @@ body {
 .fac-information-item {
   display: flex;
   flex-direction: column;
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }
 
 /* Search box */
@@ -191,10 +191,10 @@ form.search-container {
   max-width: 160px;
   margin: 15px auto;
   background-color: #303030;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   border-radius: 20px;
   padding: 5px;
-  color: #FFF;
+  color: #fff;
   font-size: 1.5em;
   position: relative;
 }
@@ -209,6 +209,11 @@ input#facId {
   left: 8px;
   font-size: 18px;
   text-align: center;
+}
+
+input#facId:focus {
+  outline: none;
+  box-shadow: 0 1px #ffa600;
 }
 
 #facId::placeholder {
@@ -239,7 +244,7 @@ input#facId {
 #page-links ul li a {
   display: block;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
 #page-links ul li svg {
@@ -250,7 +255,7 @@ input#facId {
 
 /* Error Message Modal */
 #modal {
-  background-color: rgba(0, 50, 90, 0.70);
+  background-color: rgba(0, 50, 90, 0.7);
   border: 2px solid #fff;
   border-radius: 5px;
   width: 25%;
@@ -274,8 +279,13 @@ input#facId {
 }
 
 @keyframes fadeout {
-  0% {opacity: 1;}
-  100% {opacity: 0; top: -20px}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: -20px;
+  }
 }
 
 /* Media Queries */
@@ -298,9 +308,9 @@ input#facId {
     grid-area: 2 / 1 / 4 / 6;
     padding: 0 3px;
   }
-  
+
   .index-Footer {
-    grid-area : 4 / 1 / 5 / 6;
+    grid-area: 4 / 1 / 5 / 6;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -351,9 +361,8 @@ input#facId {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     height: 100vh;
-    
   }
-  
+
   .index-nav-column { 
     grid-area: 1 / 1 / 4 / 2;; 
     display: flex;
@@ -362,20 +371,21 @@ input#facId {
     justify-content: flex-start;
     border-bottom: none;
   }
-  
+
   .index-display-column { 
     grid-area: 1 / 2 / 4 / 6; 
   }
-  
+
   .index-Footer {
-    grid-area : 4 / 1 / 5 / 6;
+    grid-area: 4 / 1 / 5 / 6;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2em;
   }
-  
-  .index-Footer a, .index-Footer a:hover {
+
+  .index-Footer a,
+  .index-Footer a:hover {
     color: #fff;
     text-decoration: none;
   }
@@ -393,6 +403,30 @@ input#facId {
 
   #page-links ul li:hover {
     text-shadow: 0px 0px 2px #14518a;
-    background-color: rgba(0, 50, 90, 0.70);
+    background-color: #00325ab3;
+  }
+
+  nav#table-select {
+    display: flex;
+    justify-content: right;
+    margin: 2px;
+  }
+
+  nav#table-select button {
+    color: #90caf9;
+    border-color: #90caf9;
+    width: 150px;
+  }
+
+  nav#table-select button:hover {
+    background-color: #90caf922;
+  }
+
+  nav#table-select button:active {
+    background-color: #00325ab3;
+  }
+  /* ovverride for MUI table */
+  tr.MuiTableRow-root {
+    display: table-row !important;
   }
 }
