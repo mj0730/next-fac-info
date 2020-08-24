@@ -3,60 +3,59 @@ import Head from 'next/head';
 import DetailsPay from './DetailsPay';
 import DetailsStaffing from './DetailsStaffing';
 import DetailsInformation from './DetailsInformation';
-import { DbInfoContext } from './DbInfoContext';
+import { DbInfoContext } from './context/DbInfoContext';
 import { useContext } from 'react';
 
-const FacilityPage = ({currentFacPay, currentFacInfo, currentFacLocality}) => {
+const FacilityPage = ({ currentFacPay, currentFacInfo, currentFacLocality }) => {
   const [DbInfo] = useContext(DbInfoContext);
 
   const toTitleCase = (str = '') => {
-    if(str === "ARTCC") {
+    if (str === 'ARTCC') {
       return str;
     } else {
-      str = str.toLowerCase()
+      str = str
+        .toLowerCase()
         .split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1));
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1));
 
-        return str.join(' ');
-      }
+      return str.join(' ');
     }
+  };
 
   return (
-    <div id="facility-info" className="grid-container fac-page-grid">
+    <div id='facility-info' className='grid-container fac-page-grid'>
       <Head>
         <title>{`${currentFacInfo.name} - pointSixtyFive`}</title>
       </Head>
-    
+
       <header>
-          <div className="flex-col">
+        <div className='flex-col'>
           <h1>{currentFacInfo.id}</h1>
           <p>{currentFacInfo.name}</p>
+        </div>
 
-          </div>
-
-          <div className="flex-col align-flex-end">
-            <h1>{(currentFacInfo.level !== undefined) && `Level ${currentFacInfo.level}`}</h1>
-            <p>{toTitleCase(currentFacInfo.type)}</p>
-          </div>
+        <div className='flex-col align-flex-end'>
+          <h1>{currentFacInfo.level !== undefined && `Level ${currentFacInfo.level}`}</h1>
+          <p>{toTitleCase(currentFacInfo.type)}</p>
+        </div>
       </header>
 
-      {(currentFacInfo.level !== undefined) &&
-      <main>
-        <DetailsInformation currentFacInfo = {currentFacInfo} />
-        <DetailsPay currentFacPay = {currentFacPay} currentFacLocality={currentFacLocality} />
+      {currentFacInfo.level !== undefined && (
+        <main>
+          <DetailsInformation currentFacInfo={currentFacInfo} />
+          <DetailsPay currentFacPay={currentFacPay} currentFacLocality={currentFacLocality} />
 
-        
-        <DetailsStaffing data = {DbInfo[currentFacInfo.id]} />
-      </main>
-      }
+          <DetailsStaffing data={DbInfo[currentFacInfo.id]} />
+        </main>
+      )}
     </div>
-    )
-}
+  );
+};
 
-export default FacilityPage
+export default FacilityPage;
 
 FacilityPage.propTypes = {
   currentFacInfo: PropTypes.object.isRequired,
   currentFacLocality: PropTypes.array.isRequired,
-  currentFacPay: PropTypes.object.isRequired
+  currentFacPay: PropTypes.object.isRequired,
 };

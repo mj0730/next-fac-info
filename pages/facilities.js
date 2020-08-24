@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { useContext, useState, useEffect } from 'react';
 import { ButtonGroup, Button } from '@material-ui/core';
-import { FacIdContext } from '../components/FacIdContext';
-import { DbInfoContext } from '../components/DbInfoContext';
+import { FacIdContext } from '../components/context/FacIdContext';
+import { DbInfoContext } from '../components/context/DbInfoContext';
 import { FACILITIES } from '../scripts/facility_info';
 import MTable from '../components/MTable';
 

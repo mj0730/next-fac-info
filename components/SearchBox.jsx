@@ -1,6 +1,6 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
-import {FacIdContext} from './FacIdContext';
+import { FacIdContext } from './context/FacIdContext';
 import Router from 'next/router';
 
 const SearchBox = () => {
@@ -13,28 +13,29 @@ const SearchBox = () => {
     if (e.target.value.length === 3) {
       Router.push('/');
     }
-  }
+  };
 
   return (
-    <div id="search-box">
-      <form className="search-container" onSubmit={(e) => e.preventDefault()}>
-        <SearchIcon style={{ flexShrink: "1", fontSize: "inherit" }} />
+    <div id='search-box'>
+      <form className='search-container' onSubmit={(e) => e.preventDefault()}>
+        <SearchIcon style={{ flexShrink: '1', fontSize: 'inherit' }} />
         <input
-          type="text"
-          id="facId"
-          name="facId"
-          minLength="3"
-          maxLength="3"
-          spellCheck="false"
-          autoCorrect="no"
-          placeholder="Search Facility ID"
+          type='text'
+          id='facId'
+          name='facId'
+          minLength='3'
+          maxLength='3'
+          spellCheck='false'
+          autoCorrect='no'
+          placeholder='Search Facility ID'
           value={FacId}
           onChange={handleChange}
-          onFocus={(e) => storeFacId("")}
-          onBlur={(e) => storeFacId("")}
+          onFocus={(e) => storeFacId('')}
+          onBlur={(e) => storeFacId('')}
         />
       </form>
     </div>
-  );}
+  );
+};
 
 export default SearchBox;

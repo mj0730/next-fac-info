@@ -1,16 +1,14 @@
 import { useState, useEffect, useContext } from 'react';
 import * as facs from '../scripts/facility_info';
-import { DbInfoContext } from '../components/DbInfoContext';
-import { FacIdContext } from '../components/FacIdContext';
+import { DbInfoContext } from '../components/context/DbInfoContext';
+import { FacIdContext } from '../components/context/FacIdContext';
 import FacilityPage from '../components/FacilityPage';
 import FrontPage from '../components/FrontPage';
 import ErrorModal from '../components/ErrorModal';
 
 //Get facility info from the database
 export async function getStaticProps(context) {
-  const result = await fetch(
-    'http://localhost:3001/api/getAllFacilityData'
-  ).then((res) => res.json());
+  const result = await fetch('http://localhost:3001/api/getAllFacilityData').then((res) => res.json());
 
   const data = {};
   result.forEach((x) => (data[x['Facility ID']] = x));
@@ -22,9 +20,7 @@ export async function getStaticProps(context) {
 
 const Index = ({ data }) => {
   const [DbInfo, setDbInfo] = useContext(DbInfoContext);
-  const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(
-    FacIdContext
-  );
+  const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
   const [currentFacPay, setCurrentFacPay] = useState('');
   const [currentFacInfo, setCurrentFacInfo] = useState('');
   const [currentFacLocality, setCurrentFacLocality] = useState('');
@@ -78,9 +74,7 @@ const Index = ({ data }) => {
           currentFacLocality={currentFacLocality}
         />
       )}
-      {idForModal && (
-        <ErrorModal facId={idForModal} displayErrorModal={displayErrorModal} />
-      )}
+      {idForModal && <ErrorModal facId={idForModal} displayErrorModal={displayErrorModal} />}
     </main>
   );
 };
