@@ -430,3 +430,21 @@ input#facId:focus {
     display: table-row !important;
   }
 }
+
+/* Map Container */
+#map-container iframe {
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: calc(100vh - 108px);
+  height: -webkit-fill-available;
+}
+
+/* media query for full screen */
+@media only screen and (min-width: 992px) {
+  #map-container iframe {
+    height: calc(100vh - 40px);
+    height: -webkit-fill-available;
+  }
+}
