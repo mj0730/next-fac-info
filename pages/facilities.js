@@ -10,6 +10,7 @@ const Facilites = () => {
   const [FacId, storeFacId] = useContext(FacIdContext);
   const [DbInfo, setDbInfo] = useContext(DbInfoContext);
   const [tableToDisplay, setTableToDisplay] = useState('information');
+  const [activeClass, setActiveClass] = useState('information');
 
   const facilityData = Object.values(FACILITIES);
   const staffingData = Object.values(DbInfo);
@@ -32,6 +33,7 @@ const Facilites = () => {
     e.target.value === undefined
       ? setTableToDisplay(e.target.firstChild.data.toLowerCase())
       : setTableToDisplay(e.target.value);
+    setActiveClass(e.target.value);
   };
 
   const columnsFacility = [
@@ -195,17 +197,15 @@ const Facilites = () => {
       </Head>
 
       <nav id="table-select">
-        <ButtonGroup color="primary" size="large" aria-label="outlined primary button group">
-          <Button onClick={handleClick} value={'information'}>
-            Information
-          </Button>
-          <Button onClick={handleClick} value={'staffing'}>
-            Staffing
-          </Button>
-          <Button onClick={handleClick} value={'pay'}>
-            Pay
-          </Button>
-        </ButtonGroup>
+        <button onClick={handleClick} value={'information'} className={activeClass === 'information' ? 'active' : null}>
+          Information
+        </button>
+        <button onClick={handleClick} value={'staffing'} className={activeClass === 'staffing' ? 'active' : null}>
+          Staffing
+        </button>
+        <button onClick={handleClick} value={'pay'} className={activeClass === 'pay' ? 'active' : null}>
+          Pay
+        </button>
       </nav>
 
       {tableToDisplay === 'information' && (

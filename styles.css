@@ -9,7 +9,7 @@ body {
 /* Main page layout (Mobile) */
 .index-grid-container {
   display: grid;
-  grid-template-rows: 68px repeat(2, 1fr) 40px;
+  grid-template-rows: 68px auto auto 40px;
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -108,7 +108,7 @@ input#facId:focus {
   list-style-type: none;
 }
 
-#page-link ul li {
+#page-links ul li {
   font-size: 1.8em;
   text-align: center;
   line-height: normal;
@@ -307,6 +307,40 @@ input#facId:focus {
   }
 }
 
+/* Tables */
+nav#table-select {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav#table-select button {
+  padding: 0.5rem 0;
+  -moz-box-flex: 1;
+  flex: 1 1 auto;
+  font-size: 1.25rem;
+  border: none;
+  margin: 0 0.2rem;
+  color: white;
+  background-color: #0e0e0e;
+}
+
+nav#table-select button:hover {
+  background-color: #14518a3f;
+}
+
+nav#table-select button.active,
+nav#table-select button:focus {
+  box-shadow: 0 1px #14518a;
+  outline: none;
+}
+
+/* MUI Datatable Overrides */
+.MuiTable-root caption {
+  display: none;
+}
+
 /* Tablets */
 @media only screen and (min-width: 601px) {
   #search-box {
@@ -321,7 +355,7 @@ input#facId:focus {
 /* Desktop */
 @media only screen and (min-width: 992px) {
   .index-grid-container {
-    grid-template-rows: repeat(3, 1fr) 40px;
+    grid-template-rows: auto auto auto 40px;
   }
 
   .index-nav-column {
@@ -357,6 +391,7 @@ input#facId:focus {
   }
 
   /* ovverride for MUI table */
+
   tr.MuiTableRow-root {
     display: table-row !important;
   }
