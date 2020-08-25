@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import '../datatables.css';
 import { useContext, useState, useEffect } from 'react';
 import { ButtonGroup, Button } from '@material-ui/core';
 import { FacIdContext } from '../components/context/FacIdContext';
