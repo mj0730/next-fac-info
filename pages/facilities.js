@@ -208,11 +208,9 @@ const Facilites = () => {
         </button>
       </nav>
 
-      {tableToDisplay === 'information' && (
-        <MTable title={'Facility Information'} data={facilityData} columns={columnsFacility} />
-      )}
-      {tableToDisplay === 'staffing' && <MTable title={'Staffing'} data={staffingData} columns={columnsStaffing} />}
-      {tableToDisplay === 'pay' && <MTable title={'Pay'} data={[]} columns={columnsPay} />}
+      {tableToDisplay === 'information' && <MTable data={facilityData} columns={columnsFacility} />}
+      {tableToDisplay === 'staffing' && <MTable data={staffingData} columns={columnsStaffing} />}
+      {tableToDisplay === 'pay' && <MTable data={[]} columns={columnsPay} />}
     </div>
   );
 };
