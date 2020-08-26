@@ -1,6 +1,6 @@
 const map = L.map('map', {
   center: [40, -98.5],
-  zoom: 5,
+  zoom: 4,
 });
 
 L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=1ojaSiJVULNHwgWfBZYs', {

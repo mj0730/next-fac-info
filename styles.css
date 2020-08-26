@@ -37,7 +37,7 @@ body {
 .index-display-column {
   grid-area: 2 / 1 / 4 / 6;
   background-color: var(--main-bg-color);
-  padding: 0 3px;
+  padding: 0 3px 0.5rem;
 }
 
 .index-footer {
@@ -281,20 +281,33 @@ input#facId::-moz-focus-inner {
   font-size: 0.5em;
 }
 
+/* Map Container */
+#map-container iframe {
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: calc(100vh - 108px);
+  height: -webkit-fill-available;
+}
+
 /* Error Message Modal */
 #modal {
   background-color: rgba(0, 50, 90, 0.7);
   border: 2px solid #fff;
   border-radius: 5px;
-  width: 25%;
-  margin-left: -12.5%;
+  min-width: 240px;
+  max-width: 25%;
+  margin: 0 auto;
   padding: 10px;
   position: absolute;
   top: -200px;
-  left: 50%;
+  left: 0;
+  right: 0;
   color: var(--text-color);
   font-size: 1.3em;
   overflow: hidden;
+  text-align: center;
 }
 
 #modal.fade-out {
@@ -409,27 +422,14 @@ nav#table-select button:focus {
     box-shadow: 3px 0 orange;
     background-color: var(--button-hover-background);
   }
-  /* ovverride for MUI table */
 
-  tr.MuiTableRow-root {
-    display: table-row !important;
-  }
-}
-
-/* Map Container */
-#map-container iframe {
-  width: 100%;
-  border: none;
-  margin: 0;
-  padding: 0;
-  height: calc(100vh - 108px);
-  height: -webkit-fill-available;
-}
-
-/* media query for full screen */
-@media only screen and (min-width: 992px) {
   #map-container iframe {
     height: calc(100vh - 40px);
     height: -webkit-fill-available;
+  }
+
+  /* ovverride for MUI table */
+  tr.MuiTableRow-root {
+    display: table-row !important;
   }
 }
