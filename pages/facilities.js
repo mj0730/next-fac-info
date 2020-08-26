@@ -1,6 +1,5 @@
+import React, { useContext, useState, useEffect } from 'react';
 import Head from 'next/head';
-import { useContext, useState, useEffect } from 'react';
-import { ButtonGroup, Button } from '@material-ui/core';
 import { FacIdContext } from '../components/context/FacIdContext';
 import { DbInfoContext } from '../components/context/DbInfoContext';
 import { FACILITIES } from '../scripts/facility_info';
@@ -191,12 +190,12 @@ const Facilites = () => {
   ];
 
   return (
-    <div id="container">
+    <div id='container'>
       <Head>
         <title>pointSixtyFive - Facility Information</title>
       </Head>
 
-      <nav id="table-select">
+      <nav id='table-select'>
         <button onClick={handleClick} value={'information'} className={activeClass === 'information' ? 'active' : null}>
           Information
         </button>

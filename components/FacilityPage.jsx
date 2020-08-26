@@ -1,10 +1,10 @@
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import DetailsPay from './DetailsPay';
 import DetailsStaffing from './DetailsStaffing';
 import DetailsInformation from './DetailsInformation';
 import { DbInfoContext } from './context/DbInfoContext';
-import { useContext } from 'react';
 
 const FacilityPage = ({ currentFacPay, currentFacInfo, currentFacLocality }) => {
   const [DbInfo] = useContext(DbInfoContext);
@@ -23,8 +23,7 @@ const FacilityPage = ({ currentFacPay, currentFacInfo, currentFacLocality }) => 
   };
 
   return (
-
-    <div id="facility-info" className="fac-page-grid">
+    <div id='facility-info' className='fac-page-grid'>
       <Head>
         <title>{`${currentFacInfo.name} - pointSixtyFive`}</title>
       </Head>

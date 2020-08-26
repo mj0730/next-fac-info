@@ -1,4 +1,5 @@
-import { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import PropTypes from 'prop-types';
 import * as facs from '../scripts/facility_info';
 import { DbInfoContext } from '../components/context/DbInfoContext';
 import { FacIdContext } from '../components/context/FacIdContext';
@@ -7,7 +8,7 @@ import FrontPage from '../components/FrontPage';
 import ErrorModal from '../components/ErrorModal';
 
 //Get facility info from the database
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const result = await fetch('http://localhost:3001/api/getAllFacilityData').then((res) => res.json());
 
   const data = {};
@@ -33,7 +34,6 @@ const Index = ({ data }) => {
   }, []);
 
   //Modal
-  let facIdForModal;
   const showModal = (input) => {
     if (displayErrorModal) setDisplayErrorModal(false);
 
@@ -79,3 +79,7 @@ const Index = ({ data }) => {
   );
 };
 export default Index;
+
+Index.propTypes = {
+  data: PropTypes.object.isRequired,
+};

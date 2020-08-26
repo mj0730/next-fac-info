@@ -30,8 +30,8 @@ const SearchBox = () => {
           placeholder='Search Facility ID'
           value={FacId}
           onChange={handleChange}
-          onFocus={(e) => storeFacId('')}
-          onBlur={(e) => storeFacId('')}
+          onFocus={() => storeFacId('')}
+          onBlur={() => storeFacId('')}
         />
       </form>
     </div>

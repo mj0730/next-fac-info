@@ -1,4 +1,7 @@
-const DifferentialPayTable = ({basePay, differential}) => { 
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const DifferentialPayTable = ({ basePay, differential }) => {
   const combinedPay = basePay.map((x, i) => x + differential[i]);
 
   return (
@@ -9,7 +12,7 @@ const DifferentialPayTable = ({basePay, differential}) => {
           {combinedPay[2] > 0 ? <td>{combinedPay[1]}</td> : <td>N/A</td>}
           {combinedPay[3] > 0 ? <td>{combinedPay[2]}</td> : <td>N/A</td>}
           {combinedPay[4] > 0 ? <td>{combinedPay[3]}</td> : <td>N/A</td>}
-          <td rowSpan="2">{combinedPay[5]}</td>
+          <td rowSpan='2'>{combinedPay[5]}</td>
         </tr>
         <tr>
           <td>{combinedPay[1]}</td>
@@ -19,6 +22,11 @@ const DifferentialPayTable = ({basePay, differential}) => {
         </tr>
       </tbody>
     </React.Fragment>
-  )
-}
+  );
+};
 export default DifferentialPayTable;
+
+DifferentialPayTable.propTypes = {
+  basePay: PropTypes.object.isRequired,
+  differential: PropTypes.object.isRequired,
+};
