@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
-import * as facs from '../scripts/facility_info';
+import * as facs from '../scripts/facility_info.js';
 import { DbInfoContext } from '../components/context/DbInfoContext';
 import { FacIdContext } from '../components/context/FacIdContext';
 import FacilityPage from '../components/FacilityPage';
