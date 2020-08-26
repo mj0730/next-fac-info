@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb';
 import nextConnect from 'next-connect';
-import dbUri from '../env/dbUri';
-import dbName from '../env/dbName';
+// import dbUri from '../env/dbUri';
+// import dbName from '../env/dbName';
 
 const uri = process.env.MONGODB_URI || dbUri;
 const db = process.env.DB_NAME || dbName;
