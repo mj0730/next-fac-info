@@ -1,8 +1,10 @@
 import PageLinks from './PageLinks';
 import SearchBox from './SearchBox';
+import Head from 'next/head';
 
 function Layout(props) {
   return (
+
     <div className="index-grid-container">
       <div className="index-nav-column">
         <SearchBox />

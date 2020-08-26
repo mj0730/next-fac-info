@@ -1,17 +1,21 @@
 import Head from 'next/head';
-import { useState, useEffect, useContext } from 'react';
-import * as facs from '../scripts/facility_info';
+import React from 'react';
 
-const Map = () => {
-
+const LeafletMap = () => {
   return (
-    <div id="map-container">
+    <div id='map-container'>
       <Head>
         <title>pointSixtyFive - Facility and Locality Map</title>
       </Head>
-
-      <p>Map placeholder</p>
+      <iframe src='iframe/index.html'>
+        Your browser can't display this content. Visit
+        <a href='https://pointsixtyfive.com/xenforo/pages/LocalityMap/' target='_blank'>
+          pointSixtyFive.com
+        </a>
+        to view this map.
+      </iframe>
     </div>
-)}
+  );
+};
 
-export default Map;
+export default LeafletMap;

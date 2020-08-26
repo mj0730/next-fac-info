@@ -1,0 +1,3133 @@
+[
+  {
+    "fac_id": "PWK",
+    "address": "1060 S Milwaukee Ave, Wheeling, IL, 60090",
+    "lat": 42.116309,
+    "lon": -87.898293,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Palwaukee Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZKC",
+    "address": "250 S Rogers Rd, Olathe, KS, 66062",
+    "lat": 38.88021,
+    "lon": -94.79049,
+    "fac_type": 8,
+    "level": 11,
+    "name": "Kansas City ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "JAX",
+    "address": "14400 Whirlwind Ave, Jacksonville, FL, 32218",
+    "lat": 30.49303,
+    "lon": -81.68277,
+    "fac_type": 3,
+    "level": 9,
+    "name": "Jacksonville Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "TVC",
+    "address": "1220 Airport Access Rd, Traverse City, MI, 49686",
+    "lat": 44.74497,
+    "lon": -85.58443,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Traverse City Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "DVT",
+    "address": "705 W Airport Blvd, Phoenix, AZ, 85027",
+    "lat": 33.69289,
+    "lon": -112.08518,
+    "fac_type": 7,
+    "level": 9,
+    "name": "Deer Valley Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "PNE",
+    "address": "3060 Red Lion Rd Gate #17, Philadelphia, PA, 19114",
+    "lat": 40.081752,
+    "lon": -75.006117,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Northeast Philadelphia Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "STL",
+    "address": "10789 Lambert International Blvd, Bridgeton, MO, 63044",
+    "lat": 38.74481,
+    "lon": -90.3733,
+    "fac_type": 7,
+    "level": 8,
+    "name": "St. Louis Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "STP",
+    "address": "514 Tower Rd, St Paul, MN, 55107",
+    "lat": 44.933406,
+    "lon": -93.064353,
+    "fac_type": 7,
+    "level": 4,
+    "name": "St. Paul Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZAU",
+    "address": "619 W New Indian Trail, Aurora, IL, 60506",
+    "lat": 41.782682,
+    "lon": -88.33107,
+    "fac_type": 8,
+    "level": 12,
+    "name": "Chicago ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "STT",
+    "address": "1 John Brewers Bay, Charlotte Amalie, VI, 802",
+    "lat": 18.339138,
+    "lon": -64.974791,
+    "fac_type": 7,
+    "level": 4,
+    "name": "St. Thomas Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "DFW",
+    "address": "2401 International Pkwy, DFW Airport, TX, 75261",
+    "lat": 32.896866,
+    "lon": -97.040389,
+    "fac_type": 7,
+    "level": 12,
+    "name": "Dallas-Fort Worth Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "DWH",
+    "address": "9125 Boudreaux Rd, Tomball, TX, 77375",
+    "lat": 30.067018,
+    "lon": -95.555973,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Houston Hooks Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "CDW",
+    "address": "31 Wright Way Ste #1, Fairfield, NJ, 7004",
+    "lat": 40.876043,
+    "lon": -74.277813,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Caldwell Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MIA",
+    "address": "6400 NW 22nd St, Miami, FL, 33122",
+    "lat": 25.793616,
+    "lon": -80.299723,
+    "fac_type": 3,
+    "level": 12,
+    "name": "Miami Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "LGB",
+    "address": "3601 E Spring St, Long Beach, CA, 90806",
+    "lat": 33.8117,
+    "lon": -118.150211,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Long Beach Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "LGA",
+    "address": "LaGuardia Airport, Flushing, NY, 11371",
+    "lat": 40.773497,
+    "lon": -73.873687,
+    "fac_type": 7,
+    "level": 11,
+    "name": "La Guardia Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "JCF",
+    "address": "100 E Sparks Dr, Edwards AFB, CA, 93524",
+    "lat": 34.919201,
+    "lon": -117.902154,
+    "fac_type": 6,
+    "level": 8,
+    "name": "Joshua TRACON",
+    "type": "Combined Control Facility"
+  },
+  {
+    "fac_id": "U90",
+    "address": "4445 Phoenix St, Tucson, AZ, 85708",
+    "lat": 32.17037,
+    "lon": -110.876194,
+    "fac_type": 2,
+    "level": 8,
+    "name": "Tucson TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "IAD",
+    "address": "24525 Willard Rd, Dulles, VA, 20166",
+    "lat": 38.938973,
+    "lon": -77.448653,
+    "fac_type": 7,
+    "level": 9,
+    "name": "Dulles Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SEA",
+    "address": "2440 S 166th St, Seattle, WA, 98158",
+    "lat": 47.455824,
+    "lon": -122.301363,
+    "fac_type": 7,
+    "level": 10,
+    "name": "Seattle Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZBW",
+    "address": "35 Northeastern Blvd, Nashua, NH, 3062",
+    "lat": 42.735436,
+    "lon": -71.480787,
+    "fac_type": 8,
+    "level": 11,
+    "name": "Boston ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "IAH",
+    "address": "4215 Will Clayton Pkwy, Houston, TX, 77032",
+    "lat": 29.984102,
+    "lon": -95.328384,
+    "fac_type": 7,
+    "level": 11,
+    "name": "Houston Intercontinental Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "S56",
+    "address": "1201 N 4000 W St, Salt Lake City, UT, 84116",
+    "lat": 40.79635,
+    "lon": -111.985153,
+    "fac_type": 2,
+    "level": 10,
+    "name": "Salt Lake City TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "RSW",
+    "address": "11900 Regional Ln SE, Ft Myers, FL, 33913",
+    "lat": 26.537367,
+    "lon": -81.759076,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Fort Myers Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ZSU",
+    "address": "Expreso Román Baldorioty de Castro, Carolina, Puerto Rico, 00984",
+    "lat": 18.431211,
+    "lon": -65.993203,
+    "fac_type": 6,
+    "level": 9,
+    "name": "San Juan",
+    "type": "Combined Control Facility"
+  },
+  {
+    "fac_id": "ARR",
+    "address": "43 W 690 US 30, Sugar Grove, IL, 60554",
+    "lat": 41.768181,
+    "lon": -88.467139,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Aurora Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ABE",
+    "address": "135 Fashion Dr S, Allentown, PA, 18109",
+    "lat": 40.658198,
+    "lon": -75.441448,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Allentown Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "SFB",
+    "address": "747 Control Tower Ln, Sanford, FL, 32773",
+    "lat": 28.7757,
+    "lon": -81.238585,
+    "fac_type": 7,
+    "level": 9,
+    "name": "Sanford Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ABQ",
+    "address": "2800 Kirtland Dr SE, Albuquerque, NM, 87117",
+    "lat": 35.04877,
+    "lon": -106.606432,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Albuquerque Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ZTL",
+    "address": "299 Woolsey Rd, Hampton, GA, 30228",
+    "lat": 33.379446,
+    "lon": -84.296862,
+    "fac_type": 8,
+    "level": 12,
+    "name": "Atlanta ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "ZDC",
+    "address": "825 E Market St, Leesburg, VA, 20176",
+    "lat": 39.101679,
+    "lon": -77.543087,
+    "fac_type": 8,
+    "level": 12,
+    "name": "Washington ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "SFO",
+    "address": "Terminal 2 Room 630, San Francisco, CA, 94128",
+    "lat": 37.616031,
+    "lon": -122.383962,
+    "fac_type": 7,
+    "level": 10,
+    "name": "San Francisco Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "BED",
+    "address": "LG Hanscom Field, Bedford, MA, 01730",
+    "lat": 42.465227,
+    "lon": -71.288573,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Hanscom Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "RDU",
+    "address": "1000 Sawyer Cir, Morrisville, NC, 27560",
+    "lat": 35.880986,
+    "lon": -78.78579,
+    "fac_type": 3,
+    "level": 9,
+    "name": "Raleigh-Durham Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MKE",
+    "address": "5330 S Howell Ave, Milwaukee, WI, 53207",
+    "lat": 42.947833,
+    "lon": -87.90643,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Milwaukee Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ZUA",
+    "address": "1775 Admiral Sherman Blvd, Barrigada, GU, 96913",
+    "lat": 13.478867,
+    "lon": -215.20844,
+    "true_lon": 144.797156,
+    "fac_type": 6,
+    "level": 8,
+    "name": "Guam",
+    "type": "Combined Control Facility"
+  },
+  {
+    "fac_id": "ACK",
+    "address": "14 Airport Rd Unit 14, Nantucket, MA, 02554",
+    "lat": 41.257091,
+    "lon": -70.06338,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Nantucket Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "PAE",
+    "address": "3310 100th St SW, Everett, WA, 98204",
+    "lat": 47.909023,
+    "lon": -122.279078,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Paine Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "LIT",
+    "address": "2601 David Grundfest Dr, Little Rock, AR, 72206",
+    "lat": 34.724835,
+    "lon": -92.223741,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Little Rock Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ACY",
+    "address": "Atlantic City International Airport, Atlantic City, NJ, 8405",
+    "lat": 39.455563,
+    "lon": -74.58804,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Atlantic City Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "BFI",
+    "address": "8200 E Marginal Way, Seattle, WA, 98108",
+    "lat": 47.529196,
+    "lon": -122.304306,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Boeing Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ITO",
+    "address": "102 Ailolo St, Hilo, HI, 96720",
+    "lat": 19.71619,
+    "lon": -155.047476,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Hilo TRACAB",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "GPT",
+    "address": "4445 10th Ave, Gulfport, MS, 39501",
+    "lat": 30.4012,
+    "lon": -89.07375,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Gulfport Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "FNT",
+    "address": "3900 W Maple Rd, Flint, MI, 48507",
+    "lat": 42.96177,
+    "lon": -83.75108,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Flint Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "JFK",
+    "address": "JFK International Airport, Jamaica, NY, 11430",
+    "lat": 40.64267,
+    "lon": -73.78132,
+    "fac_type": 7,
+    "level": 11,
+    "name": "Kennedy Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ADW",
+    "address": "FAA Andrews Air Base ATCT, Andrews AFB, MD, 20762",
+    "lat": 38.80519,
+    "lon": -76.87741,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Andrews Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "BWI",
+    "address": "Baltimore-Washington International Airport, Baltimore, MD, 21240",
+    "lat": 39.17918,
+    "lon": -76.66837,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Baltimore Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "AUS",
+    "address": "10102 Aircraft Ln, Austin, TX, 78719",
+    "lat": 30.19608,
+    "lon": -97.66543,
+    "fac_type": 3,
+    "level": 9,
+    "name": "Austin Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "SHV",
+    "address": "3694 Range Rd, Barksdale AFB, LA, 71110",
+    "lat": 32.45352,
+    "lon": -93.83042,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Shreveport Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ZFW",
+    "address": "13800 FAA Rd, Fort Worth, TX, 76155",
+    "lat": 32.83053,
+    "lon": -97.066,
+    "fac_type": 8,
+    "level": 12,
+    "name": "Fort Worth ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "AVL",
+    "address": "61 Terminal Dr, Fletcher, NC, 28732",
+    "lat": 35.43443,
+    "lon": -82.53724,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Asheville Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "OAK",
+    "address": "1 Airport Dr, Oakland, CA, 94621",
+    "lat": 37.71958,
+    "lon": -122.22193,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Oakland Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ORD",
+    "address": "Chicago O'Hare International Airport, Chicago, IL, 60666",
+    "lat": 41.97607,
+    "lon": -87.90328,
+    "fac_type": 7,
+    "level": 12,
+    "name": "Chicago O'Hare Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "GRR",
+    "address": "5500-44th St SE, Grand Rapids, MI, 49512",
+    "lat": 42.88416,
+    "lon": -85.52964,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Grand Rapids Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ORL",
+    "address": "4599 ORL Tower Rd, Orlando, FL, 32807",
+    "lat": 28.54383,
+    "lon": -81.32874,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Orlando Executive Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "CKB",
+    "address": "2500 Aviation Way, Bridgeport, WV, 26330",
+    "lat": 39.30003,
+    "lon": -80.22915,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Clarksburg Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "SJU",
+    "address": "Luis Munoz Marin International Airport, San Juan, PR, 917",
+    "lat": 18.43893,
+    "lon": -66.00398,
+    "fac_type": 7,
+    "level": 7,
+    "name": "San Juan Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "GSO",
+    "address": "1321 S Terminal Rd, Greensboro, NC, 27409",
+    "lat": 36.100918,
+    "lon": -79.941145,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Greensboro Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "PDX",
+    "address": "7108 NE Airport Way, Portland, OR, 97218",
+    "lat": 45.587687,
+    "lon": -122.589092,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Portland Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "R90",
+    "address": "100 TRACON Hill, Bellevue, NE, 68005",
+    "lat": 41.134727,
+    "lon": -95.91039,
+    "fac_type": 2,
+    "level": 8,
+    "name": "Omaha TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "TMB",
+    "address": "14744 SW 128th St, Miami, FL, 33196",
+    "lat": 25.648552,
+    "lon": -80.43234,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Tamiami Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "AGS",
+    "address": "1540 Hangar Rd, Augusta, GA, 30906",
+    "lat": 33.369617,
+    "lon": -81.971674,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Augusta Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "GCN",
+    "address": "1393 Liberator Dr, Grand Canyon, AZ, 86023",
+    "lat": 35.95164,
+    "lon": -112.142239,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Grand Canyon Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "GTF",
+    "address": "2830 Airport Ave A, Great Falls, MT, 59404",
+    "lat": 47.480063,
+    "lon": -111.359468,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Great Falls Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "A80",
+    "address": "784 S Hwy 74, Peachtree City, GA, 30269",
+    "lat": 33.351769,
+    "lon": -84.550204,
+    "fac_type": 2,
+    "level": 12,
+    "name": "Atlanta TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "BJC",
+    "address": "11001 Control Tower Dr, Westminster, CO, 80021",
+    "lat": 39.906405,
+    "lon": -105.12091,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Broomfield Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "CLE",
+    "address": "5300 Riverside Dr, Cleveland, OH, 44135",
+    "lat": 41.402002,
+    "lon": -81.848066,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Cleveland Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "CLT",
+    "address": "5507 Josh BirMham Pkwy, Charlotte, NC, 28208",
+    "lat": 35.223496,
+    "lon": -80.944273,
+    "fac_type": 3,
+    "level": 12,
+    "name": "Charlotte Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "SLC",
+    "address": "1201 North 4000 West, Salt Lake City, UT, 84116",
+    "lat": 40.796358,
+    "lon": -111.985137,
+    "fac_type": 7,
+    "level": 10,
+    "name": "Salt Lake City Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "M03",
+    "address": "2515 Winchester Rd, Memphis, TN, 38116",
+    "lat": 35.049915,
+    "lon": -89.981572,
+    "fac_type": 2,
+    "level": 9,
+    "name": "Memphis TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "A90",
+    "address": "25 Robert Milligan Pkwy, Merrimack, NH, 3054",
+    "lat": 42.816611,
+    "lon": -71.493611,
+    "fac_type": 2,
+    "level": 11,
+    "name": "Boston TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "I90",
+    "address": "4005 Greens Rd, Houston, TX, 77032",
+    "lat": 29.954588,
+    "lon": -95.321137,
+    "fac_type": 2,
+    "level": 12,
+    "name": "Houston TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "FCM",
+    "address": "10110 Flying Cloud Dr, Edn Prairie, MN, 55347",
+    "lat": 44.821742,
+    "lon": -93.458352,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Flying Cloud Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "AZO",
+    "address": "5400 Aviation Dr, Portgage, MI, 49002",
+    "lat": 42.238108,
+    "lon": -85.547812,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Kalamazoo Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "TPA",
+    "address": "4180 George J Bean Pkwy Suite 100, Tampa, FL, 33607",
+    "lat": 27.981209,
+    "lon": -82.533878,
+    "fac_type": 3,
+    "level": 10,
+    "name": "Tampa Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MRI",
+    "address": "1950 E 5th Ave, Anchorage, AK, 99501",
+    "lat": 61.217243,
+    "lon": -149.843879,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Merrill Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "P80",
+    "address": "7108 NE Airport Way, Portland, OR, 97218",
+    "lat": 45.587613,
+    "lon": -122.588691,
+    "fac_type": 2,
+    "level": 9,
+    "name": "Portland TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "GFK",
+    "address": "2780 Airport Dr RR #2, Grand Forks, ND, 58203",
+    "lat": 47.948858,
+    "lon": -97.173887,
+    "fac_type": 7,
+    "level": 9,
+    "name": "Grand Forks Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "PHL",
+    "address": "15 Hog Island Rd, Philadelphia, PA, 19153",
+    "lat": 39.865305,
+    "lon": -75.232982,
+    "fac_type": 3,
+    "level": 11,
+    "name": "Philadelphia Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "D10",
+    "address": "2401 International Pkwy, DFW Airport, TX, 75261",
+    "lat": 32.896458,
+    "lon": -97.04025,
+    "fac_type": 2,
+    "level": 12,
+    "name": "Dallas-Fort Worth TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "COS",
+    "address": "460 Kincheloe Loop, Peterson AFB, CO, 80914",
+    "lat": 38.816542,
+    "lon": -104.699121,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Colorado Springs Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "GGG",
+    "address": "214 Tower Rd, Longview, TX, 75603",
+    "lat": 32.379895,
+    "lon": -94.712605,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Longview Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "PIA",
+    "address": "6100 W Dirksen Pkwy, Peoria, IL, 61607",
+    "lat": 40.665936,
+    "lon": -89.690154,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Peoria Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "OGG",
+    "address": "62 Kuhea St, Kahului, HI 96732",
+    "lat": 20.897265,
+    "lon": -156.426289,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Kahului Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZMA",
+    "address": "7500 NW 58th St, Miami, FL, 33166",
+    "lat": 25.8248,
+    "lon": -80.319347,
+    "fac_type": 8,
+    "level": 11,
+    "name": "Miami ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "LAF",
+    "address": "1560 Aviation Dr, West Lafayette, IN, 47906",
+    "lat": 40.414752,
+    "lon": -86.933346,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Lafayette Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MCI",
+    "address": "#4 International Sq, Kansas City, MO, 64153",
+    "lat": 39.298327,
+    "lon": -94.715745,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Kansas City International Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MSY",
+    "address": "1 Terminal Dr, Kenner, LA  70062",
+    "lat": 29.984001,
+    "lon": -90.259032,
+    "fac_type": 3,
+    "level": 9,
+    "name": "Moiusantt Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MCO",
+    "address": "9685 Jeff Fuqua Blvd N, Orlando, FL, 32827",
+    "lat": 28.427191,
+    "lon": -81.307528,
+    "fac_type": 7,
+    "level": 9,
+    "name": "Orlando Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "PIT",
+    "address": "Tower Rd, Pittsburgh, PA, 15231",
+    "lat": 40.494671,
+    "lon": -80.237776,
+    "fac_type": 3,
+    "level": 9,
+    "name": "Pittsburgh Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "LAS",
+    "address": "699 Wright Brothers Ln, Las Vegas, NV, 89119",
+    "lat": 36.08277,
+    "lon": -115.147243,
+    "fac_type": 7,
+    "level": 11,
+    "name": "Las Vegas Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "NEW",
+    "address": "8500 Lloyd Stearman Dr, New Orleans, LA, 70126",
+    "lat": 30.042159,
+    "lon": -90.025771,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Lakefront Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "D21",
+    "address": "Detroit Metro Airport, Detriot, MI, 48242",
+    "lat": 42.212633,
+    "lon": -83.353975,
+    "fac_type": 2,
+    "level": 11,
+    "name": "Detroit TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "ILG",
+    "address": "#1 DRBA Way, New Castle, DE, 19720",
+    "lat": 39.677704,
+    "lon": -75.599394,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Wilmington Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SPI",
+    "address": "#1 Tower Dr, Springfield, IL, 62707",
+    "lat": 39.844356,
+    "lon": -89.685752,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Springfield Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "RNO",
+    "address": "755 S Rock Blvd, Reno, NV, 89502",
+    "lat": 39.499424,
+    "lon": -119.762892,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Reno Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "EUG",
+    "address": "28833 Douglas Dr, Eugene, OR, 97402",
+    "lat": 44.117598,
+    "lon": -123.212759,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Eugene Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MDT",
+    "address": "1 Terminal Dr, Middletown, PA 17057",
+    "lat": 40.197424,
+    "lon": -76.763474,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Harrisburg International Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MDW",
+    "address": "6200 S Laramie Ave, Chicago, IL, 60638",
+    "lat": 41.78027,
+    "lon": -87.752417,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Midway Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "DCA",
+    "address": "RR Washington National Airport, Arlington, VA, 22202",
+    "lat": 38.854579,
+    "lon": -77.04376,
+    "fac_type": 7,
+    "level": 9,
+    "name": "Washington National Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ROA",
+    "address": "5354 Aviation Dr, Roanoke, VA, 24102",
+    "lat": 37.326434,
+    "lon": -79.971551,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Roanoke Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "BOS",
+    "address": "600 Control Tower, East Boston, MA, 2128",
+    "lat": 42.365749,
+    "lon": -71.018709,
+    "fac_type": 7,
+    "level": 10,
+    "name": "Boston Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "L30",
+    "address": "699 Wright Brothers La, Las Vegas, NV, 89119",
+    "lat": 36.082711,
+    "lon": -115.146932,
+    "fac_type": 2,
+    "level": 11,
+    "name": "Las Vegas TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "MEM",
+    "address": "2515 Winchester Rd, Memphis, TN, 38116",
+    "lat": 35.049616,
+    "lon": -89.981666,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Memphis Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ROW",
+    "address": "30 W Challenger, Roswell, NM, 88202",
+    "lat": 33.29904,
+    "lon": -104.531588,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Roswell Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "IND",
+    "address": "8100 Col H Weir Cook Memorial Dr S, Indianapolis, IN, 46241",
+    "lat": 39.708816,
+    "lon": -86.304495,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Indianapolis Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "CRP",
+    "address": "6902 McGloin Rd, Corpus Christi, TX, 78415",
+    "lat": 27.760798,
+    "lon": -97.503006,
+    "fac_type": 3,
+    "level": 9,
+    "name": "Corpus Christi Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "VGT",
+    "address": "3700 Thunderbird Field Rd, North Las Vegas, NV, 89032",
+    "lat": 36.210178,
+    "lon": -115.189266,
+    "fac_type": 7,
+    "level": 7,
+    "name": "North Las Vegas Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "EVV",
+    "address": "7405 Indianapolis Rd, Evansville, IN, 47725",
+    "lat": 38.044869,
+    "lon": -87.529469,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Evansville Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "DTW",
+    "address": "Detroit Metro Airport Bldg 801, Detroit, MI, 48242",
+    "lat": 42.21278,
+    "lon": -83.354458,
+    "fac_type": 7,
+    "level": 11,
+    "name": "Detroit Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "BPT",
+    "address": "5040 W Airline Dr, Beaumont, TX, 77705",
+    "lat": 29.955837,
+    "lon": -94.020669,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Beaumont Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SAT",
+    "address": "9434 Airport Blvd, San Antonio, TX, 78216",
+    "lat": 29.527007,
+    "lon": -98.475902,
+    "fac_type": 3,
+    "level": 9,
+    "name": "San Antonio Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "YNG",
+    "address": "1453 Youngstown Kingsville Rd NE, Vienna, OH, 44473",
+    "lat": 41.263508,
+    "lon": -80.672987,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Youngstown Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "EWR",
+    "address": "118 Flagpole Rd, Newark, NJ, 7114",
+    "lat": 40.692529,
+    "lon": -74.182941,
+    "fac_type": 7,
+    "level": 11,
+    "name": "Newark Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "APA",
+    "address": "7800 S Peoria St E Wing, Englewood, CO, 80112",
+    "lat": 39.575131,
+    "lon": -104.84536,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Centennial Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "TUS",
+    "address": "705 W Airport Blvd, Phoenix, AZ, 85027",
+    "lat": 33.692918,
+    "lon": -112.083384,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Tucson Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "JAN",
+    "address": "100 International Dr, Jackson, MS, 39298",
+    "lat": 32.310078,
+    "lon": -90.075512,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Jackson Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "LVK",
+    "address": "590 Airway Blvd, Livermore, CA, 94551",
+    "lat": 37.69612,
+    "lon": -121.81635,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Livermore Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SCT",
+    "address": "9175 Kearny Villa Rd, San Diego, CA, 92126",
+    "lat": 32.891037,
+    "lon": -117.11808,
+    "fac_type": 9,
+    "level": 12,
+    "name": "Southern California TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "ZAN",
+    "address": "700 N Boniface Pkwy, Anchorage, AK, 99506",
+    "lat": 61.229836,
+    "lon": -149.77838,
+    "fac_type": 8,
+    "level": 10,
+    "name": "Anchorage ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "STS",
+    "address": "2245 Airport Blvd, Santa Rosa, CA, 95403",
+    "lat": 38.511005,
+    "lon": -122.80364,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Sonoma Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "PNS",
+    "address": "4230 Airfield Rd, Pensacola, FL, 32504",
+    "lat": 30.4576,
+    "lon": -87.18308,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Pensacola Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "S46",
+    "address": "825 S 160th St, Burien, WA, 98148",
+    "lat": 47.459644,
+    "lon": -122.32355,
+    "fac_type": 2,
+    "level": 10,
+    "name": "Seattle TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "SDF",
+    "address": "755 Old Grade Ln, Louisville, KY, 40213",
+    "lat": 38.159832,
+    "lon": -85.73058,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Standiford Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MHT",
+    "address": "8 Ammon Dr, Manchester, NH, 3103",
+    "lat": 42.93298,
+    "lon": -71.440186,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Manchester Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SDL",
+    "address": "14960 N 78th Way, Scottsdale, AZ, 85260",
+    "lat": 33.621223,
+    "lon": -111.908485,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Scottsdale Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MYF",
+    "address": "4298 Ponderosa Ave, San Diego, CA, 92123",
+    "lat": 32.819027,
+    "lon": -117.1325,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Montgomery Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "LFT",
+    "address": "220 Tower Dr, Lafayette, LA, 70508",
+    "lat": 30.20401,
+    "lon": -91.99567,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Lafayette Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "A11",
+    "address": "5200 W International Airport Rd, Anchorage, AK, 99502",
+    "lat": 61.17735,
+    "lon": -149.97821,
+    "fac_type": 2,
+    "level": 8,
+    "name": "Anchorage TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "OMA",
+    "address": "4501 Abbott Dr, Omaha, NE, 68110",
+    "lat": 41.293163,
+    "lon": -95.90153,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Omaha Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "TWF",
+    "address": "350 Airport Loop, Twin Falls, ID, 83301",
+    "lat": 42.48363,
+    "lon": -114.48479,
+    "fac_type": 4,
+    "level": 5,
+    "name": "Twin Falls Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "POC",
+    "address": "1600 Puddingstone Dr, La Verne, CA, 91750",
+    "lat": 34.095123,
+    "lon": -117.78588,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Brackett Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MIC",
+    "address": "5800 Crystal Airport Rd, Crystal, MN, 55429",
+    "lat": 45.0585,
+    "lon": -93.35586,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Crystal Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MYR",
+    "address": "3242 Tower St, Myrtle Beach, SC, 29577",
+    "lat": 33.684387,
+    "lon": -78.94085,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Myrtle Beach Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "M98",
+    "address": "6311 34th Ave S, Minneapolis, MN, 55450",
+    "lat": 44.88914,
+    "lon": -93.223045,
+    "fac_type": 2,
+    "level": 10,
+    "name": "Minneapolis TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "ZSE",
+    "address": "3101 Auburn Way S, Auburn, WA, 98902",
+    "lat": 47.28823,
+    "lon": -122.189026,
+    "fac_type": 8,
+    "level": 10,
+    "name": "Seattle ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "HOU",
+    "address": "8410 Lockheed Ave, Houston, TX, 77061",
+    "lat": 29.645914,
+    "lon": -95.287735,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Hobby Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SUS",
+    "address": "553 Beechcraft Ave, Chesterfield, MO, 63005",
+    "lat": 38.66269,
+    "lon": -90.65154,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Spirit Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ARB",
+    "address": "875 Airport Blvd, Ann Arbor, MI, 48108",
+    "lat": 42.22592,
+    "lon": -83.74826,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Ann Arbor Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "RST",
+    "address": "9 Helgerson Dr SW, Rochester, MN, 55902",
+    "lat": 43.916443,
+    "lon": -92.48792,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Rochester Municipal TRACAB",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "SEE",
+    "address": "2001 N Marshall Ave, El Cajon, CA, 92020",
+    "lat": 32.82051,
+    "lon": -116.97581,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Gillespie Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "T75",
+    "address": "22 Research Park Ct, St Charles, MO, 63304",
+    "lat": 38.706192,
+    "lon": -90.679474,
+    "fac_type": 2,
+    "level": 9,
+    "name": "St. Louis TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "CVG",
+    "address": "56 New Price Pike, Erlanger, KY, 41018",
+    "lat": 39.016514,
+    "lon": -84.60554,
+    "fac_type": 3,
+    "level": 9,
+    "name": "Cincinnati Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "SUX",
+    "address": "6001 Mitchell St, Sioux City, IA, 51111",
+    "lat": 42.402115,
+    "lon": -96.37622,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Sioux Gateway Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "POU",
+    "address": "265 New Hackensack Rd, Wappingers Falls, NY, 12590",
+    "lat": 41.623714,
+    "lon": -73.884056,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Poughkeepsie Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "BTR",
+    "address": "8326 Merle Gustafson Dr, Baton Rouge, LA, 70807",
+    "lat": 30.523174,
+    "lon": -91.14952,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Baton Rouge Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "BTV",
+    "address": "1250 Airport Dr, South Burlington, VT, 5403",
+    "lat": 44.473225,
+    "lon": -73.15886,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Burlington Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "HPN",
+    "address": "91 Tower Rd, White Plains, NY, 10604",
+    "lat": 41.06053,
+    "lon": -73.718796,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Westchester Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "FLL",
+    "address": "4150 SW 12th Ter, Fort Lauderdale, FL, 33315",
+    "lat": 26.07277,
+    "lon": -80.1575,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Fort Lauderdale Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ABI",
+    "address": "2925 Lance Dr, Abilene, TX, 79602",
+    "lat": 32.414646,
+    "lon": -99.67937,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Abilene Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "FLO",
+    "address": "2085 Terminal Dr, Florence, SC, 29506",
+    "lat": 34.194355,
+    "lon": -79.72702,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Florence Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "BDL",
+    "address": "35 Perimeter Rd, Windsor Locks, CT, 6096",
+    "lat": 41.945976,
+    "lon": -72.68602,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Bradley Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "BUF",
+    "address": "165 Holtz Dr, Cheektowaga, NY, 14225",
+    "lat": 42.940495,
+    "lon": -78.7176,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Buffalo Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ASE",
+    "address": "150 W Airport Rd, Aspen, CO, 81611",
+    "lat": 39.22004,
+    "lon": -106.864265,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Aspen TRACAB",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ONT",
+    "address": "1250 Tower Dr, Ontario, CA, 91761",
+    "lat": 34.04982,
+    "lon": -117.59856,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Ontario Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "RDG",
+    "address": "2405 B Bernville Rd, Reading, PA, 19605",
+    "lat": 40.37505,
+    "lon": -75.97236,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Reading TRACAB",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "BUR",
+    "address": "2821 N Hollywood Way, Burbank, CA, 91505",
+    "lat": 34.199932,
+    "lon": -118.34882,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Burbank Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MKC",
+    "address": "653 NW Lou Holland Dr, Kansas City, MO, 64116",
+    "lat": 39.13534,
+    "lon": -94.58896,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Kansas City Downtown Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ISP",
+    "address": "5 Airway Rd, Ronkonkoma, NY, 11779",
+    "lat": 40.789383,
+    "lon": -73.101524,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Islip Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MKG",
+    "address": "113 Sinclair Dr, Muskegon, MI, 49441",
+    "lat": 43.164413,
+    "lon": -86.23773,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Muskegon Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZDV",
+    "address": "2211 17th Ave, Longmont, CO, 80501",
+    "lat": 40.18857,
+    "lon": -105.12782,
+    "fac_type": 8,
+    "level": 10,
+    "name": "Denver ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "TYS",
+    "address": "2207 Airbase Rd, Louisville, TN, 37777",
+    "lat": 35.817825,
+    "lon": -84.002144,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Knoxville Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ACT",
+    "address": "7909 Karl May Dr, Waco, TX, 76708",
+    "lat": 31.60754,
+    "lon": -97.219666,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Waco Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "SGF",
+    "address": "2365 N FAA Ave, Springfield, MO, 65802",
+    "lat": 37.237095,
+    "lon": -93.393654,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Springfield Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ATL",
+    "address": "1106 Aviation Blvd, Atlanta, GA, 30354",
+    "lat": 33.640156,
+    "lon": -84.396774,
+    "fac_type": 7,
+    "level": 12,
+    "name": "Atlanta Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ICT",
+    "address": "2196 S Airport Rd, Wichita, KS, 67209",
+    "lat": 37.65559,
+    "lon": -97.426186,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Wichita Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "CHA",
+    "address": "5921 Pinehurst St, Chattanooga, TN, 37421",
+    "lat": 35.029255,
+    "lon": -85.20109,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Chattanooga Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "PAO",
+    "address": "1909 Embarcadero Rd, Palo Alto, CA, 94303",
+    "lat": 37.453716,
+    "lon": -122.11319,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Palo Alto Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "PRC",
+    "address": "6500 Wilkinson Dr, Prescott, AZ, 86301",
+    "lat": 34.648964,
+    "lon": -112.41949,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Prescott Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ELM",
+    "address": "276 Sing Sing Rd, Horseheads, NY, 14845",
+    "lat": 42.162693,
+    "lon": -76.89821,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Elmira TRACAB",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ELP",
+    "address": "2050 Hawkins Blvd, El Paso, TX, 79925",
+    "lat": 31.798044,
+    "lon": -106.37271,
+    "fac_type": 3,
+    "level": 7,
+    "name": "El Paso Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "BFL",
+    "address": "1547 Boughton Dr, Bakersfield, CA, 93308",
+    "lat": 35.434147,
+    "lon": -119.04622,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Bakersfield Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MLI",
+    "address": "6421 74th Ave, Milan, IL, 61264",
+    "lat": 41.441124,
+    "lon": -90.508514,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Moline Quad City Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "RVS",
+    "address": "8801 S Jack Bates Ave, Tulsa, OK, 74132",
+    "lat": 36.035725,
+    "lon": -95.99078,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Riverside Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "CHS",
+    "address": "5775 S Aviation Ave, Charleston, SC, 29406",
+    "lat": 32.899498,
+    "lon": -80.0301,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Charleston Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ADS",
+    "address": "16000 Dooley Rd, Addison, TX, 75001",
+    "lat": 32.967854,
+    "lon": -96.83841,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Addison Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "RFD",
+    "address": "5701 Falcon Rd, Rockford, IL, 61109",
+    "lat": 42.198315,
+    "lon": -89.08526,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Rockford Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "PBI",
+    "address": "3550 Belvedere Road, West Palm Beach, FL, 33406",
+    "lat": 26.691494,
+    "lon": -80.09388,
+    "fac_type": 3,
+    "level": 9,
+    "name": "West Palm Beach Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MLU",
+    "address": "5403 Operations Rd, Monroe, LA, 71203",
+    "lat": 32.511753,
+    "lon": -92.04391,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Monroe Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "C90",
+    "address": "1100 Bowes Rd, Elgin, IL, 60123",
+    "lat": 42.010273,
+    "lon": -88.302536,
+    "fac_type": 2,
+    "level": 12,
+    "name": "Chicago TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "CID",
+    "address": "9455 Shepard Ct SW, Cedar Rapids, IA, 52404",
+    "lat": 41.888192,
+    "lon": -91.705997,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Cedar Rapids Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "VNY",
+    "address": "7550 Hayvenhurst Pl, Van Nuys, CA, 91406",
+    "lat": 34.206043,
+    "lon": -118.49242,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Van Nuys Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "PSC",
+    "address": "3601 N 20th Ave, Pasco, WA, 99301",
+    "lat": 46.25754,
+    "lon": -119.11704,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Pasco Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "BGM",
+    "address": "2534 Airport Rd, Johnson City, NY, 13790",
+    "lat": 42.20997,
+    "lon": -75.98741,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Binghamton Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "HCF",
+    "address": "760 Worchester Ave, Honolulu, HI, 96818",
+    "lat": 21.319256,
+    "lon": -157.94348,
+    "fac_type": 6,
+    "level": 11,
+    "name": "Honolulu Control Facility",
+    "type": "Combined Control Facility"
+  },
+  {
+    "fac_id": "HSV",
+    "address": "1000 E Boeing Cr, Huntsville, AL, 35824",
+    "lat": 34.638943,
+    "lon": -86.77219,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Huntsville Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "BGR",
+    "address": "617 Griffin Rd, Bangor, ME, 4401",
+    "lat": 44.81219,
+    "lon": -68.82194,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Bangor Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "PSP",
+    "address": "280 N El Cielo Rd, Palm Springs, CA, 92262",
+    "lat": 33.82702,
+    "lon": -116.51062,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Palm Springs Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "EMT",
+    "address": "4500 Riverview Ave, El Monte, CA, 91731",
+    "lat": 34.088486,
+    "lon": -118.0317,
+    "fac_type": 7,
+    "level": 5,
+    "name": "El Monte Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SYR",
+    "address": "200 Constellation Way N, North Syracuse, NY, 13212",
+    "lat": 43.114902,
+    "lon": -76.11691,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Syracuse Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "P31",
+    "address": "4230 Airfield Rd, Pensacola, FL, 32504",
+    "lat": 30.4576,
+    "lon": -87.18308,
+    "fac_type": 2,
+    "level": 9,
+    "name": "Pensacola TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "MMU",
+    "address": "4 Airport Rd, Morristown, NJ, 7960",
+    "lat": 40.796394,
+    "lon": -74.42827,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Morristown Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "GRB",
+    "address": "2077 Airport Dr, Green Bay, WI, 54313",
+    "lat": 44.496002,
+    "lon": -88.11974,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Green Bay Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "AVP",
+    "address": "534 Lidy Rd, Dupont, PA, 18641",
+    "lat": 41.32794,
+    "lon": -75.73436,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Wilkes-Barre Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "PCT",
+    "address": "3699 Macintosh Dr, Warrenton, VA, 20187",
+    "lat": 38.74924,
+    "lon": -77.669464,
+    "fac_type": 2,
+    "level": 12,
+    "name": "Potomac TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "DLH",
+    "address": "4525 Airport Approach Rd, Duluth, MN, 55811",
+    "lat": 46.833878,
+    "lon": -92.19311,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Duluth Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ORF",
+    "address": "1245 Miller Store Rd, Virginia Beach, VA, 23455",
+    "lat": 36.891045,
+    "lon": -76.194336,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Norfolk Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "HTS",
+    "address": "1471 Airport Rd, Huntington, WV, 25704",
+    "lat": 38.37022,
+    "lon": -82.55581,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Huntington Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "PTK",
+    "address": "6510 Highland Rd, Waterford, MI, 48327",
+    "lat": 42.659576,
+    "lon": -83.41714,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Pontiac Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "BHM",
+    "address": "5900 Messer Airport Hwy, Birmingham, AL, 35212",
+    "lat": 33.56016,
+    "lon": -86.74917,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Birmingham Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "FPR",
+    "address": "3300 Hammond Rd, Fort Pierce, FL, 34946",
+    "lat": 27.490812,
+    "lon": -80.37401,
+    "fac_type": 7,
+    "level": 7,
+    "name": "St. Lucie Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SJC",
+    "address": "275 Martin Ave, Santa Clara, CA, 95050",
+    "lat": 37.360268,
+    "lon": -121.93491,
+    "fac_type": 7,
+    "level": 7,
+    "name": "San Jose Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "TLH",
+    "address": "5700 Springhill Rd, Tallahassee, FL, 32305",
+    "lat": 30.376928,
+    "lon": -84.35469,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Tallahassee Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "AFW",
+    "address": "2300 Alliance Blvd, Fort Worth, TX, 76177",
+    "lat": 32.986794,
+    "lon": -97.312874,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Alliance Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "PDK",
+    "address": "2001 Airport Rd, Chamblee, GA, 30341",
+    "lat": 33.876522,
+    "lon": -84.30529,
+    "fac_type": 7,
+    "level": 7,
+    "name": "DeKalb-Peachtree Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "HUF",
+    "address": "580 S Airport St, Terre Haute, IN, 47803",
+    "lat": 39.460377,
+    "lon": -87.30309,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Terre Haute Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "PUB",
+    "address": "31385 Bryan Cir, Pueblo, CO, 81001",
+    "lat": 38.28369,
+    "lon": -104.49449,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Pueblo Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "AGC",
+    "address": "12 Allegheny County Airport, West Mifflin, PA, 15122",
+    "lat": 40.35061,
+    "lon": -79.927025,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Allegheny Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MOB",
+    "address": "101 Flave Pierce Rd, Mobile, AL, 36608",
+    "lat": 30.688995,
+    "lon": -88.25007,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Mobile Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "RHV",
+    "address": "2204 Waverly Ave, San Jose, CA, 95122",
+    "lat": 37.33102,
+    "lon": -121.82139,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Reid-Hillview Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "BIL",
+    "address": "1907 Terminal Cir, Bilings, MT, 59105",
+    "lat": 45.8026,
+    "lon": -108.53604,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Billings Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "GSP",
+    "address": "2000 GSP Dr, Greer, SC, 29651",
+    "lat": 34.878906,
+    "lon": -82.22441,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Greer Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ZHU",
+    "address": "16600 John F Kennedy Blvd, Houston, TX, 77032",
+    "lat": 29.985823,
+    "lon": -95.34155,
+    "fac_type": 8,
+    "level": 11,
+    "name": "Houston ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "F11",
+    "address": "9399 Jeff Fuqua Blvd, Orlando, FL, 32827",
+    "lat": 28.431326,
+    "lon": -81.30512,
+    "fac_type": 2,
+    "level": 11,
+    "name": "Central Florida TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "HEF",
+    "address": "10603 Observation Rd, Manassas, VA, 20110",
+    "lat": 38.72197,
+    "lon": -77.52028,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Manassas Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "P50",
+    "address": "3500 E Sky Harbor Blvd, Phoenix, AZ, 85034",
+    "lat": 33.434982,
+    "lon": -112.00734,
+    "fac_type": 2,
+    "level": 11,
+    "name": "Phoenix TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "BIS",
+    "address": "2301 University Dr, Bismark, ND, 58504",
+    "lat": 46.76501,
+    "lon": -100.76323,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Bismarck TRACAB",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "RIC",
+    "address": "5701 Gulfstream Rd, Richmond, VA, 23250",
+    "lat": 37.513443,
+    "lon": -77.3319,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Richmond Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "FAI",
+    "address": "3800 University Ave S, Fairbanks, AK, 99709",
+    "lat": 64.81098,
+    "lon": -147.84708,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Fairbanks Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ZID",
+    "address": "1850 S Sigsbee St, Indianapolis, IN, 46241",
+    "lat": 39.739628,
+    "lon": -86.27734,
+    "fac_type": 8,
+    "level": 12,
+    "name": "Indianapolis ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "FAR",
+    "address": "3101 Dakota Dr, Fargo, ND, 58102",
+    "lat": 46.90662,
+    "lon": -96.822556,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Fargo Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "FAT",
+    "address": "5055 E Anderson Ave, Fresno, CA, 93727",
+    "lat": 36.77361,
+    "lon": -119.72433,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Fresno Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "FRG",
+    "address": "7170 Republic Airport, Farmingdale, NY, 11735",
+    "lat": 40.72089,
+    "lon": -73.41779,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Farmingdale Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "FAY",
+    "address": "3041 Control Tower Rd, Fayetteville, NC, 28306",
+    "lat": 34.991886,
+    "lon": -78.88525,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Fayetteville Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "PVD",
+    "address": "464 Warwick Industrial Dr, Warwick, RI, 2886",
+    "lat": 41.709988,
+    "lon": -71.43516,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Providence Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "VRB",
+    "address": "2930 Flight Safety Dr, Vero Beach, FL, 32960",
+    "lat": 27.64965,
+    "lon": -80.42106,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Vero Beach Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "LNK",
+    "address": "2600 W Adams St, Lincoln, NE, 68524",
+    "lat": 40.842873,
+    "lon": -96.74308,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Lincoln Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "HWD",
+    "address": "20305 Skywest Dr, Hayward, CA, 94541",
+    "lat": 37.66321,
+    "lon": -122.11974,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Hayward Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "CMA",
+    "address": "797 Aviation Dr, Camarillo, CA, 93010",
+    "lat": 34.20954,
+    "lon": -119.084915,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Camarillo Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "FSD",
+    "address": "2601 N Jaycee Ln, Sioux Falls, SD, 57104",
+    "lat": 43.5827,
+    "lon": -96.73179,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Sioux Falls Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "CMI",
+    "address": "1 Airport Rd, Savoy, IL, 61874",
+    "lat": 40.03943,
+    "lon": -88.25399,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Champaign Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "CMH",
+    "address": "4277 International Gtwy, Columbus, OH, 43219",
+    "lat": 39.998375,
+    "lon": -82.892624,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Columbus Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "FSM",
+    "address": "5100 S 66th St, Fort Smith, AR, 72903",
+    "lat": 35.333874,
+    "lon": -94.36185,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Fort Smith Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "PWM",
+    "address": "1003 Westbrook St, Portland, ME, 4102",
+    "lat": 43.650684,
+    "lon": -70.30972,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Portland Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "TOA",
+    "address": "25311 Aero Way, Torrance, CA, 90505",
+    "lat": 33.800663,
+    "lon": -118.341805,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Torrance Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "GEG",
+    "address": "8314 W Electric Ave, Spokane, WA, 99224",
+    "lat": 47.612667,
+    "lon": -117.528046,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Spokane Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ZJX",
+    "address": "37075 Aviation Ln, Hilliard, FL, 32046",
+    "lat": 30.69781,
+    "lon": -81.90882,
+    "fac_type": 8,
+    "level": 11,
+    "name": "Jacksonville ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "SMF",
+    "address": "5620 Alan Boyd Dr, Sacramento, CA, 95837",
+    "lat": 38.690243,
+    "lon": -121.5941,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Sacramento Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "TOL",
+    "address": "11013 Airport Hwy, Swanton, OH, 43558",
+    "lat": 41.59631,
+    "lon": -83.80455,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Toledo Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "Y90",
+    "address": "35 Perimeter Rd, Windsor Locks, CT, 6096",
+    "lat": 41.945976,
+    "lon": -72.68602,
+    "fac_type": 2,
+    "level": 8,
+    "name": "Yankee TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "LOU",
+    "address": "2710 Moran Ave, Louisville, KY, 40205",
+    "lat": 38.227192,
+    "lon": -85.66027,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Louisville Bowman Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MAF",
+    "address": "2500 N Pliska Dr, Midland, TX, 79711",
+    "lat": 31.940176,
+    "lon": -102.2092,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Midland Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "DPA",
+    "address": "2710 International Dr, West Chicago, IL, 60185",
+    "lat": 41.907055,
+    "lon": -88.255554,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Dupage Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SMO",
+    "address": "3300 Donald Douglas Loop N, Santa Monica, CA, 90405",
+    "lat": 34.018806,
+    "lon": -118.45094,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Santa Monica Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ERI",
+    "address": "4411 W 12th St, Erie, PA, 16505",
+    "lat": 42.084103,
+    "lon": -80.18283,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Erie Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "NCT",
+    "address": "11375 Douglas Rd, Mather, CA, 95655",
+    "lat": 38.55959,
+    "lon": -121.26446,
+    "fac_type": 2,
+    "level": 12,
+    "name": "Northern California TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "YIP",
+    "address": "8800 Beck Rd, Belleville, MI, 48111",
+    "lat": 42.23962,
+    "lon": -83.50414,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Willow Run Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "D01",
+    "address": "26705 E 68th Ave, Denver, CO, 80249",
+    "lat": 39.824596,
+    "lon": -104.67624,
+    "fac_type": 2,
+    "level": 12,
+    "name": "Denver TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "CNO",
+    "address": "7000 Merrill Ave, Chino, CA, 91710",
+    "lat": 33.983753,
+    "lon": -117.65177,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Chino Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SNA",
+    "address": "370 Paularino Ave, Costa Mesa, CA, 92626",
+    "lat": 33.678818,
+    "lon": -117.87248,
+    "fac_type": 7,
+    "level": 8,
+    "name": "John Wayne Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "FTW",
+    "address": "4100 N Lincoln Ave, Fort Worth, TX, 76106",
+    "lat": 32.813904,
+    "lon": -97.36304,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Meacham Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZLA",
+    "address": "2555 E Ave P, Palmdale, CA, 93550",
+    "lat": 34.602325,
+    "lon": -118.08406,
+    "fac_type": 8,
+    "level": 12,
+    "name": "Los Angeles ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "PHF",
+    "address": "2402 G Ave, Newport News, VA, 23602",
+    "lat": 37.13032,
+    "lon": -76.506165,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Patrick Henry Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZLC",
+    "address": "2150 W 700 N, Salt Lake City, UT, 84116",
+    "lat": 40.78477,
+    "lon": -111.95175,
+    "fac_type": 8,
+    "level": 10,
+    "name": "Salt Lake City ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "MRY",
+    "address": "2475 Henderson Way, Monterey, CA, 93940",
+    "lat": 36.587296,
+    "lon": -121.85321,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Monterey Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MBS",
+    "address": "8570 W Freeland Rd, Freeland, MI, 48623",
+    "lat": 43.52107,
+    "lon": -84.08192,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Saginaw Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "PHX",
+    "address": "3500 E Sky Harbor Blvd, Phoenix, AZ, 85034",
+    "lat": 33.434982,
+    "lon": -112.00734,
+    "fac_type": 7,
+    "level": 10,
+    "name": "Phoenix Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "DAB",
+    "address": "2302 Bellevue Ave, Daytona Beach, FL, 32114",
+    "lat": 29.174086,
+    "lon": -81.058205,
+    "fac_type": 3,
+    "level": 10,
+    "name": "Daytona Beach Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MSN",
+    "address": "4301 International La, Madison, WI, 53704",
+    "lat": 43.134155,
+    "lon": -89.349205,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Madison Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MSP",
+    "address": "6311 34th Ave S, Minneapolis, MN, 55450",
+    "lat": 44.88914,
+    "lon": -93.223045,
+    "fac_type": 7,
+    "level": 11,
+    "name": "Minneapolis Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "PIE",
+    "address": "14510 Airport Pkwy, Clearwater, FL, 33762",
+    "lat": 27.902931,
+    "lon": -82.69153,
+    "fac_type": 7,
+    "level": 7,
+    "name": "St. Petersburg Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "DAL",
+    "address": "8100 Aviation Pl, Dallas, TX, 75235",
+    "lat": 32.839867,
+    "lon": -96.84308,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Dallas Love Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "HIO",
+    "address": "3119 NE Cornell Rd, Hillsboro, OR, 97124",
+    "lat": 45.530663,
+    "lon": -122.95592,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Hillsboro Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZME",
+    "address": "3229 Democrat Rd, Memphis, TN, 38118",
+    "lat": 35.068867,
+    "lon": -89.958626,
+    "fac_type": 8,
+    "level": 12,
+    "name": "Memphis ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "BNA",
+    "address": "515 Olen Taylor Dr, Nashville, TN, 37217",
+    "lat": 36.11736,
+    "lon": -86.67462,
+    "fac_type": 3,
+    "level": 9,
+    "name": "Nashville Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ALB",
+    "address": "128 Sicker Rd, Latham, NY, 12110",
+    "lat": 42.751377,
+    "lon": -73.80147,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Albany Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "LAN",
+    "address": "4100 Capital City Blvd, Lansing, MI, 48906",
+    "lat": 42.77323,
+    "lon": -84.588875,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Lansing Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZMP",
+    "address": "512 Division St, Farmington, MN, 55024",
+    "lat": 44.637783,
+    "lon": -93.15073,
+    "fac_type": 8,
+    "level": 11,
+    "name": "Minneapolis ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "DAY",
+    "address": "3753 Cargo Rd, Vandalia, OH, 45377",
+    "lat": 39.89915,
+    "lon": -84.224915,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Dayton Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "LAX",
+    "address": "245 World Way N, Los Angeles, CA, 90045",
+    "lat": 33.9449,
+    "lon": -118.40668,
+    "fac_type": 7,
+    "level": 12,
+    "name": "Los Angeles Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ALO",
+    "address": "2740 Livingston La, Waterloo, IA, 50703",
+    "lat": 42.550556,
+    "lon": -92.39454,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Waterloo Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "CPR",
+    "address": "7710 Fuller St, Casper, WY, 82604",
+    "lat": 42.902534,
+    "lon": -106.45689,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Casper Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "CPS",
+    "address": "9951 Molla Dr, Cahokia, IL, 62206",
+    "lat": 38.570107,
+    "lon": -90.16692,
+    "fac_type": 7,
+    "level": 6,
+    "name": "St. Louis Downtown Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "TRI",
+    "address": "2701 Hwy 75, Blountville, TN, 37617",
+    "lat": 36.476192,
+    "lon": -82.412865,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Tri-Cities Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ILM",
+    "address": "2220 Control Tower Dr, Wilmington, NC, 28405",
+    "lat": 34.26564,
+    "lon": -77.8977,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Wilmington Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "LBB",
+    "address": "7001 N Martin Luther King Jr Blvd, Lubbock, TX, 79403",
+    "lat": 33.530704,
+    "lon": -101.820145,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Lubbock Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "JNU",
+    "address": "1873 Shell Simmons Dr, Juneau, AK, 99801",
+    "lat": 58.36273,
+    "lon": -134.58452,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Juneau Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "FWA",
+    "address": "3817 Winters Rd, Fort Wayne, IN, 46809",
+    "lat": 40.974575,
+    "lon": -85.18714,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Fort Wayne Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "AMA",
+    "address": "2000 English Rd, Amarillo, TX, 79108",
+    "lat": 35.23306,
+    "lon": -101.70626,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Amarillo Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "FFZ",
+    "address": "4822 E Falcon Dr, Mesa, AZ, 85215",
+    "lat": 33.45266,
+    "lon": -111.72829,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Falcon Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "BOI",
+    "address": "3001 W Harvard St, Boise, ID, 83705",
+    "lat": 43.557022,
+    "lon": -116.21996,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Boise Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "DSM",
+    "address": "3000 McKinley Ave, Des Moines, IA, 50321",
+    "lat": 41.54093,
+    "lon": -93.65924,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Des Moines Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ZNY",
+    "address": "4205 Johnson Ave, Ronkonkoma, NY, 11779",
+    "lat": 40.80769,
+    "lon": -73.120895,
+    "fac_type": 8,
+    "level": 12,
+    "name": "New York ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "CAE",
+    "address": "2821 Aviation Way, West Columbia, SC, 29170",
+    "lat": 33.9449,
+    "lon": -81.11782,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Columbia Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "ROC",
+    "address": "1375 Scottsville Rd, Rochester, NY, 14624",
+    "lat": 43.11352,
+    "lon": -77.66834,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Rochester Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "CAK",
+    "address": "5400 Lauby Rd NW, North Canton, OH, 44720",
+    "lat": 40.92375,
+    "lon": -81.432655,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Akron-Canton Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZOB",
+    "address": "326 E Lorain St, Oberlin, OH, 44074",
+    "lat": 41.29409,
+    "lon": -82.20859,
+    "fac_type": 8,
+    "level": 12,
+    "name": "Cleveland ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "ZOA",
+    "address": "5125 Central Ave, Fremont, CA, 94536",
+    "lat": 37.54488,
+    "lon": -122.013336,
+    "fac_type": 8,
+    "level": 11,
+    "name": "Oakland ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "LCH",
+    "address": "500 Airport Blvd, Lake Charles, LA, 70607",
+    "lat": 30.128315,
+    "lon": -93.21417,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Lake Charles Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "FXE",
+    "address": "5550 NW 23rd Ave, Fort Lauderdale, FL, 33309",
+    "lat": 26.195402,
+    "lon": -80.17355,
+    "fac_type": 7,
+    "level": 7,
+    "name": "Fort Lauderdale Executive Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ANC",
+    "address": "5200 W International Airport Rd, Anchorage, AK, 99502",
+    "lat": 61.17735,
+    "lon": -149.97821,
+    "fac_type": 7,
+    "level": 8,
+    "name": "Anchorage Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SAN",
+    "address": "3690 Pacific Hwy, San Diego, CA, 92101",
+    "lat": 32.738533,
+    "lon": -117.18094,
+    "fac_type": 7,
+    "level": 8,
+    "name": "San Diego Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "CRQ",
+    "address": "2200 Palomar Airport Rd, Carlsbad, CA, 92010",
+    "lat": 33.125824,
+    "lon": -117.27478,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Palomar Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SAV",
+    "address": "100 Melaver Dr, Savannah, GA, 31408",
+    "lat": 32.140945,
+    "lon": -81.20922,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Savannah Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "CRW",
+    "address": "100 Airport Rd, Charleston, WV, 25311",
+    "lat": 38.368767,
+    "lon": -81.59689,
+    "fac_type": 3,
+    "level": 5,
+    "name": "Charleston Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MFD",
+    "address": "2101 Harrington Memorial Rd, Mansfield, OH, 44903",
+    "lat": 40.81279,
+    "lon": -82.51301,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Mansfield Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "HLN",
+    "address": "3100 Airport Rd, Helena, MT, 59601",
+    "lat": 46.60215,
+    "lon": -111.98297,
+    "fac_type": 4,
+    "level": 5,
+    "name": "Helena Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "SBA",
+    "address": "10 Burns Pl, Santa Barbara, CA, 93117",
+    "lat": 34.431484,
+    "lon": -119.84516,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Santa Barbara Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "SRQ",
+    "address": "1120 Clyde Jones Rd, Sarasota, FL, 34243",
+    "lat": 27.403505,
+    "lon": -82.55869,
+    "fac_type": 7,
+    "level": 6,
+    "name": "Sarasota Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "CSG",
+    "address": "3250 W Britt David Rd, Columbus, GA, 31909",
+    "lat": 32.528637,
+    "lon": -84.95622,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Columbus Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "SBN",
+    "address": "4713 Lathrop St, South Bend, IN, 46628",
+    "lat": 41.708004,
+    "lon": -86.312325,
+    "fac_type": 3,
+    "level": 7,
+    "name": "South Bend Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "MWH",
+    "address": "7820 Andrews St NE, Moses Lake, WA, 98837",
+    "lat": 47.18831,
+    "lon": -119.32186,
+    "fac_type": 3,
+    "level": 6,
+    "name": "Grant County Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "N90",
+    "address": "1515 Stewart Ave, Westbury, NY, 11590",
+    "lat": 40.73761,
+    "lon": -73.57216,
+    "fac_type": 9,
+    "level": 12,
+    "name": "New York TRACON",
+    "type": "Approach Control"
+  },
+  {
+    "fac_id": "OKC",
+    "address": "4500 SW 67th St, Oklahoma City, OK, 73159",
+    "lat": 35.39867,
+    "lon": -97.599785,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Oklahoma City Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "TUL",
+    "address": "3232 N Memorial Dr, Tulsa, OK, 74115",
+    "lat": 36.203568,
+    "lon": -95.88698,
+    "fac_type": 3,
+    "level": 8,
+    "name": "Tulsa Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "DEN",
+    "address": "8400 Pena Blvd Unit 492056, Denver, CO, 80249",
+    "lat": 39.84961,
+    "lon": -104.67268,
+    "fac_type": 7,
+    "level": 12,
+    "name": "Denver Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "TEB",
+    "address": "225 Fred Wehran Dr, Teterboro, NJ, 7608",
+    "lat": 40.851818,
+    "lon": -74.055214,
+    "fac_type": 7,
+    "level": 9,
+    "name": "Teterboro Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "MGM",
+    "address": "4701-B Tower Rd, Hope Hull, AL, 36043",
+    "lat": 32.29756,
+    "lon": -86.41373,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Montgomery Tower",
+    "type": "Tower and Approach Control"
+  },
+  {
+    "fac_id": "CCR",
+    "address": "201 John Glenn Dr, Concord, CA, 94520",
+    "lat": 37.982174,
+    "lon": -122.05614,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Concord Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "APC",
+    "address": "4000 Airport Rd, Napa, CA, 94558",
+    "lat": 38.20654,
+    "lon": -122.27591,
+    "fac_type": 7,
+    "level": 4,
+    "name": "Napa Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "ZAB",
+    "address": "8000 Louisiana Blvd NE, Albuquerque, NM, 87109",
+    "lat": 35.170483,
+    "lon": -106.56876,
+    "fac_type": 8,
+    "level": 10,
+    "name": "Albuquerque ARTCC",
+    "type": "Enroute Center"
+  },
+  {
+    "fac_id": "SCK",
+    "address": "7434 S Lindbergh St, Stockton, CA, 95206",
+    "lat": 37.891167,
+    "lon": -121.24249,
+    "fac_type": 7,
+    "level": 5,
+    "name": "Stockton Tower",
+    "type": "Tower"
+  },
+  {
+    "fac_id": "LEX",
+    "address": "4051 Terminal Dr, Lexington, KY, 40510",
+    "lat": 38.039906,
+    "lon": -84.5974,
+    "fac_type": 3,
+    "level": 7,
+    "name": "Lexington Tower",
+    "type": "Tower and Approach Control"
+  }
+ ]
