@@ -1,4 +1,5 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import Router from 'next/router';
 import MUIDataTable from 'mui-datatables';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
@@ -88,7 +89,6 @@ const MTable = ({ title, data, columns }) => {
 
   const options = {
     filterType: 'checkbox',
-    selectableRows: 'multiple',
     responsive: 'stacked',
     rowsPerPageOptions: [10, 25, 50],
     rowHover: true,
@@ -114,3 +114,9 @@ const MTable = ({ title, data, columns }) => {
 };
 
 export default MTable;
+
+MTable.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.array,
+  columns: PropTypes.array,
+};

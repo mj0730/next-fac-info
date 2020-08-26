@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles.css';
 import Layout from '../components/layout';
 import FacIdContextProvider from '../components/context/FacIdContext';
@@ -14,3 +16,8 @@ export default function MyApp({ Component, pageProps }) {
     </FacIdContextProvider>
   );
 }
+
+MyApp.propTypes = {
+  Component: PropTypes.object.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
