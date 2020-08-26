@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles.css';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import FacIdContextProvider from '../components/context/FacIdContext';
 import DbInfoContextProvider from '../components/context/DbInfoContext';
 
