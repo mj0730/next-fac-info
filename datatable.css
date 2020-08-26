@@ -1,0 +1,11 @@
+.MuiTable-root caption {
+  display: none;
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+  /* ovverride for MUI table */
+  tr.MuiTableRow-root {
+    display: table-row !important;
+  }
+}

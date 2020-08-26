@@ -10,6 +10,7 @@ const Facilites = () => {
   const [FacId, storeFacId] = useContext(FacIdContext);
   const [DbInfo, setDbInfo] = useContext(DbInfoContext);
   const [tableToDisplay, setTableToDisplay] = useState('information');
+  const [activeClass, setActiveClass] = useState('information');
 
   const facilityData = Object.values(FACILITIES);
   const staffingData = Object.values(DbInfo);
@@ -32,6 +33,7 @@ const Facilites = () => {
     e.target.value === undefined
       ? setTableToDisplay(e.target.firstChild.data.toLowerCase())
       : setTableToDisplay(e.target.value);
+    setActiveClass(e.target.value);
   };
 
   const columnsFacility = [
@@ -189,30 +191,26 @@ const Facilites = () => {
   ];
 
   return (
-    <div id='container'>
+    <div id="container">
       <Head>
         <title>pointSixtyFive - Facility Information</title>
       </Head>
 
-      <nav id='table-select'>
-        <ButtonGroup color='primary' size='large' aria-label='outlined primary button group'>
-          <Button onClick={handleClick} value={'information'}>
-            Information
-          </Button>
-          <Button onClick={handleClick} value={'staffing'}>
-            Staffing
-          </Button>
-          <Button onClick={handleClick} value={'pay'}>
-            Pay
-          </Button>
-        </ButtonGroup>
+      <nav id="table-select">
+        <button onClick={handleClick} value={'information'} className={activeClass === 'information' ? 'active' : null}>
+          Information
+        </button>
+        <button onClick={handleClick} value={'staffing'} className={activeClass === 'staffing' ? 'active' : null}>
+          Staffing
+        </button>
+        <button onClick={handleClick} value={'pay'} className={activeClass === 'pay' ? 'active' : null}>
+          Pay
+        </button>
       </nav>
 
-      {tableToDisplay === 'information' && (
-        <MTable title={'Facility Information'} data={facilityData} columns={columnsFacility} />
-      )}
-      {tableToDisplay === 'staffing' && <MTable title={'Staffing'} data={staffingData} columns={columnsStaffing} />}
-      {tableToDisplay === 'pay' && <MTable title={'Pay'} data={[]} columns={columnsPay} />}
+      {tableToDisplay === 'information' && <MTable data={facilityData} columns={columnsFacility} />}
+      {tableToDisplay === 'staffing' && <MTable data={staffingData} columns={columnsStaffing} />}
+      {tableToDisplay === 'pay' && <MTable data={[]} columns={columnsPay} />}
     </div>
   );
 };

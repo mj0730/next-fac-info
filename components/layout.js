@@ -4,16 +4,18 @@ import Head from 'next/head';
 
 function Layout(props) {
   return (
-    <div className='index-grid-container'>
-      <div className='index-NavColumn'>
+
+    <div className="index-grid-container">
+      <div className="index-nav-column">
         <SearchBox />
         <PageLinks />
       </div>
 
-      <div className='index-DisplayColumn'>{props.children}</div>
+      <div className="index-display-column">{props.children}</div>
 
-      <footer className='index-Footer'>
-        <img src='circle_logo.png' alt='Logo' /> <a href='https://pointsixtyfive.com'>pointSixtyFive.com</a>
+      <footer className="index-footer">
+        <img src="circle_logo.png" alt="Logo" />{' '}
+        <a href="https://pointsixtyfive.com">pointSixtyFive.com</a>
       </footer>
     </div>
   );
