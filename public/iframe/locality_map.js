@@ -3,7 +3,7 @@ const map = L.map('map', {
   zoom: 4,
 });
 
-L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=1ojaSiJVULNHwgWfBZYs', {
+L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}@2x.png?key=1ojaSiJVULNHwgWfBZYs', {
   tileSize: 512,
   zoomOffset: -1,
   minZoom: 1,
