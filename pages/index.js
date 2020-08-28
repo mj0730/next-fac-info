@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 
 //Get facility info from the database
 export async function getStaticProps() {
-  const result = await fetch(`/api/getAllFacilityData`).then((res) => res.json());
+  const result = await fetch(`http://localhost:${PORT}/api/getAllFacilityData`).then((res) => res.json());
 
   const data = {};
   result.forEach((x) => (data[x['Facility ID']] = x));
