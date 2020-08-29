@@ -8,10 +8,11 @@ import FrontPage from '../components/FrontPage';
 import ErrorModal from '../components/ErrorModal';
 
 const PORT = process.env.PORT || 3001;
+const URL = process.env.ROOT_URL || 'http://localhost';
 
 //Get facility info from the database
 export async function getStaticProps() {
-  const result = await fetch(`http://localhost:${PORT}/api/getAllFacilityData`).then((res) => res.json());
+  const result = await fetch(`${URL}:${PORT}/api/getAllFacilityData`).then((res) => res.json());
 
   const data = {};
   result.forEach((x) => (data[x['Facility ID']] = x));
@@ -83,5 +84,5 @@ const Index = ({ data }) => {
 export default Index;
 
 Index.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object,
 };
