@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import * as facs from '../scripts/facility_info.js';
+import { connectToDatabase } from '../utils/mongodb';
 import { DbInfoContext } from '../components/context/DbInfoContext';
 import { FacIdContext } from '../components/context/FacIdContext';
 import FacilityPage from '../components/FacilityPage';
 import FrontPage from '../components/FrontPage';
 import ErrorModal from '../components/ErrorModal';
 
-const PORT = process.env.PORT || 3001;
-const URL = process.env.ROOT_URL || 'http://localhost';
-
 //Get facility info from the database
 export async function getStaticProps() {
-  const result = await fetch(`${URL}:${PORT}/api/getAllFacilityData`).then((res) => res.json());
+  const { db } = await connectToDatabase();
+  const result = await db.collection('pptdata').find().project({ _id: 0 }).toArray();
 
   const data = {};
   result.forEach((x) => (data[x['Facility ID']] = x));
