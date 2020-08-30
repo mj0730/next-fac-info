@@ -391,7 +391,7 @@ function sortFacTypes(marker, popupData) {
         <td>Address: ${marker.address}</td>
       </tr>
       <tr>
-        <td><a href="${FORUM_URL}${marker.fac_id}">Forum Page</a></td>
+        <td><a href="${FORUM_URL}${marker.fac_id}" target="_top">Forum Page</a></td>
       <tr>
     </table>
     `;

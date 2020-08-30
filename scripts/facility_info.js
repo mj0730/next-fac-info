@@ -4848,7 +4848,7 @@ function completePayTable(facility) {
 
   return {
     PayTable: basePayTable,
-    'CIP%': cipPercentage,
+    'CIP%': cipPercentage.toPrecision(2),
     CIP: cipAmounts,
     'COLA%': colaPercentage,
     COLA: colaAmounts,
