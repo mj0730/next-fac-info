@@ -425,7 +425,6 @@ nav#table-select button:focus {
 
   #map-container iframe {
     height: calc(100vh - 40px);
-    height: -webkit-fill-available;
   }
 
   /* ovverride for MUI table */
