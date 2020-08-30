@@ -10,7 +10,7 @@ const FacilityPage = ({ currentFacPay, currentFacInfo, currentFacLocality }) => 
   const [DbInfo] = useContext(DbInfoContext);
 
   const toTitleCase = (str = '') => {
-    if (str === 'ARTCC') {
+    if (str === 'ARTCC' || str === 'TRACON') {
       return str;
     } else {
       str = str
