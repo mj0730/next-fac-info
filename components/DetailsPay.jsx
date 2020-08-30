@@ -72,6 +72,6 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
 export default DetailsPay;
 
 DetailsPay.propTypes = {
-  currentFacPay: PropTypes.object.isRequired,
-  currentFacLocality: PropTypes.object.isRequired,
+  currentFacPay: PropTypes.array.isRequired,
+  currentFacLocality: PropTypes.array.isRequired,
 };
