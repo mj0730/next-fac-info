@@ -1,3 +1,4 @@
+/* this file is only used to quickreference css changes for the datatables. It is not used in the build, and any css rules used should be copied to the styles.css file */
 .MuiTable-root caption {
   display: none;
 }
