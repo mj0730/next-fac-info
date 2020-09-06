@@ -7,7 +7,7 @@ import MTable from '../components/MTable';
 
 const Facilites = () => {
   const [FacId, storeFacId] = useContext(FacIdContext);
-  const [DbInfo, setDbInfo] = useContext(DbInfoContext);
+  const [DbInfo, setDbInfo, payData] = useContext(DbInfoContext);
   const [tableToDisplay, setTableToDisplay] = useState('information');
   const [activeClass, setActiveClass] = useState('information');
 
@@ -209,7 +209,7 @@ const Facilites = () => {
 
       {tableToDisplay === 'information' && <MTable data={facilityData} columns={columnsFacility} />}
       {tableToDisplay === 'staffing' && <MTable data={staffingData} columns={columnsStaffing} />}
-      {tableToDisplay === 'pay' && <MTable data={[]} columns={columnsPay} />}
+      {tableToDisplay === 'pay' && <MTable data={payData} columns={columnsPay} />}
     </div>
   );
 };
