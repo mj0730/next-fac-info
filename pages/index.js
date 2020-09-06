@@ -20,16 +20,17 @@ export async function getStaticProps() {
 
   const payScaleData = {};
   payResult.forEach((x) => {
-    payScaleData[x['fac_id']] = x.data;
-    delete x['fac_id'];
+    payScaleData[x['fac_id']] = x;
   });
 
+  const payTable = Object.values(payScaleData);
+
   return {
-    props: { data, payScaleData },
+    props: { data, payTable },
   };
 }
 
-const Index = ({ data, payScaleData }) => {
+const Index = ({ data, payTable }) => {
   const [DbInfo, setDbInfo, payData, setPayData] = useContext(DbInfoContext);
   const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
   const [currentFacPay, setCurrentFacPay] = useState('');
@@ -41,7 +42,7 @@ const Index = ({ data, payScaleData }) => {
   //set context from database
   useEffect(() => {
     setDbInfo(data);
-    setPayData(payScaleData);
+    setPayData(payTable);
   }, []);
 
   //Modal
@@ -93,5 +94,5 @@ export default Index;
 
 Index.propTypes = {
   data: PropTypes.object,
-  payScaleData: PropTypes.object,
+  payTable: PropTypes.object,
 };

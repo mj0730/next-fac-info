@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Head from 'next/head';
-import { FacIdContext } from '../components/context/FacIdContext';
+//import { FacIdContext } from '../components/context/FacIdContext';
 import { DbInfoContext } from '../components/context/DbInfoContext';
 import { FACILITIES } from '../scripts/facility_info.js';
 import MTable from '../components/MTable';
 
 const Facilites = () => {
-  const [FacId, storeFacId] = useContext(FacIdContext);
+  //const [FacId, storeFacId] = useContext(FacIdContext);
   const [DbInfo, setDbInfo, payData] = useContext(DbInfoContext);
   const [tableToDisplay, setTableToDisplay] = useState('information');
   const [activeClass, setActiveClass] = useState('information');
@@ -139,12 +139,12 @@ const Facilites = () => {
   const columnsPay = [
     {
       label: 'ID',
-      name: 'test1',
+      name: 'fac_id',
       options: { filter: true, sort: true, searchable: true },
     },
     {
       label: 'CPC MAX',
-      name: 'test1',
+      name: 'data["PayTable[0]"]',
       options: { filter: true, sort: true, searchable: false },
     },
     {
@@ -179,7 +179,7 @@ const Facilites = () => {
     },
     {
       label: 'CIP %',
-      name: 'test2',
+      name: 'data[CIP%]',
       options: { filter: true, sort: true, searchable: false },
     },
     {
