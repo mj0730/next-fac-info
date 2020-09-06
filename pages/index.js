@@ -16,8 +16,16 @@ export async function getStaticProps() {
   const data = {};
   result.forEach((x) => (data[x['Facility ID']] = x));
 
+  const payResult = await db.collection('pay').find().project({ _id: 0 }).toArray();
+
+  const payData = {};
+  payResult.forEach((x) => {
+    payData[x['fac_id']] = x.data;
+    delete x['fac_id'];
+  });
+
   return {
-    props: { data },
+    props: { data, payData },
   };
 }
 
