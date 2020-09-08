@@ -93,6 +93,6 @@ const Index = ({ data, payTable }) => {
 export default Index;
 
 Index.propTypes = {
-  data: PropTypes.object,
-  payTable: PropTypes.object,
+  data: PropTypes.object.isRequired,
+  payTable: PropTypes.array.isRequired,
 };
