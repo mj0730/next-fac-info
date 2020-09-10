@@ -23,14 +23,14 @@ export async function getStaticProps() {
     payScaleData[x['fac_id']] = x;
   });
 
-  const payTable = Object.values(payScaleData);
+  const payTables = Object.values(payScaleData);
 
   return {
-    props: { data, payTable },
+    props: { data, payTables, payScaleData },
   };
 }
 
-const Index = ({ data, payTable }) => {
+const Index = ({ data, payTables, payScaleData }) => {
   const [DbInfo, setDbInfo, payData, setPayData] = useContext(DbInfoContext);
   const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
   const [currentFacPay, setCurrentFacPay] = useState('');
@@ -42,7 +42,7 @@ const Index = ({ data, payTable }) => {
   //set context from database
   useEffect(() => {
     setDbInfo(data);
-    setPayData(payTable);
+    setPayData(payTables);
   }, []);
 
   //Modal
@@ -59,7 +59,7 @@ const Index = ({ data, payTable }) => {
   //'Lock' valid facility into place for rendering
   useEffect(() => {
     if (facs.FACILITIES[FacId]) {
-      setCurrentFacPay(facs.completePayTable(FacId));
+      setCurrentFacPay(payScaleData[FacId]);
       setCurrentFacInfo(facs.FACILITIES[FacId]);
       setCurrentFacLocality(facs.getLocality(FacId));
       setDisplayFrontPage(false);
@@ -94,5 +94,5 @@ export default Index;
 
 Index.propTypes = {
   data: PropTypes.object.isRequired,
-  payTable: PropTypes.array.isRequired,
+  payTables: PropTypes.array.isRequired,
 };

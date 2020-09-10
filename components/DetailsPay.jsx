@@ -4,14 +4,14 @@ import StandardPayTable from './StandardPayTable';
 import DifferentialPayTable from './DifferentialPayTable';
 
 const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
-  const pay = currentFacPay;
+  const pay = currentFacPay; //remove when everything works
 
   const changeToPercentage = (num) => {
     return (num * 100).toFixed(2);
   };
 
-  let basePay = '';
-  if (pay) basePay = pay.PayTable;
+  // let basePay = '';
+  // if (pay) basePay = pay.PayTable;
 
   return (
     <section id='fac-pay'>
@@ -27,12 +27,12 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
           </tr>
         </thead>
         {!currentFacPay.differentialType ? (
-          <StandardPayTable basePay={basePay} cip={currentFacPay.CIP} />
+          <StandardPayTable basePay={pay} />
         ) : (
           <DifferentialPayTable
-            basePay={basePay}
-            differential={currentFacPay.differentialAmount}
-            cip={currentFacPay.CIP}
+            basePay={pay}
+            //differential={currentFacPay.differentialAmount}
+            //cip={currentFacPay.CIP}
           />
         )}
       </table>
