@@ -44,7 +44,6 @@ const FacilityPage = ({ currentFacPay, currentFacInfo, currentFacLocality }) => 
         <main>
           <DetailsInformation currentFacInfo={currentFacInfo} />
           <DetailsPay currentFacPay={currentFacPay} currentFacLocality={currentFacLocality} />
-
           <DetailsStaffing data={DbInfo[currentFacInfo.id]} />
         </main>
       )}

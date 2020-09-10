@@ -4,15 +4,6 @@ import StandardPayTable from './StandardPayTable';
 import DifferentialPayTable from './DifferentialPayTable';
 
 const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
-  const pay = currentFacPay; //remove when everything works
-
-  const changeToPercentage = (num) => {
-    return (num * 100).toFixed(2);
-  };
-
-  // let basePay = '';
-  // if (pay) basePay = pay.PayTable;
-
   return (
     <section id='fac-pay'>
       <h2>Pay Table</h2>
@@ -27,13 +18,9 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
           </tr>
         </thead>
         {!currentFacPay.differentialType ? (
-          <StandardPayTable basePay={pay} />
+          <StandardPayTable pay={currentFacPay} />
         ) : (
-          <DifferentialPayTable
-            basePay={pay}
-            //differential={currentFacPay.differentialAmount}
-            //cip={currentFacPay.CIP}
-          />
+          <DifferentialPayTable pay={currentFacPay} />
         )}
       </table>
 
@@ -41,14 +28,14 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
       <ul className='flex-list pay-factors'>
         <li>Locality</li>
         <li>{currentFacLocality[0]}</li>
-        <li>{`${changeToPercentage(currentFacLocality[1])}%`}</li>
+        <li>{`${currentFacPay['LOC%']}%`}</li>
       </ul>
 
       {currentFacPay.differentialType && (
         <ul className='flex-list pay-factors'>
           <li>Differential</li>
-          <li>{currentFacPay.differentialType}</li>
-          <li>{`${changeToPercentage(currentFacPay.differntialPercentage)}%`}</li>
+          <li>{currentFacPay['differentialType']}</li>
+          <li>{`${currentFacPay['differentialPercentage']}%`}</li>
         </ul>
       )}
 
@@ -72,6 +59,6 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
 export default DetailsPay;
 
 DetailsPay.propTypes = {
-  currentFacPay: PropTypes.array.isRequired,
+  currentFacPay: PropTypes.object.isRequired,
   currentFacLocality: PropTypes.array.isRequired,
 };
