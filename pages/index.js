@@ -57,9 +57,9 @@ const Index = ({ data, payTables, payScaleData }) => {
 
   //'Lock' valid facility into place for rendering
   useEffect(() => {
-    if (facs.FACILITIES[FacId]) {
+    if (data[FacId]) {
       setCurrentFacPay(payScaleData[FacId]);
-      setCurrentFacInfo(facs.FACILITIES[FacId]);
+      setCurrentFacInfo(data[FacId]);
       setDisplayFrontPage(false);
       if (displayErrorModal) setDisplayErrorModal(false);
     } else if (FacId.length === 3) {
@@ -87,5 +87,6 @@ export default Index;
 
 Index.propTypes = {
   data: PropTypes.object.isRequired,
+  payScaleData: PropTypes.object.isRequired,
   payTables: PropTypes.array.isRequired,
 };
