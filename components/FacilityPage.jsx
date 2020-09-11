@@ -6,7 +6,7 @@ import DetailsStaffing from './DetailsStaffing';
 import DetailsInformation from './DetailsInformation';
 import { DbInfoContext } from './context/DbInfoContext';
 
-const FacilityPage = ({ currentFacPay, currentFacInfo, currentFacLocality }) => {
+const FacilityPage = ({ currentFacPay, currentFacInfo }) => {
   const [DbInfo] = useContext(DbInfoContext);
 
   const toTitleCase = (str = '') => {
@@ -43,7 +43,7 @@ const FacilityPage = ({ currentFacPay, currentFacInfo, currentFacLocality }) => 
       {currentFacInfo.level !== undefined && (
         <main>
           <DetailsInformation currentFacInfo={currentFacInfo} />
-          <DetailsPay currentFacPay={currentFacPay} currentFacLocality={currentFacLocality} />
+          <DetailsPay currentFacPay={currentFacPay} />
           <DetailsStaffing data={DbInfo[currentFacInfo.id]} />
         </main>
       )}
@@ -55,6 +55,5 @@ export default FacilityPage;
 
 FacilityPage.propTypes = {
   currentFacInfo: PropTypes.object.isRequired,
-  currentFacLocality: PropTypes.array.isRequired,
   currentFacPay: PropTypes.object.isRequired,
 };

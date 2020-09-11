@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import StandardPayTable from './StandardPayTable';
 import DifferentialPayTable from './DifferentialPayTable';
 
-const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
+const DetailsPay = ({ currentFacPay }) => {
   return (
     <section id='fac-pay'>
       <h2>Pay Table</h2>
@@ -27,7 +27,7 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
       <h2>Pay Factors</h2>
       <ul className='flex-list pay-factors'>
         <li>Locality</li>
-        <li>{currentFacLocality[0]}</li>
+        <li>{currentFacPay['locArea']}</li>
         <li>{`${currentFacPay['LOC%']}%`}</li>
       </ul>
 
@@ -60,5 +60,4 @@ export default DetailsPay;
 
 DetailsPay.propTypes = {
   currentFacPay: PropTypes.object.isRequired,
-  currentFacLocality: PropTypes.array.isRequired,
 };

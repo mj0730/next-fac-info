@@ -35,7 +35,6 @@ const Index = ({ data, payTables, payScaleData }) => {
   const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
   const [currentFacPay, setCurrentFacPay] = useState('');
   const [currentFacInfo, setCurrentFacInfo] = useState('');
-  const [currentFacLocality, setCurrentFacLocality] = useState('');
   const [displayErrorModal, setDisplayErrorModal] = useState(false);
   const [idForModal, setIdForModal] = useState('');
 
@@ -61,7 +60,6 @@ const Index = ({ data, payTables, payScaleData }) => {
     if (facs.FACILITIES[FacId]) {
       setCurrentFacPay(payScaleData[FacId]);
       setCurrentFacInfo(facs.FACILITIES[FacId]);
-      setCurrentFacLocality(facs.getLocality(FacId));
       setDisplayFrontPage(false);
       if (displayErrorModal) setDisplayErrorModal(false);
     } else if (FacId.length === 3) {
@@ -70,7 +68,6 @@ const Index = ({ data, payTables, payScaleData }) => {
         name: 'Please use a valid Facility ID.',
       });
       setCurrentFacPay('');
-      setCurrentFacLocality('');
       showModal(FacId);
     }
   }, [FacId]);
@@ -80,11 +77,7 @@ const Index = ({ data, payTables, payScaleData }) => {
       {displayFrontPage ? (
         <FrontPage />
       ) : (
-        <FacilityPage
-          currentFacPay={currentFacPay}
-          currentFacInfo={currentFacInfo}
-          currentFacLocality={currentFacLocality}
-        />
+        <FacilityPage currentFacPay={currentFacPay} currentFacInfo={currentFacInfo} />
       )}
       {idForModal && <ErrorModal facId={idForModal} displayErrorModal={displayErrorModal} />}
     </main>
