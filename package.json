@@ -22,7 +22,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
-    "mongodb": "^3.6.1",
+    "mongodb": "^3.6.2",
     "mui-datatables": "^2.15.0",
     "next": "^9.5.3",
     "next-connect": "^0.6.6",
@@ -30,8 +30,8 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "eslint": "^7.8.1",
+    "eslint": "^7.9.0",
     "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.0"
+    "eslint-plugin-react-hooks": "^4.1.2"
   }
 }
