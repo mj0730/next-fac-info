@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const StandardPayTableCell = ({ basePay, cip, i }) => (
+const StandardPayTableCell = ({ pay, i }) => (
   <td>
-    {basePay[i]} {cip[i] > 0 && <span className='cip'>({cip[i]})</span>}
+    {pay[i]} {pay['CIP' + i] > 0 && <span className='cip'>({pay['CIP' + i]})</span>}
   </td>
 );
 
 export default StandardPayTableCell;
 
 StandardPayTableCell.propTypes = {
-  basePay: PropTypes.array.isRequired,
-  cip: PropTypes.array,
-  i: PropTypes.number.isRequired,
+  pay: PropTypes.object.isRequired,
+  i: PropTypes.string.isRequired,
 };

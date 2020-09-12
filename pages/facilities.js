@@ -1,13 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Head from 'next/head';
-import { FacIdContext } from '../components/context/FacIdContext';
+//import { FacIdContext } from '../components/context/FacIdContext';
 import { DbInfoContext } from '../components/context/DbInfoContext';
 import { FACILITIES } from '../scripts/facility_info.js';
 import MTable from '../components/MTable';
 
 const Facilites = () => {
-  const [FacId, storeFacId] = useContext(FacIdContext);
-  const [DbInfo, setDbInfo] = useContext(DbInfoContext);
+  //const [FacId, storeFacId] = useContext(FacIdContext);
+  const [DbInfo, setDbInfo, payData] = useContext(DbInfoContext);
   const [tableToDisplay, setTableToDisplay] = useState('information');
   const [activeClass, setActiveClass] = useState('information');
 
@@ -139,52 +139,52 @@ const Facilites = () => {
   const columnsPay = [
     {
       label: 'ID',
-      name: 'test1',
+      name: 'fac_id',
       options: { filter: true, sort: true, searchable: true },
     },
     {
       label: 'CPC MAX',
-      name: 'test1',
-      options: { filter: true, sort: true, searchable: false },
+      name: 'CPCMAX',
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'CPC',
-      name: 'test1',
-      options: { filter: true, sort: true, searchable: false },
+      name: 'CPC',
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'D3',
-      name: 'test1',
-      options: { filter: true, sort: true, searchable: false },
+      name: 'D3',
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'D2',
-      name: 'test1',
-      options: { filter: true, sort: true, searchable: false },
+      name: 'D2',
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'D1',
-      name: 'test1',
-      options: { filter: true, sort: true, searchable: false },
+      name: 'D1',
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'AG',
-      name: 'test1',
-      options: { filter: true, sort: true, searchable: false },
+      name: 'AG',
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'Locality %',
-      name: 'test2',
+      name: 'LOC%',
       options: { filter: true, sort: true, searchable: false },
     },
     {
       label: 'CIP %',
-      name: 'test2',
+      name: 'CIP%',
       options: { filter: true, sort: true, searchable: false },
     },
     {
       label: 'COLA %',
-      name: 'test2',
+      name: 'COLA%',
       options: { filter: true, sort: true, searchable: false },
     },
   ];
@@ -209,7 +209,7 @@ const Facilites = () => {
 
       {tableToDisplay === 'information' && <MTable data={facilityData} columns={columnsFacility} />}
       {tableToDisplay === 'staffing' && <MTable data={staffingData} columns={columnsStaffing} />}
-      {tableToDisplay === 'pay' && <MTable data={[]} columns={columnsPay} />}
+      {tableToDisplay === 'pay' && <MTable data={payData} columns={columnsPay} />}
     </div>
   );
 };

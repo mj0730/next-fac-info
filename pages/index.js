@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
-import * as facs from '../scripts/facility_info.js';
 import { connectToDatabase } from '../utils/mongodb';
 import { DbInfoContext } from '../components/context/DbInfoContext';
 import { FacIdContext } from '../components/context/FacIdContext';
@@ -16,23 +15,32 @@ export async function getStaticProps() {
   const data = {};
   result.forEach((x) => (data[x['Facility ID']] = x));
 
+  const payResult = await db.collection('pay').find().project({ _id: 0 }).toArray();
+
+  const payScaleData = {};
+  payResult.forEach((x) => {
+    payScaleData[x['fac_id']] = x;
+  });
+
+  const payTables = Object.values(payScaleData);
+
   return {
-    props: { data },
+    props: { data, payTables, payScaleData },
   };
 }
 
-const Index = ({ data }) => {
-  const [DbInfo, setDbInfo] = useContext(DbInfoContext);
+const Index = ({ data, payTables, payScaleData }) => {
+  const [DbInfo, setDbInfo, payData, setPayData] = useContext(DbInfoContext);
   const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
   const [currentFacPay, setCurrentFacPay] = useState('');
   const [currentFacInfo, setCurrentFacInfo] = useState('');
-  const [currentFacLocality, setCurrentFacLocality] = useState('');
   const [displayErrorModal, setDisplayErrorModal] = useState(false);
   const [idForModal, setIdForModal] = useState('');
 
   //set context from database
   useEffect(() => {
     setDbInfo(data);
+    setPayData(payTables);
   }, []);
 
   //Modal
@@ -48,10 +56,9 @@ const Index = ({ data }) => {
 
   //'Lock' valid facility into place for rendering
   useEffect(() => {
-    if (facs.FACILITIES[FacId]) {
-      setCurrentFacPay(facs.completePayTable(FacId));
-      setCurrentFacInfo(facs.FACILITIES[FacId]);
-      setCurrentFacLocality(facs.getLocality(FacId));
+    if (data[FacId]) {
+      setCurrentFacPay(payScaleData[FacId]);
+      setCurrentFacInfo(data[FacId]);
       setDisplayFrontPage(false);
       if (displayErrorModal) setDisplayErrorModal(false);
     } else if (FacId.length === 3) {
@@ -60,7 +67,6 @@ const Index = ({ data }) => {
         name: 'Please use a valid Facility ID.',
       });
       setCurrentFacPay('');
-      setCurrentFacLocality('');
       showModal(FacId);
     }
   }, [FacId]);
@@ -70,11 +76,7 @@ const Index = ({ data }) => {
       {displayFrontPage ? (
         <FrontPage />
       ) : (
-        <FacilityPage
-          currentFacPay={currentFacPay}
-          currentFacInfo={currentFacInfo}
-          currentFacLocality={currentFacLocality}
-        />
+        <FacilityPage currentFacPay={currentFacPay} currentFacInfo={currentFacInfo} />
       )}
       {idForModal && <ErrorModal facId={idForModal} displayErrorModal={displayErrorModal} />}
     </main>
@@ -83,5 +85,7 @@ const Index = ({ data }) => {
 export default Index;
 
 Index.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
+  payScaleData: PropTypes.object.isRequired,
+  payTables: PropTypes.array.isRequired,
 };

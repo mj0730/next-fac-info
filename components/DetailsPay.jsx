@@ -3,16 +3,7 @@ import PropTypes from 'prop-types';
 import StandardPayTable from './StandardPayTable';
 import DifferentialPayTable from './DifferentialPayTable';
 
-const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
-  const pay = currentFacPay;
-
-  const changeToPercentage = (num) => {
-    return (num * 100).toFixed(2);
-  };
-
-  let basePay = '';
-  if (pay) basePay = pay.PayTable;
-
+const DetailsPay = ({ currentFacPay }) => {
   return (
     <section id='fac-pay'>
       <h2>Pay Table</h2>
@@ -27,28 +18,24 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
           </tr>
         </thead>
         {!currentFacPay.differentialType ? (
-          <StandardPayTable basePay={basePay} cip={currentFacPay.CIP} />
+          <StandardPayTable pay={currentFacPay} />
         ) : (
-          <DifferentialPayTable
-            basePay={basePay}
-            differential={currentFacPay.differentialAmount}
-            cip={currentFacPay.CIP}
-          />
+          <DifferentialPayTable pay={currentFacPay} />
         )}
       </table>
 
       <h2>Pay Factors</h2>
       <ul className='flex-list pay-factors'>
         <li>Locality</li>
-        <li>{currentFacLocality[0]}</li>
-        <li>{`${changeToPercentage(currentFacLocality[1])}%`}</li>
+        <li>{currentFacPay['locArea']}</li>
+        <li>{`${currentFacPay['LOC%']}%`}</li>
       </ul>
 
       {currentFacPay.differentialType && (
         <ul className='flex-list pay-factors'>
           <li>Differential</li>
-          <li>{currentFacPay.differentialType}</li>
-          <li>{`${changeToPercentage(currentFacPay.differntialPercentage)}%`}</li>
+          <li>{currentFacPay['differentialType']}</li>
+          <li>{`${currentFacPay['differentialPercentage']}%`}</li>
         </ul>
       )}
 
@@ -72,6 +59,5 @@ const DetailsPay = ({ currentFacPay, currentFacLocality }) => {
 export default DetailsPay;
 
 DetailsPay.propTypes = {
-  currentFacPay: PropTypes.array.isRequired,
-  currentFacLocality: PropTypes.array.isRequired,
+  currentFacPay: PropTypes.object.isRequired,
 };
