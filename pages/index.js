@@ -76,7 +76,7 @@ const Index = ({ data, payTables, payScaleData }) => {
       {displayFrontPage ? (
         <FrontPage />
       ) : (
-        <FacilityPage currentFacPay={currentFacPay} currentFacInfo={currentFacInfo} />
+        <FacilityPage currentFacPay={currentFacPay} currentFacInfo={currentFacInfo} nationalData={data.national} />
       )}
       {idForModal && <ErrorModal facId={idForModal} displayErrorModal={displayErrorModal} />}
     </main>
