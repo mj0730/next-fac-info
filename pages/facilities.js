@@ -38,7 +38,7 @@ const Facilites = () => {
     {
       label: 'ID',
       name: 'Facility ID',
-      options: { filter: false, sort: true, searchable: true },
+      options: { filter: false, sort: true, sortDirection: 'asc', searchable: true },
     },
     {
       label: 'Name',
@@ -69,6 +69,7 @@ const Facilites = () => {
       options: {
         filter: true,
         sort: true,
+        sortDirection: 'asc',
         searchable: true,
         filterType: 'dropdown',
       },
@@ -139,7 +140,7 @@ const Facilites = () => {
     {
       label: 'ID',
       name: 'fac_id',
-      options: { filter: true, sort: true, searchable: true },
+      options: { filter: true, sort: true, sortDirection: 'asc', searchable: true },
     },
     {
       label: 'CPC MAX',
