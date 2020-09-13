@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from 'react';
 import Head from 'next/head';
 //import { FacIdContext } from '../components/context/FacIdContext';
 import { DbInfoContext } from '../components/context/DbInfoContext';
-import { FACILITIES } from '../scripts/facility_info.js';
 import MTable from '../components/MTable';
 
 const Facilites = () => {
