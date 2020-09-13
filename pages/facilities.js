@@ -12,6 +12,9 @@ const Facilites = () => {
 
   // Convert decimals into percentages
   function changeToPercentage(num) {
+    if (typeof num === 'string') {
+      return num;
+    }
     return (num * 100).toFixed(1);
   }
 
@@ -22,7 +25,7 @@ const Facilites = () => {
       item['Training Success Rate'] = changeToPercentage(item['Training Success Rate']);
       item['Projected % to Target'] = changeToPercentage(item['Projected % to Target']);
     });
-  }, [DbInfo]);
+  }, []);
 
   const handleClick = (e) => {
     e.target.value === undefined
