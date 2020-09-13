@@ -34,6 +34,19 @@ const Facilites = () => {
     setActiveClass(e.target.value);
   };
 
+  const formatSalary = (value) => {
+    if (value === 0) return '-';
+
+    const nf = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+
+    return nf.format(value);
+  };
+
   const columnsFacility = [
     {
       label: 'ID',
@@ -145,32 +158,37 @@ const Facilites = () => {
     {
       label: 'CPC MAX',
       name: 'CPCMAX',
-      options: { filter: false, sort: true, searchable: false },
+      options: {
+        customBodyRender: formatSalary,
+        filter: false,
+        sort: true,
+        searchable: false,
+      },
     },
     {
       label: 'CPC',
       name: 'CPC',
-      options: { filter: false, sort: true, searchable: false },
+      options: { customBodyRender: formatSalary, filter: false, sort: true, searchable: false },
     },
     {
       label: 'D3',
       name: 'D3',
-      options: { filter: false, sort: true, searchable: false },
+      options: { customBodyRender: formatSalary, filter: false, sort: true, searchable: false },
     },
     {
       label: 'D2',
       name: 'D2',
-      options: { filter: false, sort: true, searchable: false },
+      options: { customBodyRender: formatSalary, filter: false, sort: true, searchable: false },
     },
     {
       label: 'D1',
       name: 'D1',
-      options: { filter: false, sort: true, searchable: false },
+      options: { customBodyRender: formatSalary, filter: false, sort: true, searchable: false },
     },
     {
       label: 'AG',
       name: 'AG',
-      options: { filter: false, sort: true, searchable: false },
+      options: { customBodyRender: formatSalary, filter: false, sort: true, searchable: false },
     },
     {
       label: 'Locality %',
