@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const DetailsStaffingTable = ({ data, title }) => (
   <>
-    <h3>{title}</h3>
+    {title === '' ? null : <h3>{title}</h3>}
     <table id='payscale'>
       <thead className='pay-header'>
         <tr>

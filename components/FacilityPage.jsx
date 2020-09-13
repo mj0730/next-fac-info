@@ -5,7 +5,7 @@ import DetailsPay from './DetailsPay';
 import DetailsStaffing from './DetailsStaffing';
 import DetailsInformation from './DetailsInformation';
 
-const FacilityPage = ({ currentFacPay, currentFacInfo }) => {
+const FacilityPage = ({ currentFacPay, currentFacInfo, nationalData }) => {
   const toTitleCase = (str = '') => {
     if (str === 'ARTCC' || str === 'TRACON') {
       return str;
@@ -41,7 +41,7 @@ const FacilityPage = ({ currentFacPay, currentFacInfo }) => {
         <main>
           <DetailsInformation currentFacInfo={currentFacInfo} />
           <DetailsPay currentFacPay={currentFacPay} />
-          <DetailsStaffing data={currentFacInfo} />
+          <DetailsStaffing data={currentFacInfo} nationalData={nationalData} />
         </main>
       )}
     </div>
@@ -53,4 +53,5 @@ export default FacilityPage;
 FacilityPage.propTypes = {
   currentFacInfo: PropTypes.object.isRequired,
   currentFacPay: PropTypes.object.isRequired,
+  nationalData: PropTypes.object.isRequired,
 };
