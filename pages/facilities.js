@@ -1,11 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Head from 'next/head';
-//import { FacIdContext } from '../components/context/FacIdContext';
 import { DbInfoContext } from '../components/context/DbInfoContext';
 import MTable from '../components/MTable';
 
 const Facilites = () => {
-  //const [FacId, storeFacId] = useContext(FacIdContext);
   const [DbInfo, setDbInfo, payData] = useContext(DbInfoContext);
   const [tableToDisplay, setTableToDisplay] = useState('information');
   const [activeClass, setActiveClass] = useState('information');
@@ -24,7 +22,7 @@ const Facilites = () => {
       item['Training Success Rate'] = changeToPercentage(item['Training Success Rate']);
       item['Projected % to Target'] = changeToPercentage(item['Projected % to Target']);
     });
-  }, []);
+  }, [DbInfo]);
 
   const handleClick = (e) => {
     e.target.value === undefined
