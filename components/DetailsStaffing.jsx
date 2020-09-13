@@ -47,8 +47,8 @@ const DetailsStaffing = ({ data, nationalData }) => {
   ];
 
   const nationalDetails = [
-    { text: 'Current CPC% to Target', data: changeToPercentage(data['Current % CPC to Target']) },
-    { text: 'Projected CPC% to Target', data: changeToPercentage(data['Projected % to Target']) },
+    { text: 'Current CPC% to Target', data: changeToPercentage(nationalData['Current % CPC to Target']) },
+    { text: 'Projected CPC% to Target', data: changeToPercentage(nationalData['Projected % to Target']) },
   ];
 
   return (
@@ -71,6 +71,7 @@ export default DetailsStaffing;
 
 DetailsStaffing.propTypes = {
   data: PropTypes.object.isRequired,
+  nationalData: PropTypes.object.isRequired,
 };
 
 //keys of data object
