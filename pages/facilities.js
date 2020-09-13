@@ -10,8 +10,7 @@ const Facilites = () => {
   const [tableToDisplay, setTableToDisplay] = useState('information');
   const [activeClass, setActiveClass] = useState('information');
 
-  const facilityData = Object.values(FACILITIES);
-  const staffingData = Object.values(DbInfo);
+  const facilityData = Object.values(DbInfo);
 
   // Convert decimals into percentages
   function changeToPercentage(num) {
@@ -19,7 +18,7 @@ const Facilites = () => {
   }
 
   useEffect(() => {
-    staffingData.forEach((item) => {
+    facilityData.forEach((item) => {
       item['Current % CPC to Target'] = changeToPercentage(item['Current % CPC to Target']);
       item['Current % CPC to Trainees'] = changeToPercentage(item['Current % CPC to Trainees']);
       item['Training Success Rate'] = changeToPercentage(item['Training Success Rate']);
@@ -37,29 +36,29 @@ const Facilites = () => {
   const columnsFacility = [
     {
       label: 'ID',
-      name: 'id',
+      name: 'Facility ID',
       options: { filter: false, sort: true, searchable: true },
     },
     {
       label: 'Name',
-      name: 'name',
+      name: 'Facility Name',
       options: { filter: false, sort: true, searchable: true },
     },
     {
       label: 'Level',
-      name: 'level',
+      name: 'Level',
       options: { filter: true, sort: true, searchable: false },
     },
     {
       label: 'Type',
-      name: 'type',
+      name: 'Facility Type',
       options: { filter: true, sort: true, searchable: false },
     },
-    {
-      label: 'State',
-      name: 'state',
-      options: { filter: true, sort: true, searchable: false },
-    },
+    // {
+    //   label: 'State',
+    //   name: 'state',
+    //   options: { filter: true, sort: true, searchable: false },
+    // },
   ];
 
   const columnsStaffing = [
@@ -207,7 +206,7 @@ const Facilites = () => {
       </nav>
 
       {tableToDisplay === 'information' && <MTable data={facilityData} columns={columnsFacility} />}
-      {tableToDisplay === 'staffing' && <MTable data={staffingData} columns={columnsStaffing} />}
+      {tableToDisplay === 'staffing' && <MTable data={facilityData} columns={columnsStaffing} />}
       {tableToDisplay === 'pay' && <MTable data={payData} columns={columnsPay} />}
     </div>
   );
