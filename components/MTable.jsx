@@ -90,7 +90,7 @@ const MTable = ({ title, data, columns }) => {
   const options = {
     filterType: 'checkbox',
     responsive: 'stacked',
-    rowsPerPageOptions: [10, 25, 50],
+    rowsPerPageOptions: [10, 25, 50, data.length],
     rowHover: true,
     fixedHeader: true,
     fixedHeaderOptions: { xAxis: true, yAxis: true },
