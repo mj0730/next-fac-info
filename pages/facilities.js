@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import Head from 'next/head';
 import { DbInfoContext } from '../components/context/DbInfoContext';
 import MTable from '../components/MTable';
@@ -9,23 +9,6 @@ const Facilites = () => {
   const [activeClass, setActiveClass] = useState('information');
 
   const facilityData = Object.values(DbInfo);
-
-  // Convert decimals into percentages
-  function changeToPercentage(num) {
-    if (typeof num === 'string') {
-      return num;
-    }
-    return (num * 100).toFixed(1);
-  }
-
-  useEffect(() => {
-    facilityData.forEach((item) => {
-      item['Current % CPC to Target'] = changeToPercentage(item['Current % CPC to Target']);
-      item['Current % CPC to Trainees'] = changeToPercentage(item['Current % CPC to Trainees']);
-      item['Training Success Rate'] = changeToPercentage(item['Training Success Rate']);
-      item['Projected % to Target'] = changeToPercentage(item['Projected % to Target']);
-    });
-  }, []);
 
   const handleClick = (e) => {
     e.target.value === undefined
@@ -42,6 +25,26 @@ const Facilites = () => {
       currency: 'USD',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
+    });
+
+    return nf.format(value);
+  };
+
+  const formatPercentage = (value) => {
+    const nf = new Intl.NumberFormat('en-us', {
+      style: 'percent',
+      maximumFractionDigits: 1,
+    });
+
+    return nf.format(value);
+  };
+  const formatPercentageFromWholeNumber = (value) => {
+    if (parseInt(value) === 0) return '-';
+
+    value = value / 100;
+    const nf = new Intl.NumberFormat('en-us', {
+      style: 'percent',
+      maximumFractionDigits: 1,
     });
 
     return nf.format(value);
@@ -100,7 +103,7 @@ const Facilites = () => {
     {
       label: 'CPC To Target %',
       name: 'Current % CPC to Target',
-      options: { filter: true, sort: true, searchable: true },
+      options: { customBodyRender: formatPercentage, filter: true, sort: true, searchable: true },
     },
     {
       label: 'Trainees',
@@ -110,12 +113,12 @@ const Facilites = () => {
     {
       label: 'Trainee To CPC %',
       name: 'Current % CPC to Trainees',
-      options: { filter: true, sort: true, searchable: true },
+      options: { customBodyRender: formatPercentage, filter: true, sort: true, searchable: true },
     },
     {
       label: 'Training Success Rate',
       name: 'Training Success Rate',
-      options: { filter: true, sort: true, searchable: true },
+      options: { customBodyRender: formatPercentage, filter: true, sort: true, searchable: true },
     },
     {
       label: 'Training Time (yrs)',
@@ -130,7 +133,7 @@ const Facilites = () => {
     {
       label: 'Projected %',
       name: 'Projected % to Target',
-      options: { filter: true, sort: true, searchable: true },
+      options: { customBodyRender: formatPercentage, filter: true, sort: true, searchable: true },
     },
     {
       label: 'Gains (NatAvg)',
@@ -193,17 +196,17 @@ const Facilites = () => {
     {
       label: 'Locality %',
       name: 'LOC%',
-      options: { filter: true, sort: true, searchable: false },
+      options: { customBodyRender: formatPercentageFromWholeNumber, filter: true, sort: true, searchable: false },
     },
     {
       label: 'CIP %',
       name: 'CIP%',
-      options: { filter: true, sort: true, searchable: false },
+      options: { customBodyRender: formatPercentageFromWholeNumber, filter: true, sort: true, searchable: false },
     },
     {
       label: 'COLA %',
       name: 'COLA%',
-      options: { filter: true, sort: true, searchable: false },
+      options: { customBodyRender: formatPercentageFromWholeNumber, filter: true, sort: true, searchable: false },
     },
   ];
 
