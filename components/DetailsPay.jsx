@@ -4,6 +4,21 @@ import StandardPayTable from './StandardPayTable';
 import DifferentialPayTable from './DifferentialPayTable';
 
 const DetailsPay = ({ currentFacPay }) => {
+  const formatPercentage = (value, type) => {
+    if (type === 'dif') {
+      value = parseFloat(value);
+    } else {
+      value = parseFloat(value / 100);
+    }
+
+    const nf = new Intl.NumberFormat('en-us', {
+      style: 'percent',
+      maximumFractionDigits: 2,
+    });
+
+    return nf.format(value);
+  };
+
   return (
     <section id='fac-pay'>
       <h2>Pay Table</h2>
@@ -28,28 +43,28 @@ const DetailsPay = ({ currentFacPay }) => {
       <ul className='flex-list pay-factors'>
         <li>Locality</li>
         <li>{currentFacPay['locArea']}</li>
-        <li>{`${currentFacPay['LOC%']}%`}</li>
+        <li>{formatPercentage(currentFacPay['LOC%'], 'loc')}</li>
       </ul>
 
       {currentFacPay.differentialType && (
         <ul className='flex-list pay-factors'>
           <li>Differential</li>
           <li>{currentFacPay['differentialType']}</li>
-          <li>{`${currentFacPay['differentialPercentage']}%`}</li>
+          <li>{formatPercentage(currentFacPay['differentialPercentage'], 'dif')}</li>
         </ul>
       )}
 
       {currentFacPay['CIP%'] > 0 && (
         <ul className='flex-list pay-factors'>
           <li>CIP</li>
-          <li>{`${currentFacPay['CIP%']}%`}</li>
+          <li>{formatPercentage(currentFacPay['CIP%'], 'cip')}</li>
         </ul>
       )}
 
       {currentFacPay['COLA%'] > 0 && (
         <ul className='flex-list pay-factors'>
           <li>COLA</li>
-          <li>{`${currentFacPay['COLA%']}%`}</li>
+          <li>{formatPercentage(currentFacPay['COLA%'], 'cola')}</li>
         </ul>
       )}
     </section>

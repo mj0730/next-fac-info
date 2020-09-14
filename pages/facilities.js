@@ -38,6 +38,7 @@ const Facilites = () => {
 
     return nf.format(value);
   };
+
   const formatPercentageFromWholeNumber = (value) => {
     if (parseInt(value) === 0) return '-';
 
