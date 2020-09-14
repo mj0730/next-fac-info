@@ -10,9 +10,7 @@ const StandardPayTable = ({ pay }) => (
         {pay['D3'] > 0 ? <StandardPayTableCell pay={pay} i={'CPC'} /> : <td>N/A</td>}
         {pay['D2'] > 0 ? <StandardPayTableCell pay={pay} i={'D3'} /> : <td>N/A</td>}
         {pay['D1'] > 0 ? <StandardPayTableCell pay={pay} i={'D2'} /> : <td>N/A</td>}
-        <td rowSpan='2'>
-          {pay['AG']} {pay['CIPAG'] > 0 && <span className='cip'>({pay['CIPAG']})</span>}
-        </td>
+        <StandardPayTableCell pay={pay} i={'AG'} rowspan={2} />
       </tr>
       <tr>
         <StandardPayTableCell pay={pay} i={'CPC'} />
