@@ -217,12 +217,19 @@ input#facId::-moz-focus-inner {
   grid-area: 2 / 1 / 6 / 3;
 }
 
-/* Facility Pay */
-#fac-pay h2 {
+/* Facility Pay & Staffing Details*/
+#fac-pay h2,
+#fac-staffing h2 {
   margin-left: 0.5em;
 }
 
-#payscale {
+#fac-staffing h3 {
+  margin: 1rem 0 0.25rem 2rem;
+  font-weight: normal;
+}
+
+#payscale,
+#staffing-table {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
@@ -230,20 +237,33 @@ input#facId::-moz-focus-inner {
   padding: 5px;
 }
 
-#payscale td {
+#payscale td,
+#staffing-table td {
   padding: 6px;
   background-color: var(--alt-bg-color);
   border: 1px solid #000;
 }
 
-.pay-header {
+#payscale td:first-of-type,
+#staffing-table td:first-of-type {
+  border-left: none;
+}
+
+#payscale td:last-of-type,
+#staffing-table td:last-of-type {
+  border-right: none;
+}
+
+.pay-header,
+.staffing-header {
   background-color: rgba(20, 81, 138, 0.5);
   font-weight: bold;
   border-top: 2px solid var(--main-border-color);
   border-bottom: 2px solid var(--main-border-color);
 }
 
-.pay-header th {
+.pay-header th,
+.staffing-header th {
   padding: 6px;
 }
 

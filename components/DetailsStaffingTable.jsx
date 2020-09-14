@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const DetailsStaffingTable = ({ data, title }) => (
   <>
     {title === '' ? null : <h3>{title}</h3>}
-    <table id='payscale'>
-      <thead className='pay-header'>
+    <table id='staffing-table'>
+      <thead className='staffing-header'>
         <tr>
           {data.map((item, i) => (
             <th scope='col' key={i}>
@@ -17,9 +17,9 @@ const DetailsStaffingTable = ({ data, title }) => (
       <tbody>
         <tr>
           {data.map((item, i) => (
-            <th scope='col' key={i}>
+            <td scope='col' key={i}>
               {item.data}
-            </th>
+            </td>
           ))}
         </tr>
       </tbody>
