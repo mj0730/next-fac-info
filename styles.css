@@ -317,8 +317,6 @@ input#facId::-moz-focus-inner {
   background-color: rgba(0, 50, 90, 0.7);
   border: 2px solid var(--palette-color-react);
   border-radius: 5px;
-  min-width: 240px;
-  max-width: 25%;
   margin: 0 auto;
   padding: 10px;
   position: absolute;
@@ -329,6 +327,7 @@ input#facId::-moz-focus-inner {
   font-size: 1.3em;
   overflow: hidden;
   text-align: center;
+  width: 90%;
 }
 
 #modal.fade-out {
@@ -346,7 +345,7 @@ input#facId::-moz-focus-inner {
   }
   100% {
     opacity: 0;
-    top: -20px;
+    top: -200px;
   }
 }
 
@@ -448,7 +447,10 @@ nav#table-select button:focus {
     justify-content: space-around;
   }
 
-  /* ovverride for MUI table */
+  #modal {
+    min-width: 240px;
+    max-width: 25%;
+  }
 
   #map-container iframe {
     height: calc(100vh - 40px);
