@@ -148,6 +148,9 @@ input#facId::-moz-focus-inner {
   width: 100%;
 }
 
+.search-container label {
+  display: flex;
+}
 /* Front page content */
 #front-page {
   margin-top: 50px;
