@@ -22,7 +22,11 @@ const FacilityPage = ({ currentFacPay, currentFacInfo, nationalData }) => {
   return (
     <div id='facility-info' className='fac-page-grid'>
       <Head>
-        <title>{`${currentFacInfo['Facility Name']} - pointSixtyFive`}</title>
+        <title>
+          {currentFacInfo['Facility Name'] === undefined
+            ? 'No facility with that ID'
+            : `${currentFacInfo['Facility Name']} - pointSixtyFive`}
+        </title>
       </Head>
 
       <header>
