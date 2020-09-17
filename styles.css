@@ -151,10 +151,27 @@ input#facId::-moz-focus-inner {
 .search-container label {
   display: flex;
 }
+
 /* Front page content */
 #front-page {
-  margin-top: 50px;
+  max-width: 800px;
+  min-height: 500px;
+  margin: 50px auto;
   text-align: center;
+}
+
+#front-page h1 {
+  margin: 0 auto 1rem;
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--main-border-color);
+}
+
+#front-page .text-area {
+  width: 80%;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin: 0 auto;
 }
 
 /* Facility Details */
