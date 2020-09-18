@@ -21,6 +21,15 @@ export async function getStaticProps() {
 
   const payTables = Object.values(payScaleData);
 
+  const infoResult = await db.collection('facilitydata').find().project({ _id: 0 }).toArray();
+  const infoData = {};
+  infoResult.forEach((x) => (infoData[x['facId']] = x));
+
+  for (let key in data) {
+    Object.assign(data[key], infoData[key]);
+    delete data[key]['facId'];
+  }
+
   return {
     props: { data, payTables },
   };
@@ -103,11 +112,16 @@ const Facilites = ({ data, payTables }) => {
       name: 'Facility Type',
       options: { filter: true, sort: true, searchable: false },
     },
-    // {
-    //   label: 'State',
-    //   name: 'state',
-    //   options: { filter: true, sort: true, searchable: false },
-    // },
+    {
+      label: 'State',
+      name: 'state',
+      options: { filter: true, sort: true, searchable: false },
+    },
+    {
+      label: 'Region',
+      name: 'HRRegion',
+      options: { filter: true, sort: true, searchable: false },
+    },
   ];
 
   const columnsStaffing = [
