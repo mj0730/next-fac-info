@@ -1,14 +1,36 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
-import { DbInfoContext } from '../components/context/DbInfoContext';
+import { connectToDatabase } from '../utils/mongodb';
 import MTable from '../components/MTable';
 
-const Facilites = () => {
-  const [DbInfo, setDbInfo, payData] = useContext(DbInfoContext);
+//Get facility info from the database. there will be no data available if user doesn't got to index page first without this call to get static props here
+export async function getStaticProps() {
+  const { db } = await connectToDatabase();
+  const result = await db.collection('pptdata').find().project({ _id: 0 }).toArray();
+
+  const data = {};
+  result.forEach((x) => (data[x['Facility ID']] = x));
+
+  const payResult = await db.collection('pay').find().project({ _id: 0 }).toArray();
+
+  const payScaleData = {};
+  payResult.forEach((x) => {
+    payScaleData[x['fac_id']] = x;
+  });
+
+  const payTables = Object.values(payScaleData);
+
+  return {
+    props: { data, payTables },
+  };
+}
+
+const Facilites = ({ data, payTables }) => {
   const [tableToDisplay, setTableToDisplay] = useState('information');
   const [activeClass, setActiveClass] = useState('information');
 
-  const facilityData = Object.values(DbInfo);
+  const facilityData = Object.values(data);
 
   const handleClick = (e) => {
     e.target.value === undefined
@@ -49,6 +71,15 @@ const Facilites = () => {
     });
 
     return nf.format(value);
+  };
+
+  const formatCategory = (value) => {
+    if (value === undefined) {
+      return '-';
+    }
+    let result = value.split(' ');
+
+    return result[0] === 'None' ? 'None' : result[1];
   };
 
   const columnsFacility = [
@@ -129,7 +160,7 @@ const Facilites = () => {
     {
       label: 'ERR Category',
       name: 'ERR Category',
-      options: { filter: true, sort: true, searchable: true },
+      options: { customBodyRender: formatCategory, filter: true, sort: true, searchable: true },
     },
     {
       label: 'Projected %',
@@ -231,9 +262,14 @@ const Facilites = () => {
 
       {tableToDisplay === 'information' && <MTable data={facilityData} columns={columnsFacility} />}
       {tableToDisplay === 'staffing' && <MTable data={facilityData} columns={columnsStaffing} />}
-      {tableToDisplay === 'pay' && <MTable data={payData} columns={columnsPay} />}
+      {tableToDisplay === 'pay' && <MTable data={payTables} columns={columnsPay} />}
     </div>
   );
 };
 
 export default Facilites;
+
+Facilites.propTypes = {
+  data: PropTypes.object.isRequired,
+  payTables: PropTypes.array.isRequired,
+};
