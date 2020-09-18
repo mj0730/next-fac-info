@@ -22,24 +22,26 @@ export async function getStaticProps() {
     payScaleData[x['fac_id']] = x;
   });
 
+  const infoResult = await db.collection('facilitydata').find().project({ _id: 0 }).toArray();
+  const infoData = {};
+  infoResult.forEach((x) => (infoData[x['facId']] = x));
+
+  for (let key in data) {
+    Object.assign(data[key], infoData[key]);
+    delete data[key]['facId'];
+  }
+
   return {
     props: { data, payScaleData },
   };
 }
 
 const Index = ({ data, payScaleData }) => {
-  // const [DbInfo, setDbInfo, payData, setPayData] = useContext(DbInfoContext);
   const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
   const [currentFacPay, setCurrentFacPay] = useState('');
   const [currentFacInfo, setCurrentFacInfo] = useState('');
   const [displayErrorModal, setDisplayErrorModal] = useState(false);
   const [idForModal, setIdForModal] = useState('');
-
-  //set context from database
-  // useEffect(() => {
-  //   setDbInfo(data);
-  //   setPayData(payTables);
-  // }, []);
 
   //Modal
   const showModal = (input) => {
