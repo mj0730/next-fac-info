@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { connectToDatabase } from '../utils/mongodb';
-import { DbInfoContext } from '../components/context/DbInfoContext';
+// import { DbInfoContext } from '../components/context/DbInfoContext';
 import { FacIdContext } from '../components/context/FacIdContext';
 import FacilityPage from '../components/FacilityPage';
 import FrontPage from '../components/FrontPage';
@@ -22,15 +22,13 @@ export async function getStaticProps() {
     payScaleData[x['fac_id']] = x;
   });
 
-  const payTables = Object.values(payScaleData);
-
   return {
-    props: { data, payTables, payScaleData },
+    props: { data, payScaleData },
   };
 }
 
-const Index = ({ data, payTables, payScaleData }) => {
-  const [DbInfo, setDbInfo, payData, setPayData] = useContext(DbInfoContext);
+const Index = ({ data, payScaleData }) => {
+  // const [DbInfo, setDbInfo, payData, setPayData] = useContext(DbInfoContext);
   const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
   const [currentFacPay, setCurrentFacPay] = useState('');
   const [currentFacInfo, setCurrentFacInfo] = useState('');
@@ -38,10 +36,10 @@ const Index = ({ data, payTables, payScaleData }) => {
   const [idForModal, setIdForModal] = useState('');
 
   //set context from database
-  useEffect(() => {
-    setDbInfo(data);
-    setPayData(payTables);
-  }, []);
+  // useEffect(() => {
+  //   setDbInfo(data);
+  //   setPayData(payTables);
+  // }, []);
 
   //Modal
   const showModal = (input) => {
@@ -87,5 +85,4 @@ export default Index;
 Index.propTypes = {
   data: PropTypes.object.isRequired,
   payScaleData: PropTypes.object.isRequired,
-  payTables: PropTypes.array.isRequired,
 };
