@@ -3,6 +3,7 @@
   --alt-bg-color: #222222;
   --text-color: #ffffff;
   --palette-color-primary: #14518a;
+  --palette-color-primary-faded: #14518a8e;
   --main-border-color: var(--palette-color-primary);
   --button-hover-background: #14518a3f;
   --palette-color-react: #61dafb;
@@ -195,6 +196,18 @@ input#facId::-moz-focus-inner {
 
 #facility-info header h1 {
   margin: 0;
+  display: flex;
+}
+
+.core30 {
+  font-size: 0.6rem;
+  align-self: flex-start;
+  margin: 10px 0 0 5px;
+  border: 1px solid var(--main-border-color);
+  border-radius: 50%;
+  background-color: var(--palette-color-primary-faded);
+  padding: 3px;
+  text-align: center;
 }
 
 #facility-info .flex-col {

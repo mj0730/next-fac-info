@@ -31,7 +31,10 @@ const FacilityPage = ({ currentFacPay, currentFacInfo, nationalData }) => {
 
       <header>
         <div className='flex-col'>
-          <h1>{currentFacInfo['Facility ID']}</h1>
+          <h1>
+            {currentFacInfo['Facility ID']}
+            {currentFacInfo['CoreAirport'] === 'Yes' ? <span className='core30'>30</span> : null}
+          </h1>
           <p>{currentFacInfo['Facility Name']}</p>
         </div>
 
