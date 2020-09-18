@@ -102,7 +102,7 @@ input#facId::-moz-focus-inner {
 
 #facId::placeholder {
   text-transform: none;
-  font-size: 11px;
+  font-size: 0.6rem;
 }
 
 #facId:focus::placeholder {

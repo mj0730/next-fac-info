@@ -43,14 +43,19 @@ const MTable = ({ title, data, columns }) => {
         },
         cellStackedSmall: {
           borderBottom: 'none',
-          flex: '0 0 20%',
+          flex: '0 1 100%',
           fontWeight: 'bold',
           padding: '8px 16px',
+          backgroundColor: '#2222224f',
+          '&:first-of-type': {
+            backgroundColor: '#14518a3f',
+          },
         },
         responsiveStackedSmall: {
           borderBottom: 'none',
-          flex: '1 1 auto',
-          padding: '8px 16px',
+          flex: '0 1 100%',
+          padding: '4px 16px',
+          marginLeft: '1rem',
         },
       },
       MuiTableCell: {
