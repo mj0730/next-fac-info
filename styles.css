@@ -242,6 +242,7 @@ input#facId::-moz-focus-inner {
 /* Facility Pay & Staffing Details*/
 #fac-pay h2,
 #fac-staffing h2 {
+  font-size: 1.25rem;
   margin-left: 0.5em;
 }
 
@@ -264,6 +265,7 @@ input#facId::-moz-focus-inner {
   padding: 6px;
   background-color: var(--alt-bg-color);
   border: 1px solid #000;
+  font-size: 0.9rem;
 }
 
 #payscale td:first-of-type,
@@ -282,6 +284,7 @@ input#facId::-moz-focus-inner {
   font-weight: bold;
   border-top: 2px solid var(--main-border-color);
   border-bottom: 2px solid var(--main-border-color);
+  font-size: 0.9rem;
 }
 
 .pay-header th,
@@ -472,6 +475,18 @@ nav#table-select button:focus {
   #modal {
     min-width: 240px;
     max-width: 25%;
+  }
+
+  #fac-pay h2,
+  #fac-staffing h2 {
+    font-size: 1.5rem;
+  }
+
+  #payscale td,
+  #staffing-table td,
+  .pay-header,
+  .staffing-header {
+    font-size: 1rem;
   }
 
   nav#table-select button {

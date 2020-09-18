@@ -2,16 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DetailsStaffingTable from './DetailsStaffingTable';
 
-function changeToPercentage(num) {
-  return `${(num * 100).toFixed(1)}%`;
-}
+const formatPercentage = (value) => {
+  const nf = new Intl.NumberFormat('en-us', {
+    style: 'percent',
+    maximumFractionDigits: 1,
+  });
+
+  return nf.format(value);
+};
 
 const DetailsStaffing = ({ data, nationalData }) => {
   const cpcDetails = [
     { text: 'Total', data: data['Current # of CPC On-Board'] },
     { text: 'Target', data: data['CPC Target'] },
-    { text: '% Target', data: changeToPercentage(data['Current % CPC to Target']) },
-    { text: 'CPC-Trainee%', data: changeToPercentage(data['Current % CPC to Trainees']) },
+    { text: '% Target', data: formatPercentage(data['Current % CPC to Target']) },
+    { text: 'CPC-Trainee%', data: formatPercentage(data['Current % CPC to Trainees']) },
   ];
 
   const cpcitDetails = [
@@ -29,7 +34,7 @@ const DetailsStaffing = ({ data, nationalData }) => {
   ];
 
   const trainingDetails = [
-    { text: 'Success Rate', data: changeToPercentage(data['Training Success Rate']) },
+    { text: 'Success Rate', data: formatPercentage(data['Training Success Rate']) },
     { text: 'Time (years)', data: data['Training Time Years'] },
   ];
 
@@ -40,15 +45,15 @@ const DetailsStaffing = ({ data, nationalData }) => {
     { text: 'Losses', data: data['Possible Losses'] },
   ];
   const projectionDetails = [
-    { text: '% to Target', data: changeToPercentage(data['Projected % to Target']) },
+    { text: '% to Target', data: formatPercentage(data['Projected % to Target']) },
     { text: 'Inbounds', data: data['Placement List Inbounds'] },
     { text: 'Outbounds', data: data['Placement List Outbounds (ERR, Hardship)'] },
     { text: 'Losses', data: data['Projected Retirements and Other Losses'] },
   ];
 
   const nationalDetails = [
-    { text: 'Current CPC% to Target', data: changeToPercentage(nationalData['Current % CPC to Target']) },
-    { text: 'Projected CPC% to Target', data: changeToPercentage(nationalData['Projected % to Target']) },
+    { text: 'Current CPC% to Target', data: formatPercentage(nationalData['Current % CPC to Target']) },
+    { text: 'Projected CPC% to Target', data: formatPercentage(nationalData['Projected % to Target']) },
   ];
 
   return (
