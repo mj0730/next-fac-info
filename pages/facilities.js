@@ -82,6 +82,16 @@ const Facilites = ({ data, payTables }) => {
     return nf.format(value);
   };
 
+  const formatLocality = (value) => {
+    value = parseFloat(value / 100);
+    const nf = new Intl.NumberFormat('en-us', {
+      style: 'percent',
+      maximumFractionDigits: 2,
+    });
+
+    return nf.format(value);
+  };
+
   const formatCategory = (value) => {
     if (value === undefined) {
       return '-';
@@ -242,7 +252,7 @@ const Facilites = ({ data, payTables }) => {
     {
       label: 'Locality %',
       name: 'LOC%',
-      options: { customBodyRender: formatPercentageFromWholeNumber, filter: true, sort: true, searchable: false },
+      options: { customBodyRender: formatLocality, filter: true, sort: true, searchable: false },
     },
     {
       label: 'CIP %',
