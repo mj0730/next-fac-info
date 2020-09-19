@@ -235,6 +235,9 @@ input#facId::-moz-focus-inner {
   flex-direction: column;
   margin: 0 0.5em;
 }
+.address {
+  text-align: center;
+}
 
 .align-flex-end {
   align-items: flex-end;
