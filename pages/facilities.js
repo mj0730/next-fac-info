@@ -149,37 +149,37 @@ const Facilites = ({ data, payTables }) => {
     {
       label: 'CPC',
       name: 'Current # of CPC On-Board minus Temps minus LTH',
-      options: { filter: true, sort: true, searchable: true },
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'CPC Target',
       name: 'CPC Target',
-      options: { filter: true, sort: true, searchable: true },
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'CPC To Target %',
       name: 'Current % CPC to Target',
-      options: { customBodyRender: formatPercentage, filter: true, sort: true, searchable: true },
+      options: { customBodyRender: formatPercentage, filter: false, sort: true, searchable: false },
     },
     {
       label: 'Trainees',
       name: 'ATCS in Training minus LTH',
-      options: { filter: true, sort: true, searchable: true },
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'Trainee To CPC %',
       name: 'Current % CPC to Trainees',
-      options: { customBodyRender: formatPercentage, filter: true, sort: true, searchable: true },
+      options: { customBodyRender: formatPercentage, filter: false, sort: true, searchable: false },
     },
     {
       label: 'Training Success Rate',
       name: 'Training Success Rate',
-      options: { customBodyRender: formatPercentage, filter: true, sort: true, searchable: true },
+      options: { customBodyRender: formatPercentage, filter: false, sort: true, searchable: false },
     },
     {
       label: 'Training Time (yrs)',
       name: 'Training Time Years',
-      options: { filter: true, sort: true, searchable: true },
+      options: { filter: false, sort: true, searchable: true },
     },
     {
       label: 'ERR Category',
@@ -189,22 +189,22 @@ const Facilites = ({ data, payTables }) => {
     {
       label: 'Projected %',
       name: 'Projected % to Target',
-      options: { customBodyRender: formatPercentage, filter: true, sort: true, searchable: true },
+      options: { customBodyRender: formatPercentage, filter: false, sort: true, searchable: false },
     },
     {
       label: 'Gains (NatAvg)',
       name: 'Possible Gains to National Average',
-      options: { filter: true, sort: true, searchable: true },
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'Gains (Target)',
       name: 'Possible Gains to Target',
-      options: { filter: true, sort: true, searchable: true },
+      options: { filter: false, sort: true, searchable: false },
     },
     {
       label: 'Losses',
       name: 'Possible Losses',
-      options: { filter: true, sort: true, searchable: true },
+      options: { filter: false, sort: true, searchable: false },
     },
   ];
 
@@ -252,7 +252,7 @@ const Facilites = ({ data, payTables }) => {
     {
       label: 'Locality %',
       name: 'LOC%',
-      options: { customBodyRender: formatLocality, filter: true, sort: true, searchable: false },
+      options: { customBodyRender: formatLocality, filter: false, sort: true, searchable: false },
     },
     {
       label: 'CIP %',
