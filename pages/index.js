@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { connectToDatabase } from '../utils/mongodb';
-// import { DbInfoContext } from '../components/context/DbInfoContext';
 import { FacIdContext } from '../components/context/FacIdContext';
 import FacilityPage from '../components/FacilityPage';
 import FrontPage from '../components/FrontPage';

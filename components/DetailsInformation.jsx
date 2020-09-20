@@ -7,9 +7,6 @@ const DetailsInformation = ({ currentFacInfo }) => (
       <div className='fac-information-item address'>
         {currentFacInfo.address}, {currentFacInfo.city}, {currentFacInfo.state} {currentFacInfo.zip}
       </div>
-      {/* <div className='fac-information-item'>{currentFacInfo.city}</div>
-      <div className='fac-information-item'>{currentFacInfo.state}</div>
-      <div className='fac-information-item'>{currentFacInfo.zip}</div> */}
     </div>
 
     <div className='flex-row'>
