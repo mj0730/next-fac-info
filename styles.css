@@ -177,6 +177,12 @@ input#facId::-moz-focus-inner {
   margin: 0 auto;
 }
 
+#front-page .version {
+  text-align: right;
+  margin-right: 1rem;
+  font-size: 0.75rem;
+}
+
 /* Facility Details */
 .fac-page-grid {
   display: grid;
