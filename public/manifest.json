@@ -4,6 +4,7 @@
   "description": "FAA Facility Information from pointSixtyFive.com",
   "lang": "en",
   "display": "standalone",
+  "prefer_related_applications": false,
   "orientation": "",
   "scope": "/",
   "start_url": "/",
@@ -49,6 +50,12 @@
       "src": "images/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "images/icons/maskable-icon.png",
+      "sizes": "426x426",
+      "purpose": "maskable",
+      "type": "image/svg"
     }
   ]
 }
