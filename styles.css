@@ -35,6 +35,11 @@ body {
   justify-content: flex-start;
   background-color: var(--main-bg-color);
   border-bottom: 2px solid var(--main-border-color);
+  position: initial;
+}
+
+.version {
+  display: none;
 }
 
 .index-display-column {
@@ -175,12 +180,6 @@ input#facId::-moz-focus-inner {
   padding: 10px;
   font-size: 1.2rem;
   margin: 0 auto;
-}
-
-#front-page .version {
-  text-align: right;
-  margin-right: 1rem;
-  font-size: 0.75rem;
 }
 
 /* Facility Details */
@@ -455,6 +454,16 @@ nav#table-select button:focus {
     grid-area: 1 / 1 / 4 / 2;
     flex-direction: column;
     border-bottom: none;
+    position: relative;
+  }
+
+  .version {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1rem;
+    font-size: 0.75rem;
   }
 
   .index-display-column {
