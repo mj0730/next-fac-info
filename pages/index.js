@@ -78,7 +78,6 @@ const Index = ({ data, payScaleData }) => {
         <FacilityPage currentFacPay={currentFacPay} currentFacInfo={currentFacInfo} nationalData={data.National} />
       )}
       {idForModal && <ErrorModal facId={idForModal} displayErrorModal={displayErrorModal} />}
-      <div className='version'>v1.0</div>
     </main>
   );
 };
