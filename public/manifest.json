@@ -5,7 +5,7 @@
   "lang": "en",
   "display": "standalone",
   "prefer_related_applications": false,
-  "orientation": "",
+  "orientation": "any",
   "scope": "/",
   "start_url": "/",
   "theme_color": "#14518a",
