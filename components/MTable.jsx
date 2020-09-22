@@ -20,13 +20,18 @@ const MTable = ({ title, data, columns, themeName }) => {
       },
       MuiTable: {
         root: {
-          width: 'calc(100% - 4px)',
+          width: '100%',
         },
       },
       MuiTableFooter: {
         root: {
           backgroundColor: '#14518A',
           color: '#FFF',
+        },
+      },
+      MuiTablePagination: {
+        root: {
+          '&:last-child': { padding: '0 !important' },
         },
       },
       MUIDataTableBodyRow: {
@@ -118,6 +123,7 @@ const MTable = ({ title, data, columns, themeName }) => {
     fixedHeaderOptions: { xAxis: true, yAxis: true },
     searchPlaceholder: 'Search...',
     selectableRows: 'none',
+    textLabels: { pagination: { rowsPerPage: 'Rows' } },
     print: true,
     download: true,
     onCellClick: (colData, { colIndex }) => {
