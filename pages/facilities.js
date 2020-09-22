@@ -62,6 +62,10 @@ const Facilites = ({ data, payTables }) => {
   };
 
   const formatPercentage = (value) => {
+    if (typeof value === 'string') {
+      value = Number.parseFloat(value) / 100;
+    }
+
     const nf = new Intl.NumberFormat('en-us', {
       style: 'percent',
       maximumFractionDigits: 1,
@@ -99,6 +103,15 @@ const Facilites = ({ data, payTables }) => {
     let result = value.split(' ');
 
     return result[0] === 'None' ? 'None' : result[1];
+  };
+
+  const formatNumber = (value) => {
+    const nf = new Intl.NumberFormat('en-us', {
+      style: 'decimal',
+      maximumFractionDigits: 2,
+    });
+
+    return nf.format(value);
   };
 
   const columnsFacility = [
@@ -179,7 +192,7 @@ const Facilites = ({ data, payTables }) => {
     {
       label: 'Training Time (yrs)',
       name: 'Training Time Years',
-      options: { filter: false, sort: true, searchable: true },
+      options: { customBodyRender: formatNumber, filter: false, sort: true, searchable: true },
     },
     {
       label: 'ERR Category',

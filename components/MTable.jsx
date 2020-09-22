@@ -54,7 +54,7 @@ const MTable = ({ title, data, columns, themeName }) => {
           height: 'unset',
           backgroundColor: '#2222224f',
           '&:first-of-type': {
-            backgroundColor: '#14518a3f',
+            backgroundColor: 'var(--palette-color-primary-faded)',
           },
         },
         responsiveStackedSmall: {
@@ -62,6 +62,9 @@ const MTable = ({ title, data, columns, themeName }) => {
           flex: '1 1 35%',
           padding: '8px 16px',
           height: 'unset',
+          '&:nth-of-type(2)': {
+            backgroundColor: 'var(--palette-color-primary-faded)',
+          },
         },
       },
       MuiTableCell: {
