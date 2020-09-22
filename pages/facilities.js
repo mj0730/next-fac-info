@@ -172,7 +172,7 @@ const Facilites = ({ data, payTables }) => {
       options: { customBodyRender: formatPercentage, filter: false, sort: true, searchable: false },
     },
     {
-      label: 'Training Success Rate',
+      label: 'Training Success %',
       name: 'Training Success Rate',
       options: { customBodyRender: formatPercentage, filter: false, sort: true, searchable: false },
     },
@@ -284,9 +284,13 @@ const Facilites = ({ data, payTables }) => {
         </button>
       </nav>
 
-      {tableToDisplay === 'information' && <MTable data={facilityData} columns={columnsFacility} />}
-      {tableToDisplay === 'staffing' && <MTable data={facilityData} columns={columnsStaffing} />}
-      {tableToDisplay === 'pay' && <MTable data={payTables} columns={columnsPay} />}
+      {tableToDisplay === 'information' && (
+        <MTable data={facilityData} columns={columnsFacility} themeName={tableToDisplay} />
+      )}
+      {tableToDisplay === 'staffing' && (
+        <MTable data={facilityData} columns={columnsStaffing} themeName={tableToDisplay} />
+      )}
+      {tableToDisplay === 'pay' && <MTable data={payTables} columns={columnsPay} themeName={tableToDisplay} />}
     </div>
   );
 };

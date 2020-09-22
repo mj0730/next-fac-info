@@ -5,7 +5,7 @@ import MUIDataTable from 'mui-datatables';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { FacIdContext } from './context/FacIdContext';
 
-const MTable = ({ title, data, columns }) => {
+const MTable = ({ title, data, columns, themeName }) => {
   const [FacId, storeFacId] = useContext(FacIdContext);
 
   const theme = createMuiTheme({
@@ -43,9 +43,10 @@ const MTable = ({ title, data, columns }) => {
         },
         cellStackedSmall: {
           borderBottom: 'none',
-          flex: '0 1 100%',
+          flex: '0 0 20%',
           fontWeight: 'bold',
           padding: '8px 16px',
+          height: 'unset',
           backgroundColor: '#2222224f',
           '&:first-of-type': {
             backgroundColor: '#14518a3f',
@@ -53,9 +54,9 @@ const MTable = ({ title, data, columns }) => {
         },
         responsiveStackedSmall: {
           borderBottom: 'none',
-          flex: '0 1 100%',
-          padding: '4px 16px',
-          marginLeft: '1rem',
+          flex: '1 1 35%',
+          padding: '8px 16px',
+          height: 'unset',
         },
       },
       MuiTableCell: {
@@ -92,6 +93,22 @@ const MTable = ({ title, data, columns }) => {
     },
   });
 
+  switch (themeName) {
+    case 'information':
+      theme.overrides.MUIDataTableBodyCell.cellStackedSmall.flex = '0 0 20%';
+      theme.overrides.MUIDataTableBodyCell.responsiveStackedSmall.flex = '1 1 35%';
+      break;
+
+    case 'staffing':
+    case 'pay':
+      theme.overrides.MUIDataTableBodyCell.cellStackedSmall.flex = '0 0 50%';
+      theme.overrides.MUIDataTableBodyCell.responsiveStackedSmall.flex = '1 1 0%';
+      break;
+
+    default:
+      break;
+  }
+
   const options = {
     filterType: 'checkbox',
     responsive: 'stacked',
@@ -124,4 +141,5 @@ MTable.propTypes = {
   title: PropTypes.string,
   data: PropTypes.array,
   columns: PropTypes.array,
+  themeName: PropTypes.string.isRequired,
 };
