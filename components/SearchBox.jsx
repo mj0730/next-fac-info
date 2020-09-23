@@ -16,20 +16,20 @@ const SearchBox = () => {
   };
 
   return (
-    <div id="search-box">
-      <form className="search-container" onSubmit={(e) => e.preventDefault()}>
-        <label htmlFor="facId">
+    <div id='search-box'>
+      <form className='search-container' onSubmit={(e) => e.preventDefault()}>
+        <label htmlFor='facId'>
           <SearchIcon style={{ flexShrink: '1', fontSize: 'inherit' }} />
         </label>
         <input
-          type="text"
-          id="facId"
-          name="facId"
-          minLength="3"
-          maxLength="3"
-          spellCheck="false"
-          autoCorrect="no"
-          placeholder="Search Facility ID"
+          type='text'
+          id='facId'
+          name='facId'
+          minLength='3'
+          maxLength='3'
+          spellCheck='false'
+          autoCorrect='no'
+          placeholder='Facility ID'
           value={FacId}
           onChange={handleChange}
           onFocus={() => storeFacId('')}

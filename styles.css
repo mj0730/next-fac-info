@@ -108,7 +108,7 @@ input#facId::-moz-focus-inner {
 
 #facId::placeholder {
   text-transform: none;
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 
 #facId:focus::placeholder {
@@ -445,7 +445,7 @@ nav#table-select button:focus {
 }
 
 /* Desktop */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1280px) {
   .index-grid-container {
     grid-template-rows: auto auto auto 40px;
   }

@@ -8,7 +8,7 @@ function Layout(props) {
       <div className='index-nav-column'>
         <SearchBox />
         <PageLinks />
-        <div className='version'>v1.0</div>
+        <div className='version'>v1.0.1</div>
       </div>
 
       <div className='index-display-column'>{props.children}</div>

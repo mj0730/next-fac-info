@@ -12,6 +12,15 @@ const MTable = ({ title, data, columns, themeName }) => {
     palette: {
       type: 'dark',
     },
+    breakpoints: {
+      values: {
+        xs: 0, //default 0
+        sm: 0, //default 600
+        md: 1279, //default 960
+        lg: 1280, //default 1280
+        xl: 1920,
+      },
+    },
     overrides: {
       MuiPaper: {
         root: {
@@ -25,7 +34,7 @@ const MTable = ({ title, data, columns, themeName }) => {
       },
       MuiTableFooter: {
         root: {
-          backgroundColor: '#14518A',
+          backgroundColor: 'var(--palette-color-primary)',
           color: '#FFF',
         },
       },
@@ -36,7 +45,7 @@ const MTable = ({ title, data, columns, themeName }) => {
       },
       MUIDataTableBodyRow: {
         responsiveStacked: {
-          border: '1px solid #14518A !important',
+          border: '1px solid var(--palette-color-primary) !important',
           display: 'flex',
           flexWrap: 'wrap',
           margin: '3px 0',
@@ -48,7 +57,7 @@ const MTable = ({ title, data, columns, themeName }) => {
         },
         cellStackedSmall: {
           borderBottom: 'none',
-          flex: '0 0 20%',
+          flex: '0 0 18%',
           fontWeight: 'bold',
           padding: '8px 16px',
           height: 'unset',
@@ -59,7 +68,7 @@ const MTable = ({ title, data, columns, themeName }) => {
         },
         responsiveStackedSmall: {
           borderBottom: 'none',
-          flex: '1 1 35%',
+          flex: '1 1 60%',
           padding: '8px 16px',
           height: 'unset',
           '&:nth-of-type(2)': {
@@ -70,14 +79,17 @@ const MTable = ({ title, data, columns, themeName }) => {
       MuiTableCell: {
         head: {
           backgroundColor: '#000',
-          color: '#FFF',
+          color: 'var(--text-color)',
           fontWeight: 'bold',
           padding: '8px 16px',
         },
       },
       MUIDataTableHeadCell: {
         fixedHeaderCommon: {
-          backgroundColor: '#14518A',
+          backgroundColor: 'var(--palette-color-primary)',
+          '&:last-of-type': {
+            'border-right': '1px solid var(--palette-color-primary)',
+          },
         },
       },
       MuiMenu: {
@@ -103,8 +115,8 @@ const MTable = ({ title, data, columns, themeName }) => {
 
   switch (themeName) {
     case 'information':
-      theme.overrides.MUIDataTableBodyCell.cellStackedSmall.flex = '0 0 20%';
-      theme.overrides.MUIDataTableBodyCell.responsiveStackedSmall.flex = '1 1 35%';
+      theme.overrides.MUIDataTableBodyCell.cellStackedSmall.flex = '0 0 18%';
+      theme.overrides.MUIDataTableBodyCell.responsiveStackedSmall.flex = '1 1 60%';
       break;
 
     case 'staffing':
