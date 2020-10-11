@@ -7,7 +7,7 @@ import TrackChangesIcon from '@material-ui/icons/TrackChanges';
 import MapIcon from '@material-ui/icons/Map';
 
 const PageLinks = () => {
-  const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
+  const [, storeFacId, , setDisplayFrontPage] = useContext(FacIdContext);
 
   const handleClick = () => {
     setDisplayFrontPage(true);
@@ -15,26 +15,26 @@ const PageLinks = () => {
   };
 
   return (
-    <nav id="page-links">
+    <nav id='page-links'>
       <ul>
         <li>
-          <Link href="/">
+          <Link href='/'>
             <a onClick={handleClick}>
-              <HomeIcon /> <span className="hide-text">Home</span>
+              <HomeIcon /> <span className='hide-text'>Home</span>
             </a>
           </Link>
         </li>
         <li>
-          <Link href="/facilities">
+          <Link href='/facilities'>
             <a>
-              <TrackChangesIcon /> <span className="hide-text">Facilities</span>
+              <TrackChangesIcon /> <span className='hide-text'>Facilities</span>
             </a>
           </Link>
         </li>
         <li>
-          <Link href="/map">
+          <Link href='/map'>
             <a>
-              <MapIcon /> <span className="hide-text">Map</span>
+              <MapIcon /> <span className='hide-text'>Map</span>
             </a>
           </Link>
         </li>

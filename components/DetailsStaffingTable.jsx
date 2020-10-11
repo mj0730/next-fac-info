@@ -30,6 +30,6 @@ const DetailsStaffingTable = ({ data, title }) => (
 export default DetailsStaffingTable;
 
 DetailsStaffingTable.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
 };

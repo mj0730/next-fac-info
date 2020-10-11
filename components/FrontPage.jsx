@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 const FrontPage = () => {
+  const CURRENT_PPT = '09-23-2020';
   return (
     <section id='front-page'>
       <Head>
@@ -15,6 +16,8 @@ const FrontPage = () => {
         <p>Search, filter, save, or print all facility data using the facilities tables.</p>
         <p>Visualize federal locality areas and facility locations for all FAA facilities with the locality map.</p>
       </div>
+
+      <div className='updated'>Data Updated: {CURRENT_PPT}</div>
     </section>
   );
 };

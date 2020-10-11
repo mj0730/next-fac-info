@@ -6,7 +6,7 @@ import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { FacIdContext } from './context/FacIdContext';
 
 const MTable = ({ title, data, columns, themeName }) => {
-  const [FacId, storeFacId] = useContext(FacIdContext);
+  const [, storeFacId] = useContext(FacIdContext);
 
   const theme = createMuiTheme({
     palette: {

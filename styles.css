@@ -7,6 +7,7 @@
   --main-border-color: var(--palette-color-primary);
   --button-hover-background: #14518a3f;
   --palette-color-react: #61dafb;
+  --palette-color-highlight: #ee9a2b;
 }
 
 body {
@@ -180,6 +181,13 @@ input#facId::-moz-focus-inner {
   padding: 10px;
   font-size: 1.2rem;
   margin: 0 auto;
+}
+
+.updated {
+  color: #ee9a2b;
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: 5em;
 }
 
 /* Facility Details */

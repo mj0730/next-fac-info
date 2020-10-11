@@ -36,7 +36,7 @@ export async function getStaticProps() {
 }
 
 const Index = ({ data, payScaleData }) => {
-  const [FacId, storeFacId, displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
+  const [FacId, , displayFrontPage, setDisplayFrontPage] = useContext(FacIdContext);
   const [currentFacPay, setCurrentFacPay] = useState('');
   const [currentFacInfo, setCurrentFacInfo] = useState('');
   const [displayErrorModal, setDisplayErrorModal] = useState(false);
