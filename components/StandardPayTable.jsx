@@ -1,9 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import StandardPayTableCell from './StandardPayTableCell';
 
 const StandardPayTable = ({ pay }) => (
-  <React.Fragment>
+  <>
     <tbody>
       <tr>
         <StandardPayTableCell pay={pay} i={'CPCMAX'} />
@@ -19,7 +18,7 @@ const StandardPayTable = ({ pay }) => (
         {pay['D1'] > 0 ? <StandardPayTableCell pay={pay} i={'D1'} /> : <td>N/A</td>}
       </tr>
     </tbody>
-  </React.Fragment>
+  </>
 );
 
 export default StandardPayTable;

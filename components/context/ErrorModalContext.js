@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import { createContext, useState } from 'react';
 
 export const ErrorModalContext = createContext();
 
@@ -9,7 +9,7 @@ const ErrorModalContextProvider = (props) => {
     <ErrorModalContext.Provider value={[displayErrorModal, setDisplayErrorModal]}>
       {props.children}
     </ErrorModalContext.Provider>
-  )
-}
+  );
+};
 
 export default ErrorModalContextProvider;

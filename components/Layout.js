@@ -1,4 +1,3 @@
-import React from 'react';
 import PageLinks from './PageLinks';
 import SearchBox from './SearchBox';
 

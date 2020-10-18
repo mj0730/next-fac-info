@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
 const DifferentialPayTable = ({ pay }) => {
@@ -18,7 +17,7 @@ const DifferentialPayTable = ({ pay }) => {
   };
 
   return (
-    <React.Fragment>
+    <>
       <tbody>
         <tr>
           <td>
@@ -77,7 +76,7 @@ const DifferentialPayTable = ({ pay }) => {
           )}
         </tr>
       </tbody>
-    </React.Fragment>
+    </>
   );
 };
 export default DifferentialPayTable;
