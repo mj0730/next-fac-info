@@ -13,7 +13,8 @@ function Layout(props) {
       <div className='index-display-column'>{props.children}</div>
 
       <footer className='index-footer'>
-        <img src='circle_logo.png' alt='Logo' /> <a href='https://pointsixtyfive.com'>pointSixtyFive.com</a>
+        <img src='circle_logo.png' width='24' height='24' alt='Logo' />
+        <a href='https://pointsixtyfive.com'>pointSixtyFive.com</a>
       </footer>
     </div>
   );
