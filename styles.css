@@ -534,7 +534,7 @@ nav#table-select button:focus {
   }
 
   #map-container iframe {
-    height: calc(100vh - 40px);
+    height: calc(100vh - 52px);
   }
 
   /* ovverride for MUI table */
