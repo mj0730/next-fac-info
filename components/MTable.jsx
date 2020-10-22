@@ -85,7 +85,7 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
         },
       },
       MUIDataTableHeadCell: {
-        fixedHeaderCommon: {
+        fixedHeader: {
           backgroundColor: 'var(--palette-color-primary)',
           '&:last-of-type': {
             'border-right': '1px solid var(--palette-color-primary)',
@@ -135,7 +135,7 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
     rowsPerPageOptions: [10, 25, 50, data.length],
     rowHover: true,
     fixedHeader: true,
-    fixedHeaderOptions: { xAxis: true, yAxis: true },
+    fixedSelectColumn: true,
     searchPlaceholder: 'Search...',
     selectableRows: 'none',
     sortOrder: defaultSortColumn,
