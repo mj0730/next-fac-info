@@ -35,7 +35,7 @@ export async function getStaticProps() {
   };
 }
 
-const Facilites = ({ data, payTables }) => {
+const Facilities = ({ data, payTables }) => {
   const [tableToDisplay, setTableToDisplay] = useState('information');
   const [activeClass, setActiveClass] = useState('information');
 
@@ -118,7 +118,7 @@ const Facilites = ({ data, payTables }) => {
     {
       label: 'ID',
       name: 'Facility ID',
-      options: { filter: false, sort: true, sortDirection: 'asc', searchable: true },
+      options: { filter: false, sort: true, searchable: true },
     },
     {
       label: 'Name',
@@ -154,7 +154,6 @@ const Facilites = ({ data, payTables }) => {
       options: {
         filter: true,
         sort: true,
-        sortDirection: 'asc',
         searchable: true,
         filterType: 'dropdown',
       },
@@ -225,7 +224,7 @@ const Facilites = ({ data, payTables }) => {
     {
       label: 'ID',
       name: 'fac_id',
-      options: { filter: true, sort: true, sortDirection: 'asc', searchable: true },
+      options: { filter: true, sort: true, searchable: true },
     },
     {
       label: 'CPC MAX',
@@ -298,19 +297,36 @@ const Facilites = ({ data, payTables }) => {
       </nav>
 
       {tableToDisplay === 'information' && (
-        <MTable data={facilityData} columns={columnsFacility} themeName={tableToDisplay} />
+        <MTable
+          data={facilityData}
+          columns={columnsFacility}
+          themeName={tableToDisplay}
+          defaultSortColumn={{ name: 'Facility ID', direction: 'asc' }}
+        />
       )}
       {tableToDisplay === 'staffing' && (
-        <MTable data={facilityData} columns={columnsStaffing} themeName={tableToDisplay} />
+        <MTable
+          data={facilityData}
+          columns={columnsStaffing}
+          themeName={tableToDisplay}
+          defaultSortColumn={{ name: 'Facility ID', direction: 'asc' }}
+        />
       )}
-      {tableToDisplay === 'pay' && <MTable data={payTables} columns={columnsPay} themeName={tableToDisplay} />}
+      {tableToDisplay === 'pay' && (
+        <MTable
+          data={payTables}
+          columns={columnsPay}
+          themeName={tableToDisplay}
+          defaultSortColumn={{ name: 'fac_id', direction: 'asc' }}
+        />
+      )}
     </div>
   );
 };
 
-export default Facilites;
+export default Facilities;
 
-Facilites.propTypes = {
+Facilities.propTypes = {
   data: PropTypes.object.isRequired,
   payTables: PropTypes.array.isRequired,
 };
