@@ -11,8 +11,11 @@ const FrontPage = () => {
       <h1>pointSixtyFive Facility Information</h1>
 
       <div className='text-area'>
-        <p>Navigate to detailed facility pay, staffing, and training data with the search bar.</p>
-        <p>Search, filter, save, or print all facility data using the facilities tables.</p>
+        <p>Go directly to detailed facility pay, staffing, and training data with the search bar.</p>
+        <p>
+          Search, filter, save, or print all facility data using the facilities tables. Click on a facility ID to go to
+          that facility's details page.
+        </p>
         <p>Visualize federal locality areas and facility locations for all FAA facilities with the locality map.</p>
       </div>
 
