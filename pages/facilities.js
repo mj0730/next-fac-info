@@ -40,6 +40,13 @@ const Facilities = ({ data, payTables }) => {
   const [activeClass, setActiveClass] = useState('information');
 
   const facilityData = Object.values(data);
+  const facilityStaffingData = facilityData;
+
+  //removes the National Data from facility information table
+  {
+    let index = facilityData.findIndex((item) => item['Facility ID'] == 'National');
+    facilityData.splice(index, 1);
+  }
 
   const handleClick = (e) => {
     e.target.value === undefined
@@ -118,7 +125,11 @@ const Facilities = ({ data, payTables }) => {
     {
       label: 'ID',
       name: 'Facility ID',
-      options: { filter: false, sort: true, searchable: true },
+      options: {
+        filter: false,
+        sort: true,
+        searchable: true,
+      },
     },
     {
       label: 'Name',
@@ -306,7 +317,7 @@ const Facilities = ({ data, payTables }) => {
       )}
       {tableToDisplay === 'staffing' && (
         <MTable
-          data={facilityData}
+          data={facilityStaffingData}
           columns={columnsStaffing}
           themeName={tableToDisplay}
           defaultSortColumn={{ name: 'Facility ID', direction: 'asc' }}
