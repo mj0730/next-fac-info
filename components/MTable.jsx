@@ -5,7 +5,7 @@ import MUIDataTable from 'mui-datatables';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { FacIdContext } from './context/FacIdContext';
 
-const MTable = ({ title, data, columns, themeName }) => {
+const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
   const [, storeFacId] = useContext(FacIdContext);
 
   const theme = createMuiTheme({
@@ -131,13 +131,14 @@ const MTable = ({ title, data, columns, themeName }) => {
 
   const options = {
     filterType: 'checkbox',
-    responsive: 'stacked',
+    responsive: 'vertical',
     rowsPerPageOptions: [10, 25, 50, data.length],
     rowHover: true,
     fixedHeader: true,
     fixedHeaderOptions: { xAxis: true, yAxis: true },
     searchPlaceholder: 'Search...',
     selectableRows: 'none',
+    sortOrder: defaultSortColumn,
     textLabels: { pagination: { rowsPerPage: 'Rows' } },
     print: true,
     download: true,
@@ -159,8 +160,9 @@ const MTable = ({ title, data, columns, themeName }) => {
 export default MTable;
 
 MTable.propTypes = {
-  title: PropTypes.string,
-  data: PropTypes.array,
   columns: PropTypes.array,
+  data: PropTypes.array,
+  defaultSortColumn: PropTypes.object.isRequired,
+  title: PropTypes.string,
   themeName: PropTypes.string.isRequired,
 };
