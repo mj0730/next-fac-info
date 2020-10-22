@@ -54,6 +54,9 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
       MUIDataTableBodyCell: {
         root: {
           color: '#FFF',
+          '&:first-of-type': {
+            backgroundColor: 'var(--palette-color-primary-faded)',
+          },
         },
         cellStackedSmall: {
           borderBottom: 'none',
@@ -81,6 +84,9 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
           backgroundColor: '#000',
           color: 'var(--text-color)',
           fontWeight: 'bold',
+          padding: '8px 16px',
+        },
+        root: {
           padding: '8px 16px',
         },
       },
