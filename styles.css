@@ -2,6 +2,7 @@
   --main-bg-color: #0e0e0e;
   --alt-bg-color: #222222;
   --text-color: #ffffff;
+  --text-color-alt: #707070;
   --palette-color-primary: #14518a;
   --palette-color-primary-faded: #14518a8e;
   --main-border-color: var(--palette-color-primary);
