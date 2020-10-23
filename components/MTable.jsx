@@ -24,6 +24,9 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
   const theme = createMuiTheme({
     palette: {
       type: 'dark',
+      primary: {
+        main: '#14518a',
+      },
     },
     breakpoints: {
       values: {
@@ -40,15 +43,15 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
           backgroundColor: '#0C0C0C',
         },
       },
-      MuiTable: {
-        root: {
-          width: '100%',
-        },
-      },
+      // MuiTable: {
+      //   root: {
+      //     width: '100%',
+      //   },
+      // },
       MuiTableFooter: {
         root: {
           backgroundColor: 'var(--palette-color-primary)',
-          color: '#FFF',
+          color: 'var(--text-color)',
         },
       },
       // MuiTablePagination: {
@@ -66,7 +69,7 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
       },
       MUIDataTableBodyCell: {
         root: {
-          color: '#FFF',
+          color: 'var(--text-color)',
           // '&:first-of-type': {
           //   backgroundColor: 'var(--palette-color-primary-faded)',
           // },
@@ -116,12 +119,17 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
       },
       MuiMenu: {
         list: {
-          border: '1px solid #FFF',
+          border: '1px solid var(--palette-color-highlight)',
+        },
+      },
+      MUIDataTableToolbar: {
+        iconActive: {
+          color: 'var(--palette-color-highlight)',
         },
       },
       MUIDataTableFilter: {
         root: {
-          backgroundColor: '#1C1C1C',
+          backgroundColor: 'var(--alt-bg-color)',
         },
       },
       MUIDataTableFilterList: {
@@ -130,6 +138,13 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
         },
         chip: {
           margin: '0 2px',
+        },
+      },
+      MuiCheckbox: {
+        colorPrimary: {
+          '&$checked': {
+            color: 'var(--palette-color-highlight)',
+          },
         },
       },
     },
