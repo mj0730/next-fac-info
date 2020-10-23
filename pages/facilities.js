@@ -40,7 +40,7 @@ const Facilities = ({ data, payTables }) => {
   const [activeClass, setActiveClass] = useState('information');
 
   const facilityData = Object.values(data);
-  const facilityStaffingData = facilityData;
+  const facilityStaffingData = Object.values(data);
 
   //removes the National Data from facility information table
   {
@@ -104,7 +104,7 @@ const Facilities = ({ data, payTables }) => {
   };
 
   const formatCategory = (value) => {
-    if (value === undefined) {
+    if (!value) {
       return '-';
     }
     let result = value.split(' ');
