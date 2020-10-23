@@ -166,6 +166,8 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
     download: true,
     onCellClick: (colData, { colIndex }) => {
       if (colIndex === 0) {
+        if (colData === 'National') return;
+
         Router.push('/');
         storeFacId(colData);
       }
