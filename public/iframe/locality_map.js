@@ -342,6 +342,7 @@ const centers = L.featureGroup([]);
 const towers = L.featureGroup([]);
 const tracons = L.featureGroup([]);
 const updowns = L.featureGroup([]);
+const nonradar = L.featureGroup([]);
 
 function sortFacTypes(marker, popupData) {
   switch (marker.fac_type) {
@@ -355,6 +356,8 @@ function sortFacTypes(marker, popupData) {
       ccf.addLayer(L.circleMarker([marker.lat, marker.lon], style(marker)).bindPopup(popupData));
       break;
     case 4:
+      nonradar.addLayer(L.circleMarker([marker.lat, marker.lon], style(marker)).bindPopup(popupData));
+      break;
     case 7:
       towers.addLayer(L.circleMarker([marker.lat, marker.lon], style(marker)).bindPopup(popupData));
       break;
@@ -404,6 +407,7 @@ function sortFacTypes(marker, popupData) {
   towers.addTo(map);
   tracons.addTo(map);
   updowns.addTo(map);
+  nonradar.addTo(map);
 })();
 
 // Layer Controls
@@ -418,6 +422,7 @@ const overlayMaps = {
   Towers: towers,
   TRACONS: tracons,
   'Tower/Approach Controls': updowns,
+  'Tower/Non-RADAR Approach Control': nonradar,
 };
 
 L.control.layers(baseLayers, overlayMaps).addTo(map);
@@ -430,7 +435,7 @@ legend.onAdd = function () {
     labels = ['ARTCC', 'CCF', 'Tower', 'Tower/Approach', 'TRACON'];
 
   for (let i = 0; i < types.length; i++) {
-    let obj = { type: types[i] }; //placeholder so arguement is correct data type
+    let obj = { type: types[i] }; //placeholder so argument is correct data type
     div.innerHTML += `<li><i style="background: ${markerType(obj)}"></i>${labels[i]}</li>`;
   }
 
