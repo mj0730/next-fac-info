@@ -249,8 +249,19 @@ input#facId::-moz-focus-inner {
   flex-direction: column;
   margin: 0 0.5em;
 }
+
 .address {
   text-align: center;
+}
+
+.forum-link {
+  color: var(--palette-color-primary);
+  text-decoration: none;
+}
+
+.forum-link:hover,
+.forum-link:active {
+  color: var(--palette-color-highlight);
 }
 
 .align-flex-end {
@@ -536,10 +547,5 @@ nav#table-select button:focus {
 
   #map-container iframe {
     height: calc(100vh - 52px);
-  }
-
-  /* ovverride for MUI table */
-  tr.MuiTableRow-root {
-    display: table-row !important;
   }
 }

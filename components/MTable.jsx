@@ -5,7 +5,7 @@ import MUIDataTable from 'mui-datatables';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { FacIdContext } from './context/FacIdContext';
 
-const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
+const MTable = ({ title, data, columns, defaultSortColumn }) => {
   const [, storeFacId] = useContext(FacIdContext);
 
   //Creating a default instance so the conditionals/media queries in the actual theme have something to reference for the breakpoint values
@@ -92,6 +92,9 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
           // height: 'unset',
           '&:first-of-type': {
             backgroundColor: 'var(--palette-color-primary-faded)',
+            '&:hover': {
+              cursor: 'pointer',
+            },
           },
         },
       },
@@ -150,22 +153,6 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
     },
   });
 
-  // switch (themeName) {
-  //   case 'information':
-  //     theme.overrides.MUIDataTableBodyCell.cellStackedSmall.flex = '0 0 18%';
-  //     theme.overrides.MUIDataTableBodyCell.responsiveStackedSmall.flex = '1 1 60%';
-  //     break;
-
-  //   case 'staffing':
-  //   case 'pay':
-  //     theme.overrides.MUIDataTableBodyCell.cellStackedSmall.flex = '0 0 50%';
-  //     theme.overrides.MUIDataTableBodyCell.responsiveStackedSmall.flex = '1 1 0%';
-  //     break;
-
-  //   default:
-  //     break;
-  // }
-
   const options = {
     filterType: 'checkbox',
     responsive: 'vertical',
@@ -203,5 +190,4 @@ MTable.propTypes = {
   data: PropTypes.array,
   defaultSortColumn: PropTypes.object.isRequired,
   title: PropTypes.string,
-  themeName: PropTypes.string.isRequired,
 };

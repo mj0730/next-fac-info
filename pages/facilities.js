@@ -311,7 +311,6 @@ const Facilities = ({ data, payTables }) => {
         <MTable
           data={facilityData}
           columns={columnsFacility}
-          themeName={tableToDisplay}
           defaultSortColumn={{ name: 'Facility ID', direction: 'asc' }}
         />
       )}
@@ -319,17 +318,11 @@ const Facilities = ({ data, payTables }) => {
         <MTable
           data={facilityStaffingData}
           columns={columnsStaffing}
-          themeName={tableToDisplay}
           defaultSortColumn={{ name: 'Facility ID', direction: 'asc' }}
         />
       )}
       {tableToDisplay === 'pay' && (
-        <MTable
-          data={payTables}
-          columns={columnsPay}
-          themeName={tableToDisplay}
-          defaultSortColumn={{ name: 'fac_id', direction: 'asc' }}
-        />
+        <MTable data={payTables} columns={columnsPay} defaultSortColumn={{ name: 'fac_id', direction: 'asc' }} />
       )}
     </div>
   );
