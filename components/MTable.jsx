@@ -125,6 +125,13 @@ const MTable = ({ title, data, columns, defaultSortColumn }) => {
           border: '1px solid var(--palette-color-highlight)',
         },
       },
+      MuiToolbar: {
+        gutters: {
+          [defaultTheme.breakpoints.down(350)]: {
+            padding: 0,
+          },
+        },
+      },
       MUIDataTableToolbar: {
         iconActive: {
           color: 'var(--palette-color-highlight)',
