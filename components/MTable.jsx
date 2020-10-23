@@ -8,6 +8,19 @@ import { FacIdContext } from './context/FacIdContext';
 const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
   const [, storeFacId] = useContext(FacIdContext);
 
+  //Creating a default instance so the conditionals/media queries in the actual theme have something to reference for the breakpoint values
+  const defaultTheme = createMuiTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 0,
+        md: 1279,
+        lg: 1280,
+        xl: 1920,
+      },
+    },
+  });
+
   const theme = createMuiTheme({
     palette: {
       type: 'dark',
@@ -38,43 +51,43 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
           color: '#FFF',
         },
       },
-      MuiTablePagination: {
-        root: {
-          '&:last-child': { padding: '0 !important' },
-        },
-      },
+      // MuiTablePagination: {
+      //   root: {
+      //     '&:last-child': { padding: '0 !important' },
+      //   },
+      // },
       MUIDataTableBodyRow: {
         responsiveStacked: {
           border: '1px solid var(--palette-color-primary) !important',
-          display: 'flex',
-          flexWrap: 'wrap',
-          margin: '3px 0',
+          // display: 'flex',
+          // flexWrap: 'wrap',
+          // margin: '3px 0',
         },
       },
       MUIDataTableBodyCell: {
         root: {
           color: '#FFF',
-          '&:first-of-type': {
-            backgroundColor: 'var(--palette-color-primary-faded)',
-          },
+          // '&:first-of-type': {
+          //   backgroundColor: 'var(--palette-color-primary-faded)',
+          // },
         },
-        cellStackedSmall: {
-          borderBottom: 'none',
-          flex: '0 0 18%',
-          fontWeight: 'bold',
-          padding: '8px 16px',
-          height: 'unset',
-          backgroundColor: '#2222224f',
+        // cellStackedSmall: {
+        //   borderBottom: 'none',
+        //   flex: '0 0 18%',
+        //   fontWeight: 'bold',
+        //   padding: '8px 16px',
+        //   height: 'unset',
+        //   backgroundColor: '#2222224f',
+        //   '&:first-of-type': {
+        //     backgroundColor: 'var(--palette-color-primary-faded)',
+        //   },
+        // },
+        responsiveStackedSmallParent: {
+          // borderBottom: 'none',
+          // flex: '1 1 60%',
+          // padding: '8px 16px',
+          // height: 'unset',
           '&:first-of-type': {
-            backgroundColor: 'var(--palette-color-primary-faded)',
-          },
-        },
-        responsiveStackedSmall: {
-          borderBottom: 'none',
-          flex: '1 1 60%',
-          padding: '8px 16px',
-          height: 'unset',
-          '&:nth-of-type(2)': {
             backgroundColor: 'var(--palette-color-primary-faded)',
           },
         },
@@ -88,6 +101,9 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
         },
         root: {
           padding: '8px 16px',
+          [defaultTheme.breakpoints.down('sm')]: {
+            padding: '1px 2px',
+          },
         },
       },
       MUIDataTableHeadCell: {
@@ -119,21 +135,21 @@ const MTable = ({ title, data, columns, themeName, defaultSortColumn }) => {
     },
   });
 
-  switch (themeName) {
-    case 'information':
-      theme.overrides.MUIDataTableBodyCell.cellStackedSmall.flex = '0 0 18%';
-      theme.overrides.MUIDataTableBodyCell.responsiveStackedSmall.flex = '1 1 60%';
-      break;
+  // switch (themeName) {
+  //   case 'information':
+  //     theme.overrides.MUIDataTableBodyCell.cellStackedSmall.flex = '0 0 18%';
+  //     theme.overrides.MUIDataTableBodyCell.responsiveStackedSmall.flex = '1 1 60%';
+  //     break;
 
-    case 'staffing':
-    case 'pay':
-      theme.overrides.MUIDataTableBodyCell.cellStackedSmall.flex = '0 0 50%';
-      theme.overrides.MUIDataTableBodyCell.responsiveStackedSmall.flex = '1 1 0%';
-      break;
+  //   case 'staffing':
+  //   case 'pay':
+  //     theme.overrides.MUIDataTableBodyCell.cellStackedSmall.flex = '0 0 50%';
+  //     theme.overrides.MUIDataTableBodyCell.responsiveStackedSmall.flex = '1 1 0%';
+  //     break;
 
-    default:
-      break;
-  }
+  //   default:
+  //     break;
+  // }
 
   const options = {
     filterType: 'checkbox',
