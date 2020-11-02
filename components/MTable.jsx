@@ -43,53 +43,22 @@ const MTable = ({ title, data, columns, defaultSortColumn }) => {
           backgroundColor: '#0C0C0C',
         },
       },
-      // MuiTable: {
-      //   root: {
-      //     width: '100%',
-      //   },
-      // },
       MuiTableFooter: {
         root: {
           backgroundColor: 'var(--palette-color-primary)',
           color: 'var(--text-color)',
         },
       },
-      // MuiTablePagination: {
-      //   root: {
-      //     '&:last-child': { padding: '0 !important' },
-      //   },
-      // },
       MUIDataTableBodyRow: {
         responsiveStacked: {
           border: '1px solid var(--palette-color-primary) !important',
-          // display: 'flex',
-          // flexWrap: 'wrap',
-          // margin: '3px 0',
         },
       },
       MUIDataTableBodyCell: {
         root: {
           color: 'var(--text-color)',
-          // '&:first-of-type': {
-          //   backgroundColor: 'var(--palette-color-primary-faded)',
-          // },
         },
-        // cellStackedSmall: {
-        //   borderBottom: 'none',
-        //   flex: '0 0 18%',
-        //   fontWeight: 'bold',
-        //   padding: '8px 16px',
-        //   height: 'unset',
-        //   backgroundColor: '#2222224f',
-        //   '&:first-of-type': {
-        //     backgroundColor: 'var(--palette-color-primary-faded)',
-        //   },
-        // },
         responsiveStackedSmallParent: {
-          // borderBottom: 'none',
-          // flex: '1 1 60%',
-          // padding: '8px 16px',
-          // height: 'unset',
           '&:first-of-type': {
             backgroundColor: 'var(--palette-color-primary-faded)',
             '&:hover': {
@@ -161,7 +130,7 @@ const MTable = ({ title, data, columns, defaultSortColumn }) => {
   });
 
   const options = {
-    filterType: 'checkbox',
+    filterType: 'dropdown',
     responsive: 'vertical',
     rowsPerPageOptions: [10, 25, 50, data.length],
     rowHover: true,

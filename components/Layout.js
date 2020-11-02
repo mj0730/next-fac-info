@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import PageLinks from './PageLinks';
 import SearchBox from './SearchBox';
+import { version } from '../package.json';
 
 function Layout({ children }) {
   return (
@@ -8,7 +9,7 @@ function Layout({ children }) {
       <div className='index-nav-column'>
         <SearchBox />
         <PageLinks />
-        <div className='version'>v1.1.1</div>
+        <div className='version'>v{version}</div>
       </div>
 
       <div className='index-display-column'>{children}</div>

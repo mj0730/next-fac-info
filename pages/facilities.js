@@ -280,12 +280,12 @@ const Facilities = ({ data, payTables }) => {
     {
       label: 'CIP %',
       name: 'CIP%',
-      options: { customBodyRender: formatPercentageFromWholeNumber, filter: true, sort: true, searchable: false },
+      options: { customBodyRender: formatPercentageFromWholeNumber, filter: false, sort: true, searchable: false },
     },
     {
       label: 'COLA %',
       name: 'COLA%',
-      options: { customBodyRender: formatPercentageFromWholeNumber, filter: true, sort: true, searchable: false },
+      options: { customBodyRender: formatPercentageFromWholeNumber, filter: false, sort: true, searchable: false },
     },
   ];
 
