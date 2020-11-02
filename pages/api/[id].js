@@ -13,15 +13,15 @@ export default function handler(req, res) {
     let result;
     if (placeholder[id]) {
       result = placeholder[id];
+
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify(result));
     } else {
       res.statusCode = 404;
       res.setHeader('Content-Type', 'text/plain');
       res.end('Error: No ID with that value found.');
     }
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(result));
   } else {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'text/plain');
