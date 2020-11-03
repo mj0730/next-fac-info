@@ -12,4 +12,5 @@ Facility information can be accessed in it's entirety or by individual facility.
 ### Endpoints
 
 `/api/data` - JSON data of all facility information
+
 `/api/[id]` - Use a facility's 3-letter identifier to access facility specific information.
