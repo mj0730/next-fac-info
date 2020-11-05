@@ -1,8 +1,17 @@
 import { getDataFromDatabase } from './data';
+import initMiddleware from '../../utils/initMiddleware';
+import Cors from 'cors';
+
+const cors = initMiddleware(
+  Cors({
+    methods: ['GET'],
+  })
+);
 
 // query parameter in the route is case sensitive
 
 export default async function handler(req, res) {
+  await cors(req, res);
   const { data, payScaleData } = await getDataFromDatabase();
 
   if (req.method === 'GET') {
