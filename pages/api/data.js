@@ -1,6 +1,15 @@
 import { connectToDatabase } from '../../utils/mongodb';
+import initMiddleware from '../../utils/initMiddleware';
+import Cors from 'cors';
+
+const cors = initMiddleware(
+  Cors({
+    methods: ['GET'],
+  })
+);
 
 export default async function handler(req, res) {
+  await cors(req, res);
   const data = await getDataFromDatabase();
 
   if (req.method === 'GET') {
