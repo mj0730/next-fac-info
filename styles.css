@@ -25,7 +25,7 @@ body {
   grid-template-rows: 68px auto auto 40px;
   grid-template-columns: 1fr 4fr;
   grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  row-gap: 0px;
   height: 100vh;
 }
 
@@ -160,6 +160,7 @@ input#facId::-moz-focus-inner {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-left: 3px;
 }
 
 /* Front page content */
@@ -196,6 +197,7 @@ input#facId::-moz-focus-inner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 4.5em repeat(4, 1fr);
+  row-gap: 0.5rem;
   margin-top: 5px;
 }
 
@@ -227,6 +229,7 @@ input#facId::-moz-focus-inner {
 #facility-info .flex-col {
   display: flex;
   flex-direction: column;
+  max-width: 50%;
 }
 
 #fac-information {
@@ -521,6 +524,10 @@ nav#table-select button:focus {
 
   #facility-info header {
     justify-content: space-between;
+  }
+
+  .fac-page-grid {
+    row-gap: 0;
   }
 
   #modal {
