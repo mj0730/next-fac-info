@@ -1,9 +1,9 @@
 const map = L.map('map', {
   center: [40, -98.5],
-  zoom: 4,
+  zoom: 5,
 });
 
-L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}@2x.png?key=1ojaSiJVULNHwgWfBZYs', {
+L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=1ojaSiJVULNHwgWfBZYs', {
   tileSize: 512,
   zoomOffset: -1,
   minZoom: 1,
@@ -13,10 +13,10 @@ L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}@2x.png?key=1ojaSiJV
 }).addTo(map);
 
 //tool tip for locality area
-const ttip = (area) => {
+function ttip(area) {
   return `<p>Area: ${area.localityArea}</p>
   <p>Rate: ${area.localityPercent}</p>`;
-};
+}
 
 //Locality Areas
 let localityAreaGroup = L.layerGroup();
@@ -394,7 +394,7 @@ function sortFacTypes(marker, popupData) {
         <td>Address: ${marker.address}</td>
       </tr>
       <tr>
-        <td><a href="${FORUM_URL}${marker.fac_id}" target="_top">Forum Page</a></td>
+        <td><a href="${FORUM_URL}${marker.fac_id}">Forum Page</a></td>
       <tr>
     </table>
     `;
@@ -422,7 +422,6 @@ const overlayMaps = {
   Towers: towers,
   TRACONS: tracons,
   'Tower/Approach Controls': updowns,
-  'Tower/Non-RADAR Approach Control': nonradar,
 };
 
 L.control.layers(baseLayers, overlayMaps).addTo(map);
