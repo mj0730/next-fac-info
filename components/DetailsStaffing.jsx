@@ -50,7 +50,7 @@ const DetailsStaffing = ({ data, nationalData }) => {
   const projectionDetails = [
     { text: '% to Target', data: formatNumbers(data['Projected % to Target'], 'percent', 1) },
     { text: 'Inbounds', data: data['Placement List Inbounds'] },
-    { text: 'Outbounds', data: data['Placement List Outbounds (ERR, Hardship)'] },
+    { text: 'Outbounds', data: data['Placement List Outbounds'] },
     { text: 'Losses', data: formatNumbers(data['Projected Retirements and Other Losses'], 'decimal', 2) },
   ];
 
