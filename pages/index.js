@@ -9,19 +9,19 @@ import ErrorModal from '../components/ErrorModal';
 //Get facility info from the database
 export async function getStaticProps() {
   const { db } = await connectToDatabase();
-  const result = await db.collection('pptdata').find().project({ _id: 0 }).toArray();
+  const result = await db.collection('pptdata').find().project({ _id: 0, updatedAt: 0 }).toArray();
 
   const data = {};
   result.forEach((x) => (data[x['Facility ID']] = x));
 
-  const payResult = await db.collection('pay').find().project({ _id: 0 }).toArray();
+  const payResult = await db.collection('pay').find().project({ _id: 0, updatedAt: 0 }).toArray();
 
   const payScaleData = {};
   payResult.forEach((x) => {
     payScaleData[x['fac_id']] = x;
   });
 
-  const infoResult = await db.collection('facilitydata').find().project({ _id: 0 }).toArray();
+  const infoResult = await db.collection('facilitydata').find().project({ _id: 0, updatedAt: 0 }).toArray();
   const infoData = {};
   infoResult.forEach((x) => (infoData[x['facId']] = x));
 
