@@ -7,12 +7,12 @@ import MTable from '../components/MTable';
 //Get facility info from the database. there will be no data available if user doesn't got to index page first without this call to get static props here
 export async function getStaticProps() {
   const { db } = await connectToDatabase();
-  const result = await db.collection('pptdata').find().project({ _id: 0 }).toArray();
+  const result = await db.collection('pptdata').find().project({ _id: 0, updatedAt: 0 }).toArray();
 
   const data = {};
   result.forEach((x) => (data[x['Facility ID']] = x));
 
-  const payResult = await db.collection('pay').find().project({ _id: 0 }).toArray();
+  const payResult = await db.collection('pay').find().project({ _id: 0, updatedAt: 0 }).toArray();
 
   const payScaleData = {};
   payResult.forEach((x) => {
@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
   const payTables = Object.values(payScaleData);
 
-  const infoResult = await db.collection('facilitydata').find().project({ _id: 0 }).toArray();
+  const infoResult = await db.collection('facilitydata').find().project({ _id: 0, updatedAt: 0 }).toArray();
   const infoData = {};
   infoResult.forEach((x) => (infoData[x['facId']] = x));
 
