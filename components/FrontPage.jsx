@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 const FrontPage = () => {
-  const CURRENT_PPT = '11-25-2020';
+  const CURRENT_PPT = '12-23-2020';
   return (
     <section id='front-page'>
       <Head>
