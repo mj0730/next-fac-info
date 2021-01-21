@@ -88,6 +88,18 @@ const MTable = ({ title, data, columns, defaultSortColumn }) => {
             'border-right': '1px solid var(--palette-color-primary)',
           },
         },
+        data: {
+          fontSize: '.8rem',
+        },
+      },
+      MuiTableSortLabel: {
+        icon: {
+          fontSize: '.75rem',
+          margin: '0',
+          padding: '0',
+          position: 'relative',
+          top: '5px',
+        },
       },
       MuiMenu: {
         list: {

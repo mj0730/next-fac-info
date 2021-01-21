@@ -127,7 +127,8 @@ const Facilities = ({ data, payTables }) => {
     return nf.format(value);
   };
 
-  const sortNumbers = (order) => ({ data: val1 }, { data: val2 }) => (val1 - val2) * (order === 'asc' ? 1 : -1);
+  const sortNumbers = (order) => ({ data: val1 }, { data: val2 }) =>
+    (parseFloat(val1) - parseFloat(val2)) * (order === 'asc' ? 1 : -1);
 
   const columnsFacility = [
     {
@@ -190,7 +191,13 @@ const Facilities = ({ data, payTables }) => {
     {
       label: 'CPC To Target %',
       name: 'Current % CPC to Target',
-      options: { customBodyRender: formatPercentage, filter: false, sort: true, searchable: false },
+      options: {
+        customBodyRender: formatPercentage,
+        sortCompare: sortNumbers,
+        filter: false,
+        sort: true,
+        searchable: false,
+      },
     },
     {
       label: 'Trainees',
@@ -200,12 +207,24 @@ const Facilities = ({ data, payTables }) => {
     {
       label: 'Trainee To CPC %',
       name: 'Current % CPC to Trainees',
-      options: { customBodyRender: formatPercentage, filter: false, sort: true, searchable: false },
+      options: {
+        customBodyRender: formatPercentage,
+        sortCompare: sortNumbers,
+        filter: false,
+        sort: true,
+        searchable: false,
+      },
     },
     {
       label: 'Training Success %',
       name: 'Training Success Rate',
-      options: { customBodyRender: formatPercentage, filter: false, sort: true, searchable: false },
+      options: {
+        customBodyRender: formatPercentage,
+        sortCompare: sortNumbers,
+        filter: false,
+        sort: true,
+        searchable: false,
+      },
     },
     {
       label: 'Training Time (yrs)',
@@ -220,7 +239,13 @@ const Facilities = ({ data, payTables }) => {
     {
       label: 'Projected %',
       name: 'Projected % to Target',
-      options: { customBodyRender: formatPercentage, filter: false, sort: true, searchable: false },
+      options: {
+        customBodyRender: formatPercentage,
+        sortCompare: sortNumbers,
+        filter: false,
+        sort: true,
+        searchable: false,
+      },
     },
     {
       label: 'Gains (NatAvg)',
