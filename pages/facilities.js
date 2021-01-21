@@ -127,6 +127,8 @@ const Facilities = ({ data, payTables }) => {
     return nf.format(value);
   };
 
+  const sortNumbers = (order) => ({ data: val1 }, { data: val2 }) => (val1 - val2) * (order === 'asc' ? 1 : -1);
+
   const columnsFacility = [
     {
       label: 'ID',
@@ -286,12 +288,24 @@ const Facilities = ({ data, payTables }) => {
     {
       label: 'CIP %',
       name: 'CIP%',
-      options: { customBodyRender: formatPercentageFromWholeNumber, filter: false, sort: true, searchable: false },
+      options: {
+        customBodyRender: formatPercentageFromWholeNumber,
+        sortCompare: sortNumbers,
+        filter: false,
+        sort: true,
+        searchable: false,
+      },
     },
     {
       label: 'COLA %',
       name: 'COLA%',
-      options: { customBodyRender: formatPercentageFromWholeNumber, filter: false, sort: true, searchable: false },
+      options: {
+        customBodyRender: formatPercentageFromWholeNumber,
+        sortCompare: sortNumbers,
+        filter: false,
+        sort: true,
+        searchable: false,
+      },
     },
   ];
 
