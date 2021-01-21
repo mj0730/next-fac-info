@@ -45,7 +45,7 @@ const DetailsPay = ({ currentFacPay }) => {
         <li>{formatPercentage(currentFacPay['LOC%'], 'loc')}</li>
       </ul>
 
-      {currentFacPay.differentialType && (
+      {currentFacPay.differentialType != 'none' && (
         <ul className='flex-list pay-factors'>
           <li>Differential</li>
           <li>{currentFacPay['differentialType']}</li>

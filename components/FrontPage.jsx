@@ -1,7 +1,7 @@
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 
-const FrontPage = () => {
-  const CURRENT_PPT = '12-23-2020';
+const FrontPage = ({ updated }) => {
   return (
     <section id='front-page'>
       <Head>
@@ -14,14 +14,18 @@ const FrontPage = () => {
         <p>Go directly to detailed facility pay, staffing, and training data with the search bar.</p>
         <p>
           Search, filter, save, or print all facility data using the facilities tables. Click on a facility ID to go to
-          that facility's details page.
+          that facility&apos;s details page.
         </p>
         <p>Visualize federal locality areas and facility locations for all FAA facilities with the locality map.</p>
       </div>
 
-      <div className='updated'>Data Updated: {CURRENT_PPT}</div>
+      <div className='updated'>Data Updated: {updated}</div>
     </section>
   );
 };
 
 export default FrontPage;
+
+FrontPage.propTypes = {
+  updated: PropTypes.string.isRequired,
+};

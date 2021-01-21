@@ -1,6 +1,6 @@
 {
   "name": "next-fac-info",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "FAA Facility Information",
   "main": "index.js",
   "scripts": {
