@@ -25,14 +25,14 @@
     "cors": "^2.8.5",
     "mongodb": "^3.6.4",
     "mui-datatables": "^3.7.4",
-    "next": "10.0.5",
+    "next": "^10.0.8",
     "next-pwa": "^5.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "eslint": "^7.20.0",
+    "@babel/core": "^7.13.8",
+    "eslint": "^7.21.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0"
   }
