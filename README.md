@@ -11,5 +11,6 @@ Facility information can be accessed in it's entirety or by individual facility.
 
 ### Endpoints
 
-`/api/data` - Provides all facility information data.   
+`/api/data` - Provides all facility information data.  
+`/api/national` - Provides aggregate national data only.  
 `/api/[id]` - Use a facility's 3-letter identifier to access facility specific information.
