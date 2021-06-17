@@ -188,7 +188,6 @@ input#facId::-moz-focus-inner {
 .updated {
   color: #ee9a2b;
   font-size: 0.75rem;
-  font-style: italic;
   margin-top: 5em;
 }
 
