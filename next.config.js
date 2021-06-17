@@ -5,4 +5,9 @@ module.exports = withPWA({
     dest: 'public',
     disable: process.env.NODE_ENV === 'development',
   },
+  eslint: {
+    // Warning: Dangerously allow production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
 });
