@@ -166,7 +166,11 @@ const MTable = ({ title, data, columns, defaultSortColumn }) => {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <MUIDataTable title={title} data={data} columns={columns} options={options} />
+      {/* The conditional for the window object is required until an update of the package is released.
+      It will fail to render with an error without the conditional, as window is undefined at build time
+      https://github.com/gregnb/mui-datatables/issues/1806
+      */}
+      {typeof window !== 'undefined' && <MUIDataTable title={title} data={data} columns={columns} options={options} />}
     </MuiThemeProvider>
   );
 };
