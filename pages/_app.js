@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import '../styles.css';
-import Layout from '../components/Layout.js';
+import Layout from '../components/Layout';
 import FacIdContextProvider from '../components/context/FacIdContext';
+import '../styles.css';
 
 export default function MyApp({ Component, pageProps }) {
   return (
