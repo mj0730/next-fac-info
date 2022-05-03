@@ -105,3 +105,4 @@ dist
 
 .env*
 .code-workspace
+package-lock.json
