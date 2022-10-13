@@ -2,14 +2,14 @@ import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Router from 'next/router';
 import MUIDataTable from 'mui-datatables';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { FacIdContext } from './context/FacIdContext';
 
 const MTable = ({ title, data, columns, defaultSortColumn }) => {
   const [, storeFacId] = useContext(FacIdContext);
 
   //Creating a default instance so the conditionals/media queries in the actual theme have something to reference for the breakpoint values
-  const defaultTheme = createMuiTheme({
+  const defaultTheme = createTheme({
     breakpoints: {
       values: {
         xs: 0,
@@ -21,7 +21,7 @@ const MTable = ({ title, data, columns, defaultSortColumn }) => {
     },
   });
 
-  const theme = createMuiTheme({
+  const theme = createTheme({
     palette: {
       type: 'dark',
       primary: {
@@ -165,13 +165,13 @@ const MTable = ({ title, data, columns, defaultSortColumn }) => {
   };
 
   return (
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       {/* The conditional for the window object is required until an update of the package is released.
       It will fail to render with an error without the conditional, as window is undefined at build time
       https://github.com/gregnb/mui-datatables/issues/1806
       */}
       {typeof window !== 'undefined' && <MUIDataTable title={title} data={data} columns={columns} options={options} />}
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 };
 

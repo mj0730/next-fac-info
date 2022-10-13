@@ -2,9 +2,9 @@ import { useContext } from 'react';
 import Link from 'next/link';
 import { FacIdContext } from './context/FacIdContext';
 
-import HomeIcon from '@material-ui/icons/Home';
-import TrackChangesIcon from '@material-ui/icons/TrackChanges';
-import MapIcon from '@material-ui/icons/Map';
+import HomeIcon from '@mui/icons-material/Home';
+import TrackChangesIcon from '@mui/icons-material/TrackChanges';
+import MapIcon from '@mui/icons-material/Map';
 
 const PageLinks = () => {
   const [, storeFacId, , setDisplayFrontPage] = useContext(FacIdContext);

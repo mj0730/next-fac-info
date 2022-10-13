@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from '@mui/icons-material/Search';
 import { FacIdContext } from './context/FacIdContext';
 import Router from 'next/router';
 
