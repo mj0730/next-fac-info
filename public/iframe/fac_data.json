@@ -65,7 +65,7 @@
     "lat": 38.74481,
     "lon": -90.3733,
     "fac_type": 7,
-    "level": 8,
+    "level": 7,
     "name": "St. Louis Tower",
     "type": "Tower"
   },
@@ -255,7 +255,7 @@
     "lat": 41.768181,
     "lon": -88.467139,
     "fac_type": 7,
-    "level": 4,
+    "level": 5,
     "name": "Aurora Tower",
     "type": "Tower"
   },
@@ -416,7 +416,7 @@
     "lat": 19.71619,
     "lon": -155.047476,
     "fac_type": 3,
-    "level": 6,
+    "level": 5,
     "name": "Hilo TRACAB",
     "type": "Tower and Approach Control"
   },
@@ -616,7 +616,7 @@
     "lat": 33.369617,
     "lon": -81.971674,
     "fac_type": 3,
-    "level": 5,
+    "level": 6,
     "name": "Augusta Tower",
     "type": "Tower and Approach Control"
   },
@@ -726,7 +726,7 @@
     "lat": 44.821742,
     "lon": -93.458352,
     "fac_type": 7,
-    "level": 5,
+    "level": 6,
     "name": "Flying Cloud Tower",
     "type": "Tower"
   },
@@ -736,7 +736,7 @@
     "lat": 42.238108,
     "lon": -85.547812,
     "fac_type": 3,
-    "level": 7,
+    "level": 8,
     "name": "Kalamazoo Tower",
     "type": "Tower and Approach Control"
   },
@@ -856,7 +856,7 @@
     "lat": 40.414752,
     "lon": -86.933346,
     "fac_type": 7,
-    "level": 5,
+    "level": 6,
     "name": "Lafayette Tower",
     "type": "Tower"
   },
@@ -926,7 +926,7 @@
     "lat": 42.212633,
     "lon": -83.353975,
     "fac_type": 2,
-    "level": 11,
+    "level": 10,
     "name": "Detroit TRACON",
     "type": "Approach Control"
   },
@@ -1056,7 +1056,7 @@
     "lat": 39.708816,
     "lon": -86.304495,
     "fac_type": 3,
-    "level": 8,
+    "level": 9,
     "name": "Indianapolis Tower",
     "type": "Tower and Approach Control"
   },
@@ -1096,7 +1096,7 @@
     "lat": 42.21278,
     "lon": -83.354458,
     "fac_type": 7,
-    "level": 11,
+    "level": 9,
     "name": "Detroit Tower",
     "type": "Tower"
   },
@@ -1236,7 +1236,7 @@
     "lat": 38.159832,
     "lon": -85.73058,
     "fac_type": 3,
-    "level": 8,
+    "level": 9,
     "name": "Standiford Tower",
     "type": "Tower and Approach Control"
   },
@@ -1256,7 +1256,7 @@
     "lat": 33.621223,
     "lon": -111.908485,
     "fac_type": 7,
-    "level": 6,
+    "level": 7,
     "name": "Scottsdale Tower",
     "type": "Tower"
   },
@@ -1266,7 +1266,7 @@
     "lat": 32.819027,
     "lon": -117.1325,
     "fac_type": 7,
-    "level": 7,
+    "level": 9,
     "name": "Montgomery Tower",
     "type": "Tower"
   },
@@ -1336,7 +1336,7 @@
     "lat": 33.684387,
     "lon": -78.94085,
     "fac_type": 3,
-    "level": 8,
+    "level": 9,
     "name": "Myrtle Beach Tower",
     "type": "Tower and Approach Control"
   },
@@ -1536,7 +1536,7 @@
     "lat": 39.22004,
     "lon": -106.864265,
     "fac_type": 3,
-    "level": 5,
+    "level": 6,
     "name": "Aspen TRACAB",
     "type": "Tower and Approach Control"
   },
@@ -1616,7 +1616,7 @@
     "lat": 35.817825,
     "lon": -84.002144,
     "fac_type": 3,
-    "level": 7,
+    "level": 8,
     "name": "Knoxville Tower",
     "type": "Tower and Approach Control"
   },
@@ -1666,7 +1666,7 @@
     "lat": 35.029255,
     "lon": -85.20109,
     "fac_type": 3,
-    "level": 6,
+    "level": 7,
     "name": "Chattanooga Tower",
     "type": "Tower and Approach Control"
   },
@@ -1686,7 +1686,7 @@
     "lat": 34.648964,
     "lon": -112.41949,
     "fac_type": 7,
-    "level": 7,
+    "level": 8,
     "name": "Prescott Tower",
     "type": "Tower"
   },
@@ -1816,7 +1816,7 @@
     "lat": 34.206043,
     "lon": -118.49242,
     "fac_type": 7,
-    "level": 7,
+    "level": 8,
     "name": "Van Nuys Tower",
     "type": "Tower"
   },
@@ -1826,7 +1826,7 @@
     "lat": 46.25754,
     "lon": -119.11704,
     "fac_type": 3,
-    "level": 6,
+    "level": 5,
     "name": "Pasco Tower",
     "type": "Tower and Approach Control"
   },
@@ -2076,7 +2076,7 @@
     "lat": 40.35061,
     "lon": -79.927025,
     "fac_type": 7,
-    "level": 4,
+    "level": 5,
     "name": "Allegheny Tower",
     "type": "Tower"
   },
@@ -2106,7 +2106,7 @@
     "lat": 45.8026,
     "lon": -108.53604,
     "fac_type": 3,
-    "level": 6,
+    "level": 7,
     "name": "Billings Tower",
     "type": "Tower and Approach Control"
   },
@@ -2206,7 +2206,7 @@
     "lat": 46.90662,
     "lon": -96.822556,
     "fac_type": 3,
-    "level": 6,
+    "level": 7,
     "name": "Fargo Tower",
     "type": "Tower and Approach Control"
   },
@@ -2286,7 +2286,7 @@
     "lat": 34.20954,
     "lon": -119.084915,
     "fac_type": 7,
-    "level": 6,
+    "level": 7,
     "name": "Camarillo Tower",
     "type": "Tower"
   },
@@ -2346,7 +2346,7 @@
     "lat": 33.800663,
     "lon": -118.341805,
     "fac_type": 7,
-    "level": 5,
+    "level": 6,
     "name": "Torrance Tower",
     "type": "Tower"
   },
@@ -2596,7 +2596,7 @@
     "lat": 44.88914,
     "lon": -93.223045,
     "fac_type": 7,
-    "level": 11,
+    "level": 10,
     "name": "Minneapolis Tower",
     "type": "Tower"
   },
@@ -2626,7 +2626,7 @@
     "lat": 45.530663,
     "lon": -122.95592,
     "fac_type": 7,
-    "level": 7,
+    "level": 6,
     "name": "Hillsboro Tower",
     "type": "Tower"
   },
@@ -2736,7 +2736,7 @@
     "lat": 36.476192,
     "lon": -82.412865,
     "fac_type": 3,
-    "level": 5,
+    "level": 6,
     "name": "Tri-Cities Tower",
     "type": "Tower and Approach Control"
   },
@@ -2856,7 +2856,7 @@
     "lat": 40.92375,
     "lon": -81.432655,
     "fac_type": 7,
-    "level": 7,
+    "level": 4,
     "name": "Akron-Canton Tower",
     "type": "Tower"
   },
@@ -2956,7 +2956,7 @@
     "lat": 40.81279,
     "lon": -82.51301,
     "fac_type": 7,
-    "level": 5,
+    "level": 4,
     "name": "Mansfield Tower",
     "type": "Tower"
   },
@@ -2986,7 +2986,7 @@
     "lat": 27.403505,
     "lon": -82.55869,
     "fac_type": 7,
-    "level": 6,
+    "level": 7,
     "name": "Sarasota Tower",
     "type": "Tower"
   },
@@ -3096,7 +3096,7 @@
     "lat": 38.20654,
     "lon": -122.27591,
     "fac_type": 7,
-    "level": 4,
+    "level": 5,
     "name": "Napa Tower",
     "type": "Tower"
   },
@@ -3130,4 +3130,4 @@
     "name": "Lexington Tower",
     "type": "Tower and Approach Control"
   }
- ]
+]
